@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Zahnuhr</string>
+    <string name="einstellungen_button">Einstellungen</string>
+    <string name="start_button">Start</string>
+    <string name="genehmigung">Bilder mit freundlicher Genehmigung der Beratungsstelle für präventive Zahnmedizin der Gesundheitsdirektion des Kantons Zürich</string>
+    <string name="logo">Logo</string>
+    <string name="title_activity_slide_show">SlideShow</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="kf_ol">Kauflächen oben links</string><string name="kf_or">Kauflächen oben rechts</string><string name="kf_ul">Kauflächen unten links</string><string name="kf_ur">Kauflächen unten rechts</string>
+    <string name="restart_button">Neu starten</string>
+    <string name="stopp">Stopp</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Weiter</string>
+    <string name="title_activity_finished">Fertig</string>
+    <string name="i_ul">Innen unten links</string>
+    <string name="i_ur">Innen unten rechts</string>
+    <string name="i_uv">Innen unten vorne</string>
+    <string name="i_ol">Innen oben links</string>
+    <string name="i_or">Innen oben rechts</string>
+    <string name="i_ov">Innen oben vorne</string>
+    
+    <string name="sf_l">Seitenfläche links</string>
+    <string name="sf_r">Seitenfläche rechts</string>
+    <string name="sf_v">Vorne</string>
+    <string name="fertig">Fertig, Bravo!</string>
+    <string name="beenden_button">Beenden</string>
+</resources>

@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#09c" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="26dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/ic_launcher" />
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textColor="#880"
+        android:background="#08f"
+        android:textSize="50sp"
+        android:text="@string/start_button" />
+
+    <TextView
+        android:id="@+id/textView_genehmigung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button_start"
+        android:layout_margin="30dp"
+        android:textColor="#300"
+        android:textSize="20sp"
+        android:text="@string/genehmigung"
+        android:textAppearance="?android:attr/textAppearanceMedium"  
+        />
+
+  
+
+</RelativeLayout>

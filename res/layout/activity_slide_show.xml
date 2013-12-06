@@ -1,0 +1,76 @@
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" 
+        android:background   ="#09c"
+        android:layout_height="match_parent" >
+        
+            <!-- android:layout_centerHorizontal="true" -->
+        <ProgressBar
+            android:id="@+id/progressBar_teilSchritt"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"  
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            
+            android:layout_below="@+id/image_layout_container"
+            android:minHeight="20dp"
+            android:maxHeight="20dp"
+            android:scrollbarSize="20dp"
+            android:background="#00f"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBar_overallProcess"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"    
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/progressBar_teilSchritt" />
+
+        <TextView
+            android:id="@+id/textView_wo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+   
+            android:layout_centerHorizontal="true"
+            android:text="@string/kf_ul"
+            android:layout_below="@+id/progressBar_overallProcess"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        
+        <Button
+            android:id="@+id/button_pause_resume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_wo"
+            android:layout_centerHorizontal="true"
+            android:text="@string/pause" />
+<!--  
+        <ImageView
+            android:id="@+id/imageView_kf_ul"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/kf_ul"
+            android:src="@drawable/kf_ul" /> -->
+<LinearLayout 
+      android:id="@+id/image_layout_container"
+      android:layout_gravity="center"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    
+<eu.gressly.android.zahnuhr.util.DynamicImageView
+    android:id="@+id/imageView_kf_ul"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    
+    android:scaleType="centerCrop"
+    android:layout_gravity="center"
+    android:gravity = "center"
+    android:src="@drawable/kf_ul" />
+
+</LinearLayout>
+    </RelativeLayout>
+
