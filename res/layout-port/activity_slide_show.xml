@@ -46,15 +46,7 @@
             android:layout_below="@+id/textView_wo"
             android:layout_centerHorizontal="true"
             android:text="@string/pause" />
-<!--  
-        <ImageView
-            android:id="@+id/imageView_kf_ul"
-            android:layout_width="400dp"
-            android:layout_height="200dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/kf_ul"
-            android:src="@drawable/kf_ul" /> -->
+
 <LinearLayout 
       android:id="@+id/image_layout_container"
       android:layout_gravity="center"

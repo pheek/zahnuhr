@@ -5,6 +5,7 @@ import eu.gressly.android.zahnuhr.util.PauseResumeButtonListener;
 import eu.gressly.android.zahnuhr.util.ZahnTimer;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
@@ -53,8 +54,9 @@ public class SlideShowActivity extends Activity {
 	    registerPauseButtonListener();
 
         startProgress();
+        
 	}
-
+	
 	private void registerPauseButtonListener() {
 		Button pauseResumeButton = (Button) findViewById(R.id.button_pause_resume);
         PauseResumeButtonListener prbl = new PauseResumeButtonListener(this);

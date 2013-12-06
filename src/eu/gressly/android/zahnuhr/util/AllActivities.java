@@ -35,7 +35,11 @@ public class AllActivities {
 	}
 
 	public static SlideShowActivity getNewestSlideActivity() {
-		SlideShowActivity newest = null;
+		if(null == registeredActivities) {
+			return null;
+		}
+		
+		SlideShowActivity newest = null;		
 		for (Activity a : registeredActivities) {
 			if (a instanceof SlideShowActivity) {
 				newest = (SlideShowActivity) a;

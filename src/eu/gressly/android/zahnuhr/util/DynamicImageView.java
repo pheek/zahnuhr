@@ -7,7 +7,7 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 
 public class DynamicImageView extends ImageView {
-    public static final float HEIGHT_PERCENTAGE_IN_LANDSCAPE_LAYOUT = 0.68f;
+    public static final float HEIGHT_PERCENTAGE_IN_LANDSCAPE_LAYOUT = 0.75f;
     
 	public DynamicImageView(final Context context, final AttributeSet attrs) {
 		super(context, attrs);
@@ -41,6 +41,9 @@ public class DynamicImageView extends ImageView {
 	}
 
 	private boolean breitbild(int widthMeasureSpec, int heightMeasureSpec) {
+		if(null == AllActivities.getNewestSlideActivity()) {
+			return false;
+		}
 		boolean bb =  Configuration.ORIENTATION_LANDSCAPE ==
 			  AllActivities.getNewestSlideActivity().getResources().getConfiguration().orientation;
         System.out.println("DEBUG" + (bb ? "breitbild detected" : "portrait detected" ));

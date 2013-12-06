@@ -9,7 +9,7 @@
         android:layout_height="200dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="5dp"
         android:contentDescription="@string/logo"
         android:src="@drawable/ic_launcher" />
 
@@ -19,25 +19,24 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:textColor="#880"
-        android:background="#08f"
-        android:textSize="50sp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/start_button_foreground"
+        android:background="@color/start_button_background"
+        android:textSize="48sp"
         android:text="@string/start_button" />
 
     <TextView
         android:id="@+id/textView_genehmigung"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
         android:layout_below="@+id/button_start"
-        android:layout_margin="30dp"
-        android:textColor="#300"
-        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:layout_marginTop="5dp"
         android:text="@string/genehmigung"
-        android:textAppearance="?android:attr/textAppearanceMedium"  
-        />
-
-  
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/genehmigung"
+        android:textSize="19sp" />
 
 </RelativeLayout>

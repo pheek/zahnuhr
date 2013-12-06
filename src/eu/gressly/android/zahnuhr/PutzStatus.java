@@ -9,27 +9,27 @@ public class PutzStatus {
 	   {
 		   
 		   // debug data:
-//		   new PutzSchritt(R.drawable.kf_or, R.string.kf_or, 4),
-//		   new PutzSchritt(R.drawable.kf_ol, R.string.kf_ol, 4),
-//		   new PutzSchritt(R.drawable.kf_ur, R.string.kf_ur, 4),
+		   new PutzSchritt(R.drawable.kf_or, R.string.kf_or, 4),
+		   new PutzSchritt(R.drawable.kf_ol, R.string.kf_ol, 4),
+		   new PutzSchritt(R.drawable.kf_ur, R.string.kf_ur, 4),
 
 		   // hot data:
-		   new PutzSchritt(R.drawable.kf_or, R.string.kf_or, 15),
-		   new PutzSchritt(R.drawable.kf_ol, R.string.kf_ol, 15),
-		   new PutzSchritt(R.drawable.kf_ur, R.string.kf_ur, 15),
-		   new PutzSchritt(R.drawable.kf_ul, R.string.kf_ul, 15),
-		   
-		   new PutzSchritt(R.drawable.sf_r, R.string.sf_r, 15),
-		   new PutzSchritt(R.drawable.sf_l, R.string.sf_l, 15),
-		   new PutzSchritt(R.drawable.sf_v, R.string.sf_v, 15),		   
-		   
-		   new PutzSchritt(R.drawable.i_ur, R.string.i_ur, 10),
-		   new PutzSchritt(R.drawable.i_uv, R.string.i_uv, 10),
-		   new PutzSchritt(R.drawable.i_ul, R.string.i_ul, 10),
-		   
-		   new PutzSchritt(R.drawable.i_or, R.string.i_or, 10),
-		   new PutzSchritt(R.drawable.i_ov, R.string.i_ov, 10),
-		   new PutzSchritt(R.drawable.i_ol, R.string.i_ol, 10),
+//		   new PutzSchritt(R.drawable.kf_or, R.string.kf_or, 15),
+//		   new PutzSchritt(R.drawable.kf_ol, R.string.kf_ol, 15),
+//		   new PutzSchritt(R.drawable.kf_ur, R.string.kf_ur, 15),
+//		   new PutzSchritt(R.drawable.kf_ul, R.string.kf_ul, 15),
+//		   
+//		   new PutzSchritt(R.drawable.sf_r, R.string.sf_r, 15),
+//		   new PutzSchritt(R.drawable.sf_l, R.string.sf_l, 15),
+//		   new PutzSchritt(R.drawable.sf_v, R.string.sf_v, 15),		   
+//		   
+//		   new PutzSchritt(R.drawable.i_ur, R.string.i_ur, 10),
+//		   new PutzSchritt(R.drawable.i_uv, R.string.i_uv, 10),
+//		   new PutzSchritt(R.drawable.i_ul, R.string.i_ul, 10),
+//		   
+//		   new PutzSchritt(R.drawable.i_or, R.string.i_or, 10),
+//		   new PutzSchritt(R.drawable.i_ov, R.string.i_ov, 10),
+//		   new PutzSchritt(R.drawable.i_ol, R.string.i_ol, 10),
 	   };
    
    public PutzStatus() {

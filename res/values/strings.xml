@@ -4,7 +4,7 @@
     <string name="app_name">Zahnuhr</string>
     <string name="einstellungen_button">Einstellungen</string>
     <string name="start_button">Start</string>
-    <string name="genehmigung">Bilder mit freundlicher Genehmigung der Beratungsstelle für präventive Zahnmedizin der Gesundheitsdirektion des Kantons Zürich</string>
+    <string name="genehmigung">Bilder mit freundlicher Genehmigung:\nBeratungsstelle für Präventive Zahnmedizin der Gesundheitsdirektion des Kantons Zürich</string>
     <string name="logo">Logo</string>
     <string name="title_activity_slide_show">SlideShow</string>
     <string name="dummy_button">Dummy Button</string>
