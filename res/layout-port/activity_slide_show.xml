@@ -54,14 +54,14 @@
       android:layout_height="wrap_content">
     
 <eu.gressly.android.zahnuhr.util.DynamicImageView
-    android:id="@+id/imageView_kf_ul"
+    android:id="@+id/imageView_kf_or"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     
     android:scaleType="centerCrop"
     android:layout_gravity="center"
     android:gravity = "center"
-    android:src="@drawable/kf_ul" />
+    android:src="@drawable/kf_or" />
 
 </LinearLayout>
     </RelativeLayout>

@@ -4,26 +4,41 @@
     <string name="app_name">Zahnuhr</string>
     <string name="einstellungen_button">Einstellungen</string>
     <string name="start_button">Start</string>
-    <string name="genehmigung">Bilder mit freundlicher Genehmigung:\nBeratungsstelle für Präventive Zahnmedizin der Gesundheitsdirektion des Kantons Zürich</string>
+    <string name="zielgruppe">Eine Zahnuhr für Kinder, welche in der Schule bereits ins richtige Zähneputzen eingeführt wurden.</string>
+    <string name="genehmigung">Bilder mit freundlicher Genehmigung:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
     <string name="logo">Logo</string>
     <string name="title_activity_slide_show">SlideShow</string>
     <string name="dummy_button">Dummy Button</string>
-    <string name="kf_ol">Kauflächen oben links</string><string name="kf_or">Kauflächen oben rechts</string><string name="kf_ul">Kauflächen unten links</string><string name="kf_ur">Kauflächen unten rechts</string>
     <string name="restart_button">Neu starten</string>
     <string name="stopp">Stopp</string>
     <string name="pause">Pause</string>
     <string name="resume">Weiter</string>
     <string name="title_activity_finished">Fertig</string>
-    <string name="i_ul">Innen unten links</string>
-    <string name="i_ur">Innen unten rechts</string>
-    <string name="i_uv">Innen unten vorne</string>
-    <string name="i_ol">Innen oben links</string>
-    <string name="i_or">Innen oben rechts</string>
-    <string name="i_ov">Innen oben vorne</string>
+
     
-    <string name="sf_l">Seitenfläche links</string>
-    <string name="sf_r">Seitenfläche rechts</string>
-    <string name="sf_v">Vorne</string>
+    <string name="kf_or">Kauflächen oben erste Seite</string>
+    <string name="kf_ol">Kauflächen oben zweite Seite</string>
+    <string name="kf_ur">Kauflächen unten erste Seite</string>
+    <string name="kf_ul">Kauflächen unten zweite Seite</string>
+    
+    <string name="i_ur">Innen unten erste Seite</string>
+    <string name="i_uv">Innen unten vorne</string>
+    <string name="i_ul">Innen unten zweite Seite</string>
+    <string name="i_or">Innen oben erste Seite</string>
+    <string name="i_ov">Innen oben vorne</string>
+    <string name="i_ol">Innen oben zweite Seite</string>
+    
+    <string name="sf_r">Seitenfläche erste Seite bis und mit Eckzahn</string>
+    <string name="sf_l">Seitenfläche zweite Seite bis und mit Eckzahn</string>
+    <!-- ab der Mittelstufe (10jährige): -->
+    <string name="sf_ro">Seitenfläche erste Seite oben bis und mit Eckzahn</string>
+    <string name="sf_ru">Seitenfläche erste Seite unten bis und mit Eckzahn</string>
+    <string name="sf_lo">Seitenfläche zweite Seite oben bis und mit Eckzahn</string>
+    <string name="sf_lu">Seitenfläche zweite Seite unten bis und mit Eckzahn</string>
+
+    <string name="sf_vo">Vorne oben</string>
+    <string name="sf_vu">Vorne unten</string>
+    
     <string name="fertig">Fertig, Bravo!</string>
     <string name="beenden_button">Beenden</string>
 </resources>

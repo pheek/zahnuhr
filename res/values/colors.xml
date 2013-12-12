@@ -1,8 +1,9 @@
 <resources>
 
     <color name="black_overlay">#66000000</color>
-    <color name="genehmigung">#ff00ff88</color>
+    <color name="genehmigungText">#fcf8</color>
     <color name="start_button_foreground">#c004</color>
     <color name="start_button_background">#0088ff</color>
+    <color name="zielgruppeText">#FCCF</color>
 
 </resources>

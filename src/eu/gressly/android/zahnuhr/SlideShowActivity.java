@@ -5,7 +5,6 @@ import eu.gressly.android.zahnuhr.util.PauseResumeButtonListener;
 import eu.gressly.android.zahnuhr.util.ZahnTimer;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
@@ -87,8 +86,10 @@ public class SlideShowActivity extends Activity {
 		return ztLocal.isPaused() && ztOverall.isPaused();
 	}
 	
+	//TODO
+	// starting: dies muss gezügelt werden, sobald der "SlideShowRunner" gezügelt wird.
 	PutzSchritt paintedSchritt = null;
-	boolean justStarted = true;
+	boolean     justStarted    = true;
 
 	void neuZeichnen() {
 		if(ztOverall.getRemainingSeconds() <= 0.0) {
