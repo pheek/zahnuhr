@@ -152,7 +152,8 @@ public class SlideShowActivity extends Activity {
 	    	@Override 
 	    	public void run() {
 	    		System.out.println("DEBUG runOnUiThread...");
-	    		ImageView img = (ImageView) findViewById(R.id.imageView_kf_ul);
+	    		ImageView img = (ImageView) findViewById(R.id.startImage);
+	    		System.out.println("... found drawableID: " + paintedSchritt.drawableID);
 	    		img.setImageResource(paintedSchritt.drawableID);	
 	    		
 	    		System.out.println("DEBUG: drawAndText: replace Text...");

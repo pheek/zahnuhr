@@ -54,7 +54,7 @@
       android:layout_height="wrap_content">
     
 <eu.gressly.android.zahnuhr.util.DynamicImageView
-    android:id="@+id/imageView_kf_or"
+    android:id="@+id/startImage"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     

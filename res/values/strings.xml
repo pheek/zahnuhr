@@ -14,7 +14,6 @@
     <string name="pause">Pause</string>
     <string name="resume">Weiter</string>
     <string name="title_activity_finished">Fertig</string>
-
     
     <string name="kf_or">Kauflächen oben erste Seite</string>
     <string name="kf_ol">Kauflächen oben zweite Seite</string>
@@ -30,6 +29,7 @@
     
     <string name="sf_r">Seitenfläche erste Seite bis und mit Eckzahn</string>
     <string name="sf_l">Seitenfläche zweite Seite bis und mit Eckzahn</string>
+    
     <!-- ab der Mittelstufe (10jährige): -->
     <string name="sf_ro">Seitenfläche erste Seite oben bis und mit Eckzahn</string>
     <string name="sf_ru">Seitenfläche erste Seite unten bis und mit Eckzahn</string>
