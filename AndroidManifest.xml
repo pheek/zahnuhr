@@ -26,14 +26,14 @@
         </activity>
         
         <activity
-            android:name="eu.gressly.android.zahnuhr.SlideShowActivity"
+            android:name="eu.gressly.android.zahnuhr.activities.SlideShowActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_slide_show"
             android:theme="@style/FullscreenTheme" >
         </activity>
         
         <activity
-            android:name="eu.gressly.android.zahnuhr.FinishScreenActivity"
+            android:name="eu.gressly.android.zahnuhr.activities.FinishScreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_finished"
             android:theme="@style/FullscreenTheme" >

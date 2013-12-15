@@ -1,7 +1,7 @@
 package eu.gressly.android.zahnuhr.util;
 
 import eu.gressly.android.zahnuhr.R;
-import eu.gressly.android.zahnuhr.SlideShowActivity;	
+import eu.gressly.android.zahnuhr.activities.SlideShowActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;

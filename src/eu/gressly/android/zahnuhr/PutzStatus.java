@@ -1,7 +1,7 @@
 package eu.gressly.android.zahnuhr;
 
 public class PutzStatus {
-   final float totalSecs  ;
+   public final float totalSecs  ;
          int   actPosIndex;
    
          
@@ -50,14 +50,14 @@ public class PutzStatus {
      return total;  
    }
    
-   PutzSchritt getActPos() {
+   public PutzSchritt getActPos() {
 	   if(actPosIndex < stati.length) {
 		   return stati[actPosIndex];
 	   }
 	   return null;
    }
    
-   PutzSchritt nextPos() {
+   public PutzSchritt nextPos() {
 	   actPosIndex++;
 	   return getActPos();
    }

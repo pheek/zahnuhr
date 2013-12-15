@@ -1,5 +1,7 @@
 package eu.gressly.android.zahnuhr;
 
+import eu.gressly.android.zahnuhr.activities.SlideShowActivity;
+
 /**
  * 
  * @author phi@gressly.eu
@@ -46,7 +48,7 @@ public class SlideShowRunner implements Runnable {
 		running = true;
 	}
 
-	void stop() {
+	public void stop() {
 		running = false;
 	}
 } // end class SlideShowRunner

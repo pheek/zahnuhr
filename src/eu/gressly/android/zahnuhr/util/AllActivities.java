@@ -3,7 +3,7 @@ package eu.gressly.android.zahnuhr.util;
 import java.util.ArrayList;
 import java.util.List;
 
-import eu.gressly.android.zahnuhr.SlideShowActivity;
+import eu.gressly.android.zahnuhr.activities.SlideShowActivity;
 
 import android.app.Activity;
 

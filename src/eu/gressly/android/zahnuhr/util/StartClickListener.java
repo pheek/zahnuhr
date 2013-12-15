@@ -1,6 +1,6 @@
 package eu.gressly.android.zahnuhr.util;
 
-import eu.gressly.android.zahnuhr.SlideShowActivity;
+import eu.gressly.android.zahnuhr.activities.SlideShowActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
