@@ -5,5 +5,6 @@
     <color name="start_button_foreground">#c004</color>
     <color name="start_button_background">#0088ff</color>
     <color name="zielgruppeText">#FCCF</color>
+    <color name="app_background">#09c</color>
 
 </resources>

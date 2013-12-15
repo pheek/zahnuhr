@@ -1,36 +1,68 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#09c" >
+    android:layout_height="fill_parent" 
+    android:background="@color/app_background">
 
     <ImageView
-        android:id="@+id/logo"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:id="@+id/imageView1"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:padding="5dp"
         android:contentDescription="@string/logo"
         android:src="@drawable/ic_launcher" />
 
-    <Button
-        android:id="@+id/button_start"
+    <TextView
+        android:id="@+id/textView_kinder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/logo"
-        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView1"
+        android:text="@string/kinder" />
+
+    <Button
+        android:id="@+id/button_start_kinder"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView_kinder"
+        android:layout_below="@+id/textView_kinder"
         android:background="@color/start_button_background"
         android:text="@string/start_button"
         android:textColor="@color/start_button_foreground"
-        android:textSize="48sp" />
+        android:textSize="44sp" />
+
+    <TextView
+        android:id="@+id/textView_jugendliche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_start_kinder"
+        android:layout_below="@+id/button_start_kinder"
+        android:layout_marginTop="16dp"
+        android:text="@string/jugendliche" />
+
+    <Button
+        android:id="@+id/button_start_jugendliche"
+        android:padding="2dp"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView_jugendliche"
+        android:layout_below="@+id/textView_jugendliche"
+        android:text="@string/start_button"
+        android:textColor="@color/start_button_foreground"
+               android:background="@color/start_button_background"
+        android:textSize="44sp" />
 
     <TextView
         android:id="@+id/textView_zielgruppe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button_start"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imageView1"
         android:layout_margin="20dp"
+        android:layout_marginTop="23dp"
         android:text="@string/zielgruppe"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/zielgruppeText"
@@ -40,9 +72,9 @@
         android:id="@+id/textView_genehmigung"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView_zielgruppe"
         android:layout_below="@+id/textView_zielgruppe"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
+        android:layout_margin="2dp"
         android:text="@string/genehmigung"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/genehmigungText"
