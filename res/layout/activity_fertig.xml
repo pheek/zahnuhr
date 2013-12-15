@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#09c"
+    android:background="@color/app_background"
     tools:context=".FinishScreenActivity" >
 
     <!--
@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#09c" >
+        android:background="@color/app_background" >
 
         <TextView
             android:id="@+id/textView_fertig"

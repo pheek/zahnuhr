@@ -3,16 +3,6 @@
     android:layout_height="fill_parent" 
     android:background="@color/app_background">
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:padding="5dp"
-        android:contentDescription="@string/logo"
-        android:src="@drawable/ic_launcher" />
-
     <TextView
         android:id="@+id/textView_kinder"
         android:layout_width="wrap_content"
@@ -52,29 +42,39 @@
         android:layout_below="@+id/textView_jugendliche"
         android:text="@string/start_button"
         android:textColor="@color/start_button_foreground"
-               android:background="@color/start_button_background"
+        android:background="@color/start_button_background"
         android:textSize="44sp" />
 
     <TextView
         android:id="@+id/textView_zielgruppe"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/imageView1"
-        android:layout_margin="20dp"
-        android:layout_marginTop="23dp"
+        android:layout_below="@+id/button_start_jugendliche"
+        android:layout_centerHorizontal="true"
+android:padding="15dp"
+        android:layout_marginTop="30dp"
         android:text="@string/zielgruppe"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/zielgruppeText"
         android:textSize="12sp" />
 
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView_kinder"
+        android:contentDescription="@string/logo"
+        android:padding="7dp"
+        android:src="@drawable/ic_launcher" />
+
     <TextView
         android:id="@+id/textView_genehmigung"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView_zielgruppe"
+        android:layout_alignParentLeft="true"
         android:layout_below="@+id/textView_zielgruppe"
-        android:layout_margin="2dp"
+        android:padding="15dp"
         android:text="@string/genehmigung"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/genehmigungText"
