@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import eu.gressly.android.zahnuhr.activities.SlideShowActivity;
+import eu.gressly.android.zahnuhr.stati.PutzAlter;
 
 import android.app.Activity;
 
@@ -20,6 +21,8 @@ import android.app.Activity;
  * 
  */
 public class AllActivities {
+	
+   public static PutzAlter SEQUENZ;
 
 	private static ArrayList<Activity> registeredActivities;
 
@@ -46,6 +49,13 @@ public class AllActivities {
 			}
 		}
 		return newest;
+	}
+
+	public static void unregister(SlideShowActivity toRemove) {
+		if(null == AllActivities.registeredActivities) {
+		   return;
+		}
+		AllActivities.registeredActivities.remove(toRemove);
 	}
 
 } // end class AllActivities

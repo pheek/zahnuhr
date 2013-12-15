@@ -8,6 +8,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import eu.gressly.android.zahnuhr.R;
+import eu.gressly.android.zahnuhr.StateCallback;
+import eu.gressly.android.zahnuhr.StateImplementation;
 import eu.gressly.android.zahnuhr.util.AllActivities;
 import eu.gressly.android.zahnuhr.util.StartClickListener;
 
@@ -66,7 +68,8 @@ public class FinishScreenActivity extends Activity {
 		 if(null == restartButton) {
 			 System.out.println("FEHLER: Resource button_restart nicht gefunden!!!");
 		 } else {
-	        StartClickListener scl = new StartClickListener();
+			StateCallback sc = StateImplementation.getInstance();
+	        StartClickListener scl = new StartClickListener(sc.getAlter());
 	        scl.setActivity(this);
 	        restartButton.setOnClickListener(scl);
 		 }

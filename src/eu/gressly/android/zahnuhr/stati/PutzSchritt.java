@@ -1,4 +1,4 @@
-package eu.gressly.android.zahnuhr;
+package eu.gressly.android.zahnuhr.stati;
 
 public class PutzSchritt {
   public int    drawableID;

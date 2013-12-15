@@ -27,7 +27,7 @@
         
         <activity
             android:name="eu.gressly.android.zahnuhr.activities.SlideShowActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:configChanges="keyboardHidden|screenSize"
             android:label="@string/title_activity_slide_show"
             android:theme="@style/FullscreenTheme" >
         </activity>

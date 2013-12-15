@@ -1,6 +1,7 @@
 package eu.gressly.android.zahnuhr;
 
-import eu.gressly.android.zahnuhr.activities.SlideShowActivity;
+import eu.gressly.util.callback.Updater;
+
 
 /**
  * 
@@ -11,14 +12,21 @@ import eu.gressly.android.zahnuhr.activities.SlideShowActivity;
  */
 public class SlideShowRunner implements Runnable {
 
-	SlideShowActivity slideShow        ;
-	boolean           running          ;
+	private boolean           running          ;
 	Thread            thisThread = null;
-
-	public SlideShowRunner(SlideShowActivity slideShowActivity) {
-		this.slideShow = slideShowActivity;
+	Updater           callbackState;
+    private static SlideShowRunner   singleton;
+	
+	private SlideShowRunner(Updater up) {
+		this.callbackState = up;
 		System.out.println("Starting GUI-Thread in SlideShowRunner");
-		start();
+	}
+	
+	public static SlideShowRunner getInstance(Updater up) {
+		if(null == singleton) {
+		   SlideShowRunner.singleton = new SlideShowRunner(up);
+		}
+		return singleton;
 	}
 
 	@Override
@@ -30,7 +38,7 @@ public class SlideShowRunner implements Runnable {
 				// refresh rate of the sliders.
 				Thread.sleep(250);
 				System.out.println("SSR: running;");
-				slideShow.neuZeichnen();
+				callbackState.update();
 			} catch (InterruptedException ie) {
 				running = false;
 			}
@@ -39,6 +47,7 @@ public class SlideShowRunner implements Runnable {
 
 	void start() {
 		stop();
+		System.out.println("SlideShowRunner.start()");
 		if (null != thisThread) {
 			thisThread.interrupt();
 			thisThread = null;
@@ -46,6 +55,10 @@ public class SlideShowRunner implements Runnable {
 		thisThread = new Thread(this);
 		thisThread.start();
 		running = true;
+	}
+	
+	public boolean isRunning() {
+		return running;
 	}
 
 	public void stop() {
