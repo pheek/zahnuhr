@@ -30,6 +30,15 @@ public class AllActivities {
 		if (null == registeredActivities) {
 			registeredActivities = new ArrayList<Activity>();
 		}
+// while registering a new "SlideActivity", unregister the old one.
+		SlideShowActivity oldActivity = AllActivities.getNewestSlideActivity();
+		if(null != oldActivity) {
+			//TODO: Test, if ok, without finishing the old one.
+			// In other words: What happens, when we omit the following line?
+			oldActivity.finish();
+			AllActivities.unregister(oldActivity);
+		}	
+		
 		registeredActivities.add(a);
 	}
 

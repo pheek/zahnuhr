@@ -1,5 +1,12 @@
 package eu.gressly.android.zahnuhr.activities;
-
+/**
+ * @author  phi (phi@gressly.eu)
+ * @version alpha
+ * @date    16. 12. 2013
+ * 
+ * @purpose Contains the images (slide show) of teeth.
+ *          is updated (repainted) when the Callback calls "update()".
+ */
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,12 +37,7 @@ public class SlideShowActivity extends Activity implements Updater {
 		super.onCreate(savedInstanceState);
 
 		// besser gleich in AllActivities eine Methode: 
-		SlideShowActivity oldActivity = AllActivities.getNewestSlideActivity();
 		AllActivities.registerActivity(this);
-		if(null != oldActivity) {
-			oldActivity.finish();
-			AllActivities.unregister(oldActivity);
-		}
 
 		// Hide title
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -51,7 +53,7 @@ public class SlideShowActivity extends Activity implements Updater {
 		StateCallback sc = StateImplementation.getInstance();
 		sc.setUpdater(this);
 
-		startProgress();
+	//	startProgress();
 	}
 
 	private void registerPauseButtonListener() {
@@ -66,11 +68,6 @@ public class SlideShowActivity extends Activity implements Updater {
 		// pbOverAll.setBackgroundColor(Color.MAGENTA);
 	}
 
-	void startProgress() {
-		
-		StateImplementation.getInstance().start(this);
-	}
-
 	public void pause() {
 		StateImplementation.getInstance().pause();
 	}
@@ -83,13 +80,10 @@ public class SlideShowActivity extends Activity implements Updater {
 		return StateImplementation.getInstance().isPaused();
 	}
 
-	// TODO
-	// starting: dies muss gezügelt werden, sobald der "SlideShowRunner"
-	// gezügelt wird.
-	//PutzSchritt paintedSchritt = null;
-
-	
-	
+	@Override
+	public void update() {
+		this.neuZeichnen();
+	}
 	
 	private void neuZeichnen() {
 		StateCallback state = StateImplementation.getInstance();
@@ -98,33 +92,7 @@ public class SlideShowActivity extends Activity implements Updater {
 			gotoViewFinished();
 			return;
 		}
-//		if (justStarted) {
-//			justStarted = false;
-//			ztOverall.setRemainingSeconds(putzStatus.totalSecs);
-//			paintedSchritt = putzStatus.getActPos();
-//			if (null != paintedSchritt) {
-//				System.out
-//						.println("DEBUG: neuZeichnen(): null==paintedSchritt");
-//				ztLocal.setRemainingSeconds(paintedSchritt.seconds);
-//				drawAndText(paintedSchritt);
-//			} else {
-//				gotoViewFinished();
-//				return;
-//			}
-//		}
-//		// lokaler Timer abgelaufen:
-//		if (ztLocal.getRemainingSeconds() <= 0) {
-//			System.out.println("DEBUG: neuZeichnen(): remainingSeconds <= 0");
-//			
-//			paintedSchritt = putzStatus.nextPos();
-//			if (null == paintedSchritt) {
-//				// finished
-//				gotoViewFinished();
-//				return;
-//			}
-//			ztLocal.setRemainingSeconds(paintedSchritt.seconds);
-//			drawAndText(paintedSchritt);
-//		}
+
 		if (state.getRemainingSecondsActState() <= 0) {
 			System.out.println("DEBUG: neuZeichnen(): remainingSeconds <= 0");
 			
@@ -139,8 +107,8 @@ public class SlideShowActivity extends Activity implements Updater {
 
 	private void paintingProgressBars() {
 		StateCallback state = StateImplementation.getInstance();
-		setProgress(R.id.progressBar_teilSchritt, state.getActPutzSchritt().seconds
-				- state.getRemainingSecondsActState(), state.getActPutzSchritt().seconds);
+		setProgress(R.id.progressBar_teilSchritt, state.getActPutzSchritt().getSeconds()
+				- state.getRemainingSecondsActState(), state.getActPutzSchritt().getSeconds());
 		setProgress(R.id.progressBar_overallProcess, state.getTotalSecs()
 				- state.getRemainingSecondsOverAll(),state.getTotalSecs());
 	}
@@ -168,19 +136,14 @@ public class SlideShowActivity extends Activity implements Updater {
 				System.out.println("DEBUG runOnUiThread...");
 				ImageView img = (ImageView) findViewById(R.id.startImage);
 				System.out.println("... found drawableID: "
-						+ paintedSchritt.drawableID);
-				img.setImageResource(paintedSchritt.drawableID);
+						+ paintedSchritt.getDrawableID());
+				img.setImageResource(paintedSchritt.getDrawableID());
 
 				System.out.println("DEBUG: drawAndText: replace Text...");
 				TextView txt = (TextView) findViewById(R.id.textView_wo);
-				txt.setText(getResources().getText(paintedSchritt.stringID));
+				txt.setText(getResources().getText(paintedSchritt.getStringID()));
 			}
 		});
 	}
 
-	@Override
-	public void update() {
-		this.neuZeichnen();
-	}
-
-}
+} // end class: SlideShowActivity

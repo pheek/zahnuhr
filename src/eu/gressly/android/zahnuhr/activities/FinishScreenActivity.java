@@ -21,8 +21,6 @@ import eu.gressly.android.zahnuhr.util.StartClickListener;
  */
 public class FinishScreenActivity extends Activity {
 
-
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		System.out.println("DEBUG: Creating FinishScreenActivity");
@@ -75,5 +73,4 @@ public class FinishScreenActivity extends Activity {
 		 }
 	}
 
-
-}
+} //end class FinishScreenActivity

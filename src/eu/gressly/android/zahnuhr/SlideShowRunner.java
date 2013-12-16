@@ -1,5 +1,12 @@
 package eu.gressly.android.zahnuhr;
-
+/**
+ * @author  phi (phi@gressly.eu)
+ * @version alpha
+ * @date    16. 12. 2013
+ * 
+ * @purpose A runner who calls every 200ms an "update()" Method, so a
+ *          Progressbar can be repainted.
+ */
 import eu.gressly.util.callback.Updater;
 
 
@@ -12,10 +19,12 @@ import eu.gressly.util.callback.Updater;
  */
 public class SlideShowRunner implements Runnable {
 
-	private boolean           running          ;
-	Thread            thisThread = null;
-	Updater           callbackState;
-    private static SlideShowRunner   singleton;
+	private boolean running          ;
+	private Thread  thisThread = null;
+	private Updater callbackState    ;
+    
+	// Singleton Design Pattern
+	private static  SlideShowRunner singleton;
 	
 	private SlideShowRunner(Updater up) {
 		this.callbackState = up;

@@ -1,4 +1,13 @@
 package eu.gressly.android.zahnuhr.activities;
+/**
+ * @author  phi (phi@gressly.eu)
+ * @version alpha
+ * @date    16. 12. 2013
+ * 
+ * @purpose Start main Activity.
+ *          important: The button event is responsable, to restart the activity.
+ *          
+ */          
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,14 +19,8 @@ import eu.gressly.android.zahnuhr.stati.PutzAlter;
 import eu.gressly.android.zahnuhr.util.AllActivities;
 import eu.gressly.android.zahnuhr.util.StartClickListener;
 
-/**
- * An example full-screen activity that shows and hides the system UI (i.e.
- * status bar and navigation/system bar) with user interaction.
- *
- * @see SystemUiHider
- */
-public class StartMainActivity extends Activity {
 
+public class StartMainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +55,4 @@ public class StartMainActivity extends Activity {
         startButton.setOnClickListener(scl);
 	}
 
- 
-
-}
+} // end class StartMainActivity

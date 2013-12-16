@@ -1,5 +1,15 @@
 package eu.gressly.android.zahnuhr.util;
-
+/**
+ * @author  phi (phi@gressly.eu)
+ * @version alpha
+ * @date    16. 12. 2013
+ * 
+ * @purpose restarts the "runner" (and all timers) and switches to the
+ *          "intent" SlideShowActivity. This should be the only place,
+ *          where the sequence is restarted. 
+ *          Restarting in "onCreate()" of the "SlideShowActivity" will
+ *          restart the timer on all turns of the phone.
+ */
 import eu.gressly.android.zahnuhr.StateCallback;
 import eu.gressly.android.zahnuhr.StateImplementation;
 import eu.gressly.android.zahnuhr.activities.SlideShowActivity;
@@ -29,4 +39,4 @@ public class StartClickListener implements OnClickListener {
         myActivity.startActivity(slideShowView);	
 	}
 
-}
+} // end class StartClickListener

@@ -1,5 +1,12 @@
 package eu.gressly.android.zahnuhr.util;
-
+/**
+ * @author  phi (phi@gressly.eu)
+ * @version alpha
+ * @date    16. 12. 2013
+ * 
+ * @purpose Scales an image to about 75% in height, but only, if the
+ *          tablet (phone) is in landscape mode.
+ */
 import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
@@ -51,4 +58,5 @@ public class DynamicImageView extends ImageView {
         return bb;
 		//return MeasureSpec.getSize(widthMeasureSpec) > MeasureSpec.getSize(heightMeasureSpec);
 	}
-}
+	
+} // end class DynamicImageView
