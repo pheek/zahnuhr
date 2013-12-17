@@ -21,13 +21,6 @@
     <string name="kf_ur">Kauflächen unten erste Seite</string>
     <string name="kf_ul">Kauflächen unten zweite Seite</string>
     
-    <string name="i_ur">Innen unten erste Seite</string>
-    <string name="i_uv">Innen unten vorne</string>
-    <string name="i_ul">Innen unten zweite Seite</string>
-    <string name="i_or">Innen oben erste Seite</string>
-    <string name="i_ov">Innen oben vorne</string>
-    <string name="i_ol">Innen oben zweite Seite</string>
-    
     <string name="sf_r">Seitenfläche erste Seite bis und mit Eckzahn</string>
     <string name="sf_l">Seitenfläche zweite Seite bis und mit Eckzahn</string>
     
@@ -39,6 +32,14 @@
 
     <string name="sf_vo">Vorne oben</string>
     <string name="sf_vu">Vorne unten</string>
+
+    <string name="i_or">Innen oben erste Seite</string>
+    <string name="i_ov">Innen oben vorne</string>
+    <string name="i_ol">Innen oben zweite Seite</string>
+    <string name="i_ur">Innen unten erste Seite</string>
+    <string name="i_uv">Innen unten vorne</string>
+    <string name="i_ul">Innen unten zweite Seite</string>
+    
     
     <string name="fertig">Fertig, Bravo!</string>
     <string name="beenden_button">Beenden</string>

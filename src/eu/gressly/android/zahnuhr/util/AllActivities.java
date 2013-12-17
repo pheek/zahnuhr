@@ -33,9 +33,9 @@ public class AllActivities {
 // while registering a new "SlideActivity", unregister the old one.
 		SlideShowActivity oldActivity = AllActivities.getNewestSlideActivity();
 		if(null != oldActivity) {
-			//TODO: Test, if ok, without finishing the old one.
-			// In other words: What happens, when we omit the following line?
-			oldActivity.finish();
+			// !!! Must not be removed: Otherwise the active is also finished, because
+			//     it is the same Activity.
+			//oldActivity.finish();
 			AllActivities.unregister(oldActivity);
 		}	
 		
