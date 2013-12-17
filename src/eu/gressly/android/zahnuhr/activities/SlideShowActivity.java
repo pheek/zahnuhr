@@ -9,7 +9,9 @@ package eu.gressly.android.zahnuhr.activities;
  */
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -31,7 +33,8 @@ import eu.gressly.util.callback.Updater;
  * @see SystemUiHider
  */
 public class SlideShowActivity extends Activity implements Updater {
-
+	private static final String TAG = "SlideShowActivity";
+   
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -55,7 +58,23 @@ public class SlideShowActivity extends Activity implements Updater {
 
 	//	startProgress();
 	}
+	
+	// to repaint after a screen turn (rotation)???
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+      Log.i(TAG, "onConfigurationchanged()");
+	  super.onConfigurationChanged(newConfig);	
 
+	  setContentView(R.layout.activity_slide_show);
+	  registerPauseButtonListener();
+	  
+	  // register this for callback
+	  StateCallback sc = StateImplementation.getInstance();
+	  sc.setUpdater(this);
+	  // sofort neu zeichnen, und nicht auf den Repaint-Thread warten:
+	  this.update();
+	}
+	
 	private void registerPauseButtonListener() {
 		Button pauseResumeButton = (Button) findViewById(R.id.button_pause_resume);
 		PauseResumeButtonListener prbl = new PauseResumeButtonListener(this);
@@ -64,6 +83,10 @@ public class SlideShowActivity extends Activity implements Updater {
 
 	private void setProgress(int bar_rid, float actualSeconds, float maxSeconds) {
 		ProgressBar pbOverAll = (ProgressBar) findViewById(bar_rid);
+		if(null == pbOverAll) {
+			Log.e(TAG, "set Progress has a NullPointer!!!!");
+			return;
+		}
 		pbOverAll.setProgress((int) (actualSeconds * 100.0 / maxSeconds));
 		// pbOverAll.setBackgroundColor(Color.MAGENTA);
 	}
@@ -85,7 +108,7 @@ public class SlideShowActivity extends Activity implements Updater {
 		this.neuZeichnen();
 	}
 	
-	private void neuZeichnen() {
+	private synchronized void neuZeichnen() {
 		StateCallback state = StateImplementation.getInstance();
 		if (state.getRemainingSecondsOverAll() <= 0.0) {
 			state.stop();
@@ -94,17 +117,15 @@ public class SlideShowActivity extends Activity implements Updater {
 		}
 
 		if (state.getRemainingSecondsActState() <= 0) {
-			System.out.println("DEBUG: neuZeichnen(): remainingSeconds <= 0");
-			
+			//System.out.println("DEBUG: neuZeichnen(): remainingSeconds <= 0");
 			state.nextInSequence();
-			drawAndText(state.getActPutzSchritt());
-			
 		}
+		// TODO: Feinkorrektur: der Wert, der getRemainingSecondsActState < 0 ist, muss vom
+		//       nächsten Schritt noch abgezogen werden!
+		drawAndText(state.getActPutzSchritt());
 		paintingProgressBars();
 	}
-
-
-
+	
 	private void paintingProgressBars() {
 		StateCallback state = StateImplementation.getInstance();
 		setProgress(R.id.progressBar_teilSchritt, state.getActPutzSchritt().getSeconds()
@@ -115,31 +136,29 @@ public class SlideShowActivity extends Activity implements Updater {
 
 	private void gotoViewFinished() {
 		// switch to other view
-		System.out
-				.println("DEBUG: Go to other view (finished). stopping slideShowrunner!");
+		//System.out.println("DEBUG: Go to other view (finished). stopping slideShowrunner!");
 		StateImplementation.getInstance().stop();
-		Intent finishedView = new Intent(getApplicationContext(),
-				FinishScreenActivity.class);
+		Intent finishedView = new Intent(getApplicationContext(), FinishScreenActivity.class);
 		startActivity(finishedView);
 	}
 
 	private void drawAndText(final PutzSchritt paintedSchritt) {
 		// from stackoverflow:
 		if (null == paintedSchritt) {
-			System.out.println("DEBUG SlideShowActivity drawAndText();");
+			Log.i(TAG, "DEBUG SlideShowActivity drawAndText(): paintenSchritt == NULL !");
 			return;
 		}
 
 		SlideShowActivity.this.runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
-				System.out.println("DEBUG runOnUiThread...");
+				//System.out.println("DEBUG runOnUiThread...");
 				ImageView img = (ImageView) findViewById(R.id.startImage);
-				System.out.println("... found drawableID: "
-						+ paintedSchritt.getDrawableID());
+				//System.out.println("... found drawableID: "
+				//		+ paintedSchritt.getDrawableID());
 				img.setImageResource(paintedSchritt.getDrawableID());
 
-				System.out.println("DEBUG: drawAndText: replace Text...");
+				//System.out.println("DEBUG: drawAndText: replace Text...");
 				TextView txt = (TextView) findViewById(R.id.textView_wo);
 				txt.setText(getResources().getText(paintedSchritt.getStringID()));
 			}

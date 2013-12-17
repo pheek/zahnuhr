@@ -21,7 +21,7 @@
         android:background="@color/start_button_background"
         android:text="@string/start_button"
         android:textColor="@color/start_button_foreground"
-        android:textSize="44sp" />
+        android:textSize="@dimen/start_button_text_size" />
 
     <TextView
         android:id="@+id/textView_jugendliche"
@@ -43,7 +43,7 @@
         android:text="@string/start_button"
         android:textColor="@color/start_button_foreground"
         android:background="@color/start_button_background"
-        android:textSize="44sp" />
+        android:textSize="@dimen/start_button_text_size" />
 
     <TextView
         android:id="@+id/textView_zielgruppe"
@@ -56,7 +56,7 @@ android:padding="15dp"
         android:text="@string/zielgruppe"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/zielgruppeText"
-        android:textSize="12sp" />
+        android:textSize="@dimen/erklaerungstexte" />
 
     <ImageView
         android:id="@+id/imageView1"
@@ -78,6 +78,6 @@ android:padding="15dp"
         android:text="@string/genehmigung"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/genehmigungText"
-        android:textSize="12sp" />
+        android:textSize="@dimen/erklaerungstexte" />
 
 </RelativeLayout>

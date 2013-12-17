@@ -24,7 +24,7 @@ public class DynamicImageView extends ImageView {
 	@Override
 	protected void onMeasure(final int widthMeasureSpec,
 			final int heightMeasureSpec) {
-		System.out.println("onMeasure");
+		//System.out.println("onMeasure");
 		final Drawable thisDrawable = this.getDrawable();
 
 		if (null != thisDrawable) {
@@ -53,7 +53,7 @@ public class DynamicImageView extends ImageView {
 		}
 		boolean bb =  Configuration.ORIENTATION_LANDSCAPE ==
 			  AllActivities.getNewestSlideActivity().getResources().getConfiguration().orientation;
-        System.out.println("DEBUG" + (bb ? "breitbild detected" : "portrait detected" ));
+        //System.out.println("DEBUG" + (bb ? "breitbild detected" : "portrait detected" ));
 
         return bb;
 		//return MeasureSpec.getSize(widthMeasureSpec) > MeasureSpec.getSize(heightMeasureSpec);

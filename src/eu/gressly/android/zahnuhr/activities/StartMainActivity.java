@@ -29,7 +29,6 @@ public class StartMainActivity extends Activity {
         hideTitleAndNotificationbar();
 
         setStartButonHandler();
-        
     }
 
 	private void hideTitleAndNotificationbar() {

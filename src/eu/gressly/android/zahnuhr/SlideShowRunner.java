@@ -1,4 +1,5 @@
 package eu.gressly.android.zahnuhr;
+import android.util.Log;
 /**
  * @author  phi (phi@gressly.eu)
  * @version alpha
@@ -18,7 +19,7 @@ import eu.gressly.util.callback.Updater;
  * calls back the view to refresh its content about every 1/4 second
  */
 public class SlideShowRunner implements Runnable {
-
+    private static final String TAG = "SlideShowRunner";
 	private boolean running          ;
 	private Thread  thisThread = null;
 	private Updater callbackState    ;
@@ -28,7 +29,7 @@ public class SlideShowRunner implements Runnable {
 	
 	private SlideShowRunner(Updater up) {
 		this.callbackState = up;
-		System.out.println("Starting GUI-Thread in SlideShowRunner");
+		Log.i(TAG, "Starting GUI-Thread in SlideShowRunner");
 	}
 	
 	public static SlideShowRunner getInstance(Updater up) {
@@ -41,12 +42,12 @@ public class SlideShowRunner implements Runnable {
 	@Override
 	public void run() {
 		running = true;
-		System.out.println("Starting runnable.");
+		Log.i(TAG, "Starting runnable.");
 		while (running) {
 			try {
 				// refresh rate of the sliders.
 				Thread.sleep(250);
-				System.out.println("SSR: running;");
+				//System.out.println("SSR: running;");
 				callbackState.update();
 			} catch (InterruptedException ie) {
 				running = false;
@@ -56,7 +57,7 @@ public class SlideShowRunner implements Runnable {
 
 	void start() {
 		stop();
-		System.out.println("SlideShowRunner.start()");
+		Log.i(TAG, "SlideShowRunner.start()");
 		if (null != thisThread) {
 			thisThread.interrupt();
 			thisThread = null;

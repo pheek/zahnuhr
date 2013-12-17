@@ -8,11 +8,13 @@ package eu.gressly.android.zahnuhr.util;
  */
 import eu.gressly.android.zahnuhr.R;
 import eu.gressly.android.zahnuhr.activities.SlideShowActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class PauseResumeButtonListener implements OnClickListener {
+	private static final String TAG = "PauseResumeButtonListener";
 	SlideShowActivity slideShowActivity;
 
 	public PauseResumeButtonListener(SlideShowActivity slideShowActivity) {
@@ -21,6 +23,7 @@ public class PauseResumeButtonListener implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
+		Log.i(TAG, "Pause/Weiter geklickt...");
 		Button pauseResumeButton = (Button) slideShowActivity
 				.findViewById(R.id.button_pause_resume);
 		if (slideShowActivity.isPaused()) {
