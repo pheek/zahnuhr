@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <string name="app_name">Reloj dental</string>
+    <string name="kinder">Niños hasta los 10 años</string>
+    <string name="jugendliche">Adolescente</string>
+    <string name="start_button">Empezar</string>
+    <string name="zielgruppe">Grupo de metas. Ejem. Los niños de una escuela alcanzan la meta de limpiarse los dientes correctamente, siguiendo el horario de lipieza dental de la escuela.</string>
+    <string name="genehmigung">Permiso:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
+    <string name="logo">Elemento gràfico que identifica a una entidad publica, privada, a un proyecto o producto especìfico.</string>
+    <string name="title_activity_slide_show">Presentaciòn</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="restart_button">Incio</string>
+    <string name="stopp">Parada</string>
+    <string name="pause">Pausa</string>
+    <string name="resume">Adelante</string>
+    <string name="title_activity_finished">Terminar</string>
+    
+    <string name="kf_or">Superficie oclusal superior, primer lado.</string>
+    <string name="kf_ol">Superficie oclusal superior, segundo lado.</string>
+    <string name="kf_ur">Superficie oclusal inferior, primer lado.</string>
+    <string name="kf_ul">Superficie oclusal inferior, segundo lado.</string>
+    
+    <string name="sf_r">Cepillar la superficie lateral del primer lado. Desde los dientes Molares hasta los dientes Caninos.</string>
+    <string name="sf_l">Cepillar la superficie lateral del segundo lado. Desde los dientes Molares hasta los dientes Caninos.</string>
+    
+    <!-- ab der Mittelstufe (10jährige): -->
+    <string name="sf_ro">Cepillar la parte superior frontal de los dientes Incisivos hasta los dientes caninos.</string>
+    <string name="sf_ru">Cepillar la parte inferior frontal hasta los dientes Caninos.</string>
+    <string name="sf_lo">Cepillar la parte frontal superior del segundo lado desde los dientes Molares hasta los dientes Caninos.</string>
+    <string name="sf_lu">Cepillar la parte frontal inferior del segundo lado, desde los dientes Molares hasta los dientes Caninos.</string>
+
+
+    <string name="i_or">Cepillar los dientes Molares superiores del primer lado.</string>
+    <string name="i_ov">Cepillar los dientes Incisivos superiores, interiormente.</string>
+    <string name="i_ol">Cepillar los dientes Molares superiores del primer lado.</string>
+    <string name="i_ur">Cepillar los dientes Molares inferiores del primer lado interiormente.</string>
+    <string name="i_uv">Cepillar los dientes Incisivos inferiores interiormente.</string>
+    <string name="i_ul">Cepillar los dientes Incisivos superiores del segundo lado interiormente.</string>
+
+    <string name="sf_vo">Cepillar los dientes Incisivos superiores.</string>
+    <string name="sf_vu">Cepillar los dientes Incisivos inferiores.</string>
+    
+    <string name="fertig">Listo. i Bravo!</string>
+    <string name="beenden_button">Salir</string>
+
+</resources>
