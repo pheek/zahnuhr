@@ -48,15 +48,16 @@ public class SlideShowActivity extends Activity implements Updater {
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+		setContentViewAndStartProgress();
+	}
+	
+	void setContentViewAndStartProgress() {
 		this.setContentView(R.layout.activity_slide_show);
-
 		registerPauseButtonListener();
-		
 		// register this for callback
 		StateCallback sc = StateImplementation.getInstance();
 		sc.setUpdater(this);
-
-	//	startProgress();
+		
 	}
 	
 	// to repaint after a screen turn (rotation)???
@@ -65,12 +66,7 @@ public class SlideShowActivity extends Activity implements Updater {
       Log.i(TAG, "onConfigurationchanged()");
 	  super.onConfigurationChanged(newConfig);	
 
-	  setContentView(R.layout.activity_slide_show);
-	  registerPauseButtonListener();
-	  
-	  // register this for callback
-	  StateCallback sc = StateImplementation.getInstance();
-	  sc.setUpdater(this);
+	  setContentViewAndStartProgress();
 	  // sofort neu zeichnen, und nicht auf den Repaint-Thread warten:
 	  this.update();
 	}

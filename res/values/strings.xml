@@ -3,7 +3,7 @@
 
     <string name="app_name">Zahnuhr</string>
     <string name="kinder">Kinder bis 10 Jahre</string>
-    <string name="jugendliche">Kinder ab 10 Jahren</string>
+    <string name="jugendliche">Ab 10 Jahren</string>
     <string name="start_button">Start</string>
     <string name="zielgruppe">Eine Zahnuhr für Kinder, welche in der Schule bereits ins richtige Zähneputzen eingeführt wurden.</string>
     <string name="genehmigung">Bilder mit freundlicher Genehmigung:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
@@ -30,8 +30,8 @@
     <string name="sf_lo">Seitenfläche zweite Seite oben bis und mit Eckzahn</string>
     <string name="sf_lu">Seitenfläche zweite Seite unten bis und mit Eckzahn</string>
 
-    <string name="sf_vo">Vorne oben</string>
-    <string name="sf_vu">Vorne unten</string>
+    <string name="sf_vo">Außen vorne oben</string>
+    <string name="sf_vu">Außen vorne unten</string>
 
     <string name="i_or">Innen oben erste Seite</string>
     <string name="i_ov">Innen oben vorne</string>
@@ -39,7 +39,6 @@
     <string name="i_ur">Innen unten erste Seite</string>
     <string name="i_uv">Innen unten vorne</string>
     <string name="i_ul">Innen unten zweite Seite</string>
-    
     
     <string name="fertig">Fertig, Bravo!</string>
     <string name="beenden_button">Beenden</string>

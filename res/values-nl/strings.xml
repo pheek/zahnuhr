@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <string name="app_name">Tandenuur</string>
+    <string name="kinder">Kinderen tot 10 jaar</string>
+    <string name="jugendliche">Kinderen vanaf 10 jaar</string>
+    <string name="start_button">Start</string>
+    <string name="zielgruppe">Transalte: Eine Zahnuhr für Kinder, welche in der Schule bereits ins richtige Zähneputzen eingeführt wurden.</string>
+    <string name="genehmigung">Foto’s met vriendelijke goedkeuring:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
+    <string name="logo">Logo</string>
+    <string name="title_activity_slide_show">Slideshow</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="restart_button">Herstart</string>
+    <string name="stopp">Stop</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Hervatten</string>
+    <string name="title_activity_finished">Klaar</string>
+    
+    <string name="kf_or">Kauwvlakken boven eerste zijde</string>
+    <string name="kf_ol">Kauwvlakken boven tweede zijde</string>
+    <string name="kf_ur">Kauwvlakken onder eerste zijde</string>
+    <string name="kf_ul">Kauwvlakken onder tweede zijde</string>
+    
+    <string name="sf_r">Zijvlakken eerste zijde tot en met hoektand</string>
+    <string name="sf_l">Zijvlakken tweede zijde tot en met hoektand</string>
+    
+    <!-- ab der Mittelstufe (10jährige): -->
+    <string name="sf_ro">Zijvlakken eerste zijde boven tot en met hoektand</string>
+    <string name="sf_ru">Zijvlakken eerste zijde onder tot en met hoektand</string>
+    <string name="sf_lo">Zijvlakken tweede zijde boven tot en met hoektand</string>
+    <string name="sf_lu">Zijvlakken tweede zijde onder tot en met hoektand</string>
+
+    <string name="sf_vo">Voorzijde boven</string>
+    <string name="sf_vu">Voorzijde onder</string>
+
+    <string name="i_or">Binnen boven eerste zijde</string>
+    <string name="i_ov">Binnen boven voorzijde</string>
+    <string name="i_ol">Binnen boven tweede zijde</string>
+    <string name="i_ur">Binnen onder eerste zijde</string>
+    <string name="i_uv">Binnen onder voorzijde</string>
+    <string name="i_ul">Binnen onder tweede zijde</string>
+    
+    <string name="fertig">Klaar! Fantastisch!</string>
+    <string name="beenden_button">Einde</string>
+
+</resources>
