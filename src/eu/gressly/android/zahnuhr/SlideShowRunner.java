@@ -10,7 +10,6 @@ import android.util.Log;
  */
 import eu.gressly.util.callback.Updater;
 
-
 /**
  * 
  * @author phi@gressly.eu
@@ -74,4 +73,5 @@ public class SlideShowRunner implements Runnable {
 	public void stop() {
 		running = false;
 	}
+	
 } // end class SlideShowRunner

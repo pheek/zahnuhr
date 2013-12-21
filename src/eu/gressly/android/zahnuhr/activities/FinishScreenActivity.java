@@ -2,6 +2,7 @@ package eu.gressly.android.zahnuhr.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -20,6 +21,7 @@ import eu.gressly.android.zahnuhr.util.StartClickListener;
  * @see SystemUiHider
  */
 public class FinishScreenActivity extends Activity {
+	private static final String TAG = "FinishScreenActivity";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -58,13 +60,13 @@ public class FinishScreenActivity extends Activity {
 				}
 				
 			});
-		}
-		
+		}	
 	}
+	
 	private void registerRestartZahnputzButton() {
 		Button restartButton = (Button) findViewById(R.id.button_restart);
 		 if(null == restartButton) {
-			 System.out.println("FEHLER: Resource button_restart nicht gefunden!!!");
+			 Log.w(TAG, "FEHLER: Resource button_restart nicht gefunden!!!");
 		 } else {
 			StateCallback sc = StateImplementation.getInstance();
 	        StartClickListener scl = new StartClickListener(sc.getAlter());

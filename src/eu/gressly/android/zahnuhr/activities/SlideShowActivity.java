@@ -57,7 +57,6 @@ public class SlideShowActivity extends Activity implements Updater {
 		// register this for callback
 		StateCallback sc = StateImplementation.getInstance();
 		sc.setUpdater(this);
-		
 	}
 	
 	// to repaint after a screen turn (rotation)???
@@ -84,7 +83,6 @@ public class SlideShowActivity extends Activity implements Updater {
 			return;
 		}
 		pbOverAll.setProgress((int) (actualSeconds * 100.0 / maxSeconds));
-		// pbOverAll.setBackgroundColor(Color.MAGENTA);
 	}
 
 	public void pause() {
@@ -113,7 +111,6 @@ public class SlideShowActivity extends Activity implements Updater {
 		}
 
 		if (state.getRemainingSecondsActState() <= 0) {
-			//System.out.println("DEBUG: neuZeichnen(): remainingSeconds <= 0");
 			state.nextInSequence();
 		}
 		// TODO: Feinkorrektur: der Wert, der getRemainingSecondsActState < 0 ist, muss vom
@@ -131,8 +128,6 @@ public class SlideShowActivity extends Activity implements Updater {
 	}
 
 	private void gotoViewFinished() {
-		// switch to other view
-		//System.out.println("DEBUG: Go to other view (finished). stopping slideShowrunner!");
 		StateImplementation.getInstance().stop();
 		Intent finishedView = new Intent(getApplicationContext(), FinishScreenActivity.class);
 		startActivity(finishedView);
@@ -148,13 +143,8 @@ public class SlideShowActivity extends Activity implements Updater {
 		SlideShowActivity.this.runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
-				//System.out.println("DEBUG runOnUiThread...");
 				ImageView img = (ImageView) findViewById(R.id.startImage);
-				//System.out.println("... found drawableID: "
-				//		+ paintedSchritt.getDrawableID());
 				img.setImageResource(paintedSchritt.getDrawableID());
-
-				//System.out.println("DEBUG: drawAndText: replace Text...");
 				TextView txt = (TextView) findViewById(R.id.textView_wo);
 				txt.setText(getResources().getText(paintedSchritt.getStringID()));
 			}

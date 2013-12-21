@@ -11,11 +11,14 @@ package eu.gressly.android.zahnuhr.stati;
  *                    KINDER and JUGENDLICHE.
  */
 
+import android.util.Log;
 import eu.gressly.android.zahnuhr.R;
 
 public class PutzSequenz {
-	private float totalSecs;
-	int           actPosIndex;
+	private final static String TAG = "PutzSequenz";
+	
+	private float totalSecs  ;
+	private int   actPosIndex;
 
 	private PutzSchritt[] stati; // one of "Kinder" or "Jugendliche"
 
@@ -78,8 +81,11 @@ public class PutzSequenz {
 	};
 
 	public PutzSequenz() {
-		// default mit setAlter überschreiben.
-		setAlter(PutzAlter.KINDER);
+		this(PutzAlter.KINDER);
+	}
+	
+	public PutzSequenz(PutzAlter alter) {
+		setAlter(alter);
 	}
 
 	public void setAlter(PutzAlter alter) {
@@ -97,6 +103,7 @@ public class PutzSequenz {
 
 	public void reset() {
 		actPosIndex = 0;
+		calcTotalSecs();
 	}
 
 	private void calcTotalSecs() {
@@ -122,14 +129,6 @@ public class PutzSequenz {
 		actPosIndex++;
 	}
 
-	float getOverallSecondsBeforThisState() {
-		float overall = 0;
-		for (int pos = 0; stati[pos] != getActPos(); pos++) {
-			overall = overall + stati[pos].getSeconds();
-		}
-		return overall;
-	}
-
 	public PutzAlter getAlter() {
 		if (stati == statiKinder)
 			return PutzAlter.KINDER;
@@ -137,6 +136,7 @@ public class PutzSequenz {
 			return PutzAlter.JUGENDLICHE;
 
 		// default, this should not happen
+		Log.w(TAG, "falsches Alter ?? Das sollte nicht passieren !!");
 		return PutzAlter.KINDER;
 	}
 

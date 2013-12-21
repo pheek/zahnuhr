@@ -20,21 +20,23 @@ public class PauseResumeButtonListener implements OnClickListener {
 	public PauseResumeButtonListener(SlideShowActivity slideShowActivity) {
 		this.slideShowActivity = slideShowActivity;
 	}
-
+/**
+ * Simple switch between "paused" and "active".
+ */
 	@Override
 	public void onClick(View v) {
 		Log.i(TAG, "Pause/Weiter geklickt...");
 		Button pauseResumeButton = (Button) slideShowActivity
 				.findViewById(R.id.button_pause_resume);
+		CharSequence label;
 		if (slideShowActivity.isPaused()) {
-			pauseResumeButton.setText(slideShowActivity.getResources().getText(
-					R.string.pause));
+			label = slideShowActivity.getResources().getText(R.string.pause);
 			slideShowActivity.resume();
 		} else {
-			pauseResumeButton.setText(slideShowActivity.getResources().getText(
-					R.string.resume));
+			label = slideShowActivity.getResources().getText(R.string.resume);
 			slideShowActivity.pause();
 		}
+		pauseResumeButton.setText(label);
 	}
 
 } // end class PauseResumeButton
