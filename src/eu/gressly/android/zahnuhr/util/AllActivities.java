@@ -33,6 +33,12 @@ public class AllActivities {
 			registeredActivities = new ArrayList<Activity>();
 		}
 		
+		removeSlideShowActivitiesAfterTerminating(a);
+		
+		registeredActivities.add(a);
+	}
+
+	private static void removeSlideShowActivitiesAfterTerminating(Activity a) {
 		if(a instanceof FinishScreenActivity) {
 			// remove all SlideShowActivities
 			@SuppressWarnings("unchecked")
@@ -44,16 +50,6 @@ public class AllActivities {
 				}
 			}
 		}
-// while registering a new "SlideActivity", unregister the old one.
-//		SlideShowActivity oldActivity = AllActivities.getNewestSlideActivity();
-//		if(null != oldActivity) {
-//			// !!! Must not be removed: Otherwise the active is also finished, because
-//			//     it is the same Activity.
-//			//oldActivity.finish();
-//			AllActivities.unregister(oldActivity);
-//		}	
-		
-		registeredActivities.add(a);
 	}
 
 	public static List<Activity> getAllRegisteredActivities() {
