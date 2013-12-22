@@ -3,6 +3,7 @@ package eu.gressly.android.zahnuhr.util;
 import java.util.ArrayList;
 import java.util.List;
 
+import eu.gressly.android.zahnuhr.activities.FinishScreenActivity;
 import eu.gressly.android.zahnuhr.activities.SlideShowActivity;
 import eu.gressly.android.zahnuhr.stati.PutzAlter;
 
@@ -27,17 +28,30 @@ public class AllActivities {
 	private static ArrayList<Activity> registeredActivities;
 
 	public static void registerActivity(Activity a) {
+		// lazy instantiation
 		if (null == registeredActivities) {
 			registeredActivities = new ArrayList<Activity>();
 		}
+		
+		if(a instanceof FinishScreenActivity) {
+			// remove all SlideShowActivities
+			@SuppressWarnings("unchecked")
+			ArrayList<Activity> clone = (ArrayList<Activity>) registeredActivities.clone();
+			for(Activity ac : clone) {
+				if(ac instanceof SlideShowActivity) {
+				  registeredActivities.remove(ac);
+				  ac.finish();
+				}
+			}
+		}
 // while registering a new "SlideActivity", unregister the old one.
-		SlideShowActivity oldActivity = AllActivities.getNewestSlideActivity();
-		if(null != oldActivity) {
-			// !!! Must not be removed: Otherwise the active is also finished, because
-			//     it is the same Activity.
-			//oldActivity.finish();
-			AllActivities.unregister(oldActivity);
-		}	
+//		SlideShowActivity oldActivity = AllActivities.getNewestSlideActivity();
+//		if(null != oldActivity) {
+//			// !!! Must not be removed: Otherwise the active is also finished, because
+//			//     it is the same Activity.
+//			//oldActivity.finish();
+//			AllActivities.unregister(oldActivity);
+//		}	
 		
 		registeredActivities.add(a);
 	}
@@ -60,11 +74,11 @@ public class AllActivities {
 		return newest;
 	}
 
-	public static void unregister(SlideShowActivity toRemove) {
-		if(null == AllActivities.registeredActivities) {
-		   return;
-		}
-		AllActivities.registeredActivities.remove(toRemove);
-	}
+//	public static void unregister(SlideShowActivity toRemove) {
+//		if(null == AllActivities.registeredActivities) {
+//		   return;
+//		}
+//		AllActivities.registeredActivities.remove(toRemove);
+//	}
 
 } // end class AllActivities

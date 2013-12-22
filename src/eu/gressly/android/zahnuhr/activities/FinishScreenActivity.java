@@ -52,9 +52,7 @@ public class FinishScreenActivity extends Activity {
 
 				@Override
 				public void onClick(View arg0) {
-					// TODO Auto-generated method stub
 					for(Activity a : AllActivities.getAllRegisteredActivities()) {
-						System.out.println("Closing Activity: " + a);
 						a.finish();
 					}					
 				}

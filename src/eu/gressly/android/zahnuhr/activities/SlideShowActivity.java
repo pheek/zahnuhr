@@ -38,7 +38,10 @@ public class SlideShowActivity extends Activity implements Updater {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+		
+		// avoid screen dimming:
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+		
 		// besser gleich in AllActivities eine Methode: 
 		AllActivities.registerActivity(this);
 
