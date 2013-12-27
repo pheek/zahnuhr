@@ -116,8 +116,7 @@ public class SlideShowActivity extends Activity implements Updater {
 		if (state.getRemainingSecondsActState() <= 0) {
 			state.nextInSequence();
 		}
-		// TODO: Feinkorrektur: der Wert, der getRemainingSecondsActState < 0 ist, muss vom
-		//       nächsten Schritt noch abgezogen werden!
+		
 		drawAndText(state.getActPutzSchritt());
 		paintingProgressBars();
 	}

@@ -60,7 +60,6 @@ public class StartMainActivity extends Activity {
         scl.setActivity(this);
         startButton.setOnClickListener(scl);
         
-        // TODO: Behandle jugendliche anders
         startButton = (Button) findViewById(R.id.button_start_jugendliche);
         scl = new StartClickListener(PutzAlter.JUGENDLICHE);
         scl.setActivity(this);

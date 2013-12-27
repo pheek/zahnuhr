@@ -98,11 +98,6 @@ public class StateImplementation implements StateCallback {
 		return timerOverall.getRemainingSeconds() - afterSecs;
 	}
 
-//	@Override
-//	public void setRemainingSecondsActState(float secs) {
-//		timerActStep.setRemainingSeconds(secs);
-//	}
-
 	@Override
 	public PutzSchritt getActPutzSchritt() {
 		return sequenz.getActPos();
