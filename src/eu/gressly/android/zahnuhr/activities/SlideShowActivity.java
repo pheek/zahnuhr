@@ -126,7 +126,9 @@ public class SlideShowActivity extends Activity implements Updater {
 		StateCallback state = StateImplementation.getInstance();
 		setProgress(R.id.progressBar_teilSchritt, state.getActPutzSchritt().getSeconds()
 				- state.getRemainingSecondsActState(), state.getActPutzSchritt().getSeconds());
-		setProgress(R.id.progressBar_overallProcess, state.getTotalSecs()
+
+		// Nur pro bild wechseln
+				setProgress(R.id.progressBar_overallProcess, state.getTotalSecs()
 				- state.getRemainingSecondsOverAll(),state.getTotalSecs());
 	}
 
