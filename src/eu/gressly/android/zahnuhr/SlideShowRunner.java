@@ -19,6 +19,9 @@ import eu.gressly.util.callback.Updater;
  */
 public class SlideShowRunner implements Runnable {
     private static final String TAG = "SlideShowRunner";
+    
+    private static final int REDRAW_MILLISECS = 100;
+    
 	private boolean running          ;
 	private Thread  thisThread = null;
 	private Updater callbackState    ;
@@ -45,7 +48,7 @@ public class SlideShowRunner implements Runnable {
 		while (running) {
 			try {
 				// refresh rate of the sliders.
-				Thread.sleep(250);
+				Thread.sleep(REDRAW_MILLISECS);
 				//System.out.println("SSR: running;");
 				callbackState.update();
 			} catch (InterruptedException ie) {

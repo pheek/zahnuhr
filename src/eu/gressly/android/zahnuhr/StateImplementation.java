@@ -24,16 +24,14 @@ public class StateImplementation implements StateCallback {
 	private Updater         updater        ;
 	private SlideShowRunner slideShowRunner;
 	private BackwardsTimer  timerOverall   ;
-	private BackwardsTimer  timerActStep   ;
 	private PutzSequenz     sequenz = null ; // must be set before switching to slideShwo
 	
 	private static StateImplementation singleton;
 	
 	private StateImplementation() {
 		this.slideShowRunner = SlideShowRunner.getInstance(this);
-		this.timerOverall = new BackwardsTimer();
-		this.timerActStep = new BackwardsTimer();
-		this.sequenz = new PutzSequenz();
+		this.timerOverall    = new BackwardsTimer();
+		this.sequenz         = new PutzSequenz();
 		this.sequenz.reset();
 	}
 	
@@ -59,42 +57,34 @@ public class StateImplementation implements StateCallback {
 		if(this.isPaused()) {this.resume();}
 		slideShowRunner.stop();
 		sequenz.reset();
-		resetTimers();
+		resetTimer();
 		slideShowRunner.start();
 	}
 	
-	private void resetTimers() {
+	private void resetTimer() {
 		this.setRemainingSecondsOverAll(sequenz.getTotalSecs());
-		this.setRemainingSecondsActState(sequenz.getActPos().getSeconds());
 	}
 
 	@Override
 	public void stop() {
 		slideShowRunner.stop();
-		resetTimers();
+		resetTimer();
 		sequenz.reset();
 	}
 
 	@Override
 	public void pause() {
-		timerActStep.pause();
 		timerOverall.pause();
 	}
 
 	@Override
 	public boolean isPaused() {
-		return timerActStep.isPaused() && timerOverall.isPaused();
+		return timerOverall.isPaused();
 	}
 
 	@Override
 	public void resume() {
-		timerActStep.resume();
 		timerOverall.resume();
-	}
-
-	@Override
-	public float getRemainingSecondsOverAll() {
-		return timerOverall.getRemainingSeconds();
 	}
 
 	@Override
@@ -104,13 +94,14 @@ public class StateImplementation implements StateCallback {
 
 	@Override
 	public float getRemainingSecondsActState() {
-		return timerActStep.getRemainingSeconds();
+		float afterSecs  = sequenz.getTotalSecsAfterActState();
+		return timerOverall.getRemainingSeconds() - afterSecs;
 	}
 
-	@Override
-	public void setRemainingSecondsActState(float secs) {
-		timerActStep.setRemainingSeconds(secs);
-	}
+//	@Override
+//	public void setRemainingSecondsActState(float secs) {
+//		timerActStep.setRemainingSeconds(secs);
+//	}
 
 	@Override
 	public PutzSchritt getActPutzSchritt() {
@@ -149,7 +140,17 @@ public class StateImplementation implements StateCallback {
 	@Override
 	public void nextInSequence() {
 		sequenz.nextPos();
-		setRemainingSecondsActState(this.sequenz.getActPos().getSeconds());
+		//setRemainingSecondsActState(this.sequenz.getActPos().getSeconds());
+	}
+
+	@Override
+	public boolean isGlobalTimeOver() {
+		return this.timerOverall.getRemainingSeconds() <= 0.0f;
+	}
+
+	@Override
+	public float getRemainingSecondsFromStartPositionActState() {
+		return this.sequenz.getTotalSecsAfterActState() + this.sequenz.getActPos().getSeconds();
 	}
 
 } // end class StateImplementation

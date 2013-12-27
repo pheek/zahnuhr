@@ -18,11 +18,11 @@
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:layout_below="@+id/button_pause_resume"
-            android:layout_toRightOf="@+id/startImage"
+            android:layout_alignParentTop="true"
             android:background="#00f"
             android:maxHeight="20dp"
-            android:minHeight="20dp"
+            android:minHeight="20dp"  
+            android:layout_toRightOf="@+id/startImage"
             android:scrollbarSize="20dp" />
 
         <ProgressBar
@@ -37,7 +37,7 @@
             android:id="@+id/button_pause_resume"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_below="@+id/progressBar_overallProcess"
             android:layout_toRightOf="@+id/startImage"
             android:text="@string/pause" />
 

@@ -23,10 +23,11 @@ public interface StateCallback extends Callback
 	 boolean isPaused()   ;
 	 void    resume()     ;
 	  
-	 float   getRemainingSecondsOverAll();
 	 void    setRemainingSecondsOverAll(float secs);
+	 boolean isGlobalTimeOver();
+	 float   getRemainingSecondsFromStartPositionActState();
+	 
 	 float   getRemainingSecondsActState();
-	 void    setRemainingSecondsActState(float secs);
 	  
 	 PutzSchritt getActPutzSchritt();
 	 void setAlter(PutzAlter alter);

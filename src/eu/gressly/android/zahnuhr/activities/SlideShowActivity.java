@@ -107,7 +107,7 @@ public class SlideShowActivity extends Activity implements Updater {
 	
 	private synchronized void neuZeichnen() {
 		StateCallback state = StateImplementation.getInstance();
-		if (state.getRemainingSecondsOverAll() <= 0.0) {
+		if (state.isGlobalTimeOver()) {
 			state.stop();
 			gotoViewFinished();
 			return;
@@ -129,7 +129,7 @@ public class SlideShowActivity extends Activity implements Updater {
 
 		// Nur pro bild wechseln
 				setProgress(R.id.progressBar_overallProcess, state.getTotalSecs()
-				- state.getRemainingSecondsOverAll(),state.getTotalSecs());
+				- state.getRemainingSecondsFromStartPositionActState(), state.getTotalSecs());
 	}
 
 	private void gotoViewFinished() {

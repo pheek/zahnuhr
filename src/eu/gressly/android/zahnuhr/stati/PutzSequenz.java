@@ -140,4 +140,12 @@ public class PutzSequenz {
 		return PutzAlter.KINDER;
 	}
 
+	public float getTotalSecsAfterActState() {
+		float tot = 0.0f;
+		for(int pos = actPosIndex + 1; pos < stati.length; pos ++) {
+			tot = tot + stati[pos].getSeconds();
+		}
+		return tot;
+	}
+
 } // end class PutzSequenz
