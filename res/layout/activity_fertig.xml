@@ -44,18 +44,11 @@
 
      
             <Button
-                android:id="@+id/button_restart"
+                android:id="@+id/button_ok"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/restart_button" />
-
-            <Button
-                android:id="@+id/button_quit"
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/beenden_button" />
+                android:text="@string/ok_button" />
      
 
     </LinearLayout>

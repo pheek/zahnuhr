@@ -1,6 +1,7 @@
 package eu.gressly.android.zahnuhr.activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -38,38 +39,24 @@ public class FinishScreenActivity extends Activity {
              
 		setContentView(R.layout.activity_fertig);
 		
-		registerRestartZahnputzButton();
-		
-		registerQuitButton();
+		registerOKButton();
+
 	}
 
-	private void registerQuitButton() {
-		Button quitButton = (Button) findViewById(R.id.button_quit);
-		if(null == quitButton) {
-			System.out.println("FEHLER: Resource button_quit nicht gefunden");
-		} else {
-			quitButton.setOnClickListener( new OnClickListener() {
-
-				@Override
-				public void onClick(View arg0) {
-					for(Activity a : AllActivities.getAllRegisteredActivities()) {
-						a.finish();
-					}					
-				}
-				
-			});
-		}	
-	}
 	
-	private void registerRestartZahnputzButton() {
-		Button restartButton = (Button) findViewById(R.id.button_restart);
+	
+	private void registerOKButton() {
+		Button restartButton = (Button) findViewById(R.id.button_ok);
 		 if(null == restartButton) {
-			 Log.w(TAG, "FEHLER: Resource button_restart nicht gefunden!!!");
+			 Log.w(TAG, "FEHLER: Resource button_ok nicht gefunden!!!");
 		 } else {
-			StateCallback sc = StateImplementation.getInstance();
-	        StartClickListener scl = new StartClickListener(sc.getAlter());
-	        scl.setActivity(this);
-	        restartButton.setOnClickListener(scl);
+			restartButton.setOnClickListener(new OnClickListener() {
+			    @Override
+			    public void onClick(View arg0) {
+				  Intent startActivity = new Intent(FinishScreenActivity.this, StartMainActivity.class);
+				  startActivity(startActivity);
+			    }
+			});
 		 }
 	}
 
