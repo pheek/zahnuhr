@@ -30,9 +30,21 @@ public class StartMainActivity extends Activity {
         AllActivities.registerActivity(this);
         hideTitleAndNotificationbar();
 
-        setStartButonHandler();
+        buttonTexteLos();
+        setStartButonHandler();    
     }
-  
+   
+    void buttonTexteLos() {
+    	Button startButtonKinder = (Button) findViewById(R.id.button_start_kinder);
+    	String kinderLos = (String) getText(R.string.kinder) + ": " +
+    	                         getText(R.string.los_text);
+    	startButtonKinder.setText(kinderLos);
+    	
+    	Button startButtonJugendliche = (Button) findViewById(R.id.button_start_jugendliche);
+    	String jugendlicheLos = (String) getText(R.string.jugendliche) + ": " +
+    	                         getText(R.string.los_text);
+    	startButtonJugendliche.setText(jugendlicheLos);
+    }
     
     @Override
     protected void onPostResume() {

@@ -1,79 +1,64 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" 
-    android:background="@color/app_background">
+    android:layout_width ="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/app_background" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width ="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/logo"
+        android:padding="7dp"
+        android:src="@drawable/ic_launcher" />
 
     <TextView
-        android:id="@+id/textView_kinder"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView_zielgruppe"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/imageView1"
-        android:text="@string/kinder" />
+        android:padding="15dp"
+        android:text="@string/zielgruppe"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/zielgruppeText"
+        android:textSize="@dimen/erklaerungstexte" />
 
     <Button
         android:id="@+id/button_start_kinder"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView_kinder"
-        android:layout_below="@+id/textView_kinder"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imageView1"
         android:background="@color/start_button_background"
         android:text="@string/start_button"
         android:textColor="@color/start_button_foreground"
         android:textSize="@dimen/start_button_text_size" />
-
-    <TextView
-        android:id="@+id/textView_jugendliche"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button_start_kinder"
-        android:layout_below="@+id/button_start_kinder"
-        android:layout_marginTop="16dp"
-        android:text="@string/jugendliche" />
 
     <Button
         android:id="@+id/button_start_jugendliche"
-        android:padding="2dp"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView_jugendliche"
-        android:layout_below="@+id/textView_jugendliche"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/button_start_kinder"
+        android:background="@color/start_button_background"
+        android:padding="2dp"
+        android:layout_marginTop="5dp"
         android:text="@string/start_button"
         android:textColor="@color/start_button_foreground"
-        android:background="@color/start_button_background"
         android:textSize="@dimen/start_button_text_size" />
-
-    <TextView
-        android:id="@+id/textView_zielgruppe"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button_start_jugendliche"
-        android:layout_centerHorizontal="true"
-android:padding="15dp"
-        android:layout_marginTop="30dp"
-        android:text="@string/zielgruppe"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/zielgruppeText"
-        android:textSize="@dimen/erklaerungstexte" />
-
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView_kinder"
-        android:contentDescription="@string/logo"
-        android:padding="7dp"
-        android:src="@drawable/ic_launcher" />
 
     <TextView
         android:id="@+id/textView_genehmigung"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView_zielgruppe"
+        android:layout_below="@+id/button_start_jugendliche"
         android:padding="15dp"
         android:text="@string/genehmigung"
         android:textAppearance="?android:attr/textAppearanceMedium"

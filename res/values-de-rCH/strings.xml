@@ -4,8 +4,8 @@
     <string name="app_name">Zaauur</string>
     <string name="kinder">Kinde bis 10 Jaar</string>
     <string name="jugendliche">Ab 10 Jaar</string>
-    <string name="start_button">Los</string>
-    <string name="zielgruppe">Ä Zaauur fü Chinde, wo-n-i de Schuel scho g\'leert händ richtig Zää z\'butze.</string>
+    <string name="start_button">Start</string>
+    <string name="zielgruppe">Ä Zaauur fü Chinde, wo-n-i de Schuel scho g\'léért händ richtig Zää z\'butze.</string>
     <string name="genehmigung">Mit fründliche G\'néémigung:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
     <string name="logo">Logo</string>
     <string name="title_activity_slide_show">SlideShow</string>
