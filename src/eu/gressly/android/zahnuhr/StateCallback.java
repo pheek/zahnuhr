@@ -34,4 +34,5 @@ public interface StateCallback extends Callback
      PutzAlter getAlter();
 	 float getTotalSecs();
      void nextInSequence();
+     boolean isGongTime();
 }

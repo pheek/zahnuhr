@@ -148,4 +148,14 @@ public class StateImplementation implements StateCallback {
 		return this.sequenz.getTotalSecsAfterActState() + this.sequenz.getActPos().getSeconds();
 	}
 
+	public static final float GONG_LEN = 2.5f;
+	@Override
+	public boolean isGongTime() {
+		// gong never palyed after last sequence
+		if(this.sequenz.isLastPos()) {
+			return false;
+		}
+		return this.getRemainingSecondsActState() < GONG_LEN;
+	}
+
 } // end class StateImplementation

@@ -125,6 +125,10 @@ public class PutzSequenz {
 		return null;
 	}
 
+	public boolean isLastPos() {
+		return actPosIndex == stati.length - 1;
+	}
+	
 	public void nextPos() {
 		actPosIndex++;
 	}

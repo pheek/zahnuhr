@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
- <string name="app_name">Reloj dental</string>
+    <string name="app_name">Reloj dental</string>
     <string name="kinder">Niños hasta los 10 años</string>
     <string name="jugendliche">Adolescente</string>
     <string name="start_button">Empezar</string>

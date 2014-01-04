@@ -10,6 +10,7 @@ package eu.gressly.android.zahnuhr.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
@@ -105,6 +106,8 @@ public class SlideShowActivity extends Activity implements Updater {
 		this.neuZeichnen();
 	}
 	
+	
+	boolean isGonging = false;
 	private synchronized void neuZeichnen() {
 		StateCallback state = StateImplementation.getInstance();
 		if (state.isGlobalTimeOver()) {
@@ -119,6 +122,32 @@ public class SlideShowActivity extends Activity implements Updater {
 		
 		drawAndText(state.getActPutzSchritt());
 		paintingProgressBars();
+		if(state.isGongTime() && !isGonging) {
+			isGonging = true;
+			blackScreen();
+			gongPlay();
+		} 
+		if(!state.isGongTime()) {
+			isGonging = false;
+		}
+		
+	}
+	
+	void blackScreen() {
+		SlideShowActivity.this.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				ImageView img = (ImageView) findViewById(R.id.startImage);
+				img.setImageResource(R.drawable.blackout);
+				
+			}
+		});
+		
+	}
+	
+	void gongPlay() {
+		MediaPlayer mPlayer = MediaPlayer.create(SlideShowActivity.this, R.raw.gong);
+		mPlayer.start();
 	}
 	
 	private void paintingProgressBars() {
@@ -147,10 +176,12 @@ public class SlideShowActivity extends Activity implements Updater {
 		SlideShowActivity.this.runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
-				ImageView img = (ImageView) findViewById(R.id.startImage);
-				img.setImageResource(paintedSchritt.getDrawableID());
-				TextView txt = (TextView) findViewById(R.id.textView_wo);
-				txt.setText(getResources().getText(paintedSchritt.getStringID()));
+				if(!isGonging) {
+			    	ImageView img = (ImageView) findViewById(R.id.startImage);
+				    img.setImageResource(paintedSchritt.getDrawableID());
+				    TextView txt = (TextView) findViewById(R.id.textView_wo);
+				    txt.setText(getResources().getText(paintedSchritt.getStringID()));
+				}
 			}
 		});
 	}
