@@ -149,6 +149,7 @@ public class StateImplementation implements StateCallback {
 	}
 
 	public static final float GONG_LEN = 2.5f;
+	// ACHTUNG: Dies entspricht genau der Länge des Tons!
 	@Override
 	public boolean isGongTime() {
 		// gong never palyed after last sequence
