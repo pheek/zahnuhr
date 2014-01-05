@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
- <string name="app_name">Tandenuur</string>
+  <resources>
+    <string name="app_name">Tandenuur</string>
     <string name="kinder">Kinderen tot 10 jaar</string>
     <string name="jugendliche">Kinderen vanaf 10 jaar</string>
-    <string name="start_button">Start</string>
+    <string name="start_button">Start</string> 
+    <string name="los_text">(nl:) Los</string>
     <string name="zielgruppe">Transalte: Eine Zahnuhr für Kinder, welche in der Schule bereits ins richtige Zähneputzen eingeführt wurden.</string>
     <string name="genehmigung">Foto’s met vriendelijke goedkeuring:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
     <string name="logo">Logo</string>
@@ -42,4 +43,4 @@
     <string name="fertig">Klaar! Fantastisch!</string>
     <string name="beenden_button">Einde</string>
 
-</resources>
+  </resources>

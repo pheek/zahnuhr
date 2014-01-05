@@ -140,6 +140,9 @@ public class SlideShowActivity extends Activity implements Updater {
 				ImageView img = (ImageView) findViewById(R.id.startImage);
 				img.setImageResource(R.drawable.blackout);
 				
+				StateCallback state = StateImplementation.getInstance();
+			    TextView txt = (TextView) findViewById(R.id.textView_wo);
+			    txt.setText(getResources().getText(state.getActPutzSchritt().getStringID()));
 			}
 		});
 		

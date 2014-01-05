@@ -34,16 +34,19 @@ public class StartMainActivity extends Activity {
         setStartButonHandler();    
     }
    
-    void buttonTexteLos() {
-    	Button startButtonKinder = (Button) findViewById(R.id.button_start_kinder);
-    	String kinderLos = (String) getText(R.string.kinder) + ": " +
-    	                         getText(R.string.los_text);
-    	startButtonKinder.setText(kinderLos);
-    	
-    	Button startButtonJugendliche = (Button) findViewById(R.id.button_start_jugendliche);
-    	String jugendlicheLos = (String) getText(R.string.jugendliche) + ": " +
-    	                         getText(R.string.los_text);
-    	startButtonJugendliche.setText(jugendlicheLos);
+    /**
+     * Hier werden die Texte "Kinder ab 10 Jahern" mit dem Text "Los"
+     * verknüpft. Dazwischen kommt ein Doppelpunkt und am Schluss ein Ausrufezeichnen.
+     */
+    private void buttonTexteLos() {
+    	losText(R.id.button_start_kinder     , R.string.kinder     );
+    	losText(R.id.button_start_jugendliche, R.string.jugendliche);
+    }
+    
+    private void losText(int rButtonID, int rTextID) {
+      Button startButton = (Button) findViewById(rButtonID);
+      String losText     = (String) getText(rTextID) + ": " + getText(R.string.los_text) + "!";
+      startButton.setText(losText);
     }
     
     @Override
@@ -53,9 +56,9 @@ public class StartMainActivity extends Activity {
     	//      mit "back" von der 2. Activity hier zurückgesprungen wird.
     	//      Wahrscheinlich in einem anderen on...-Handler.
     	StateCallback sc = StateImplementation.getInstance();
-    	sc.stop();
-    	
+    	sc.stop();  	
     }
+    
 	private void hideTitleAndNotificationbar() {
 		//Hide title
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -67,13 +70,14 @@ public class StartMainActivity extends Activity {
 	}
 
 	private void setStartButonHandler() {
-		Button startButton = (Button) findViewById(R.id.button_start_kinder);
-        StartClickListener scl = new StartClickListener(PutzAlter.KINDER);
-        scl.setActivity(this);
-        startButton.setOnClickListener(scl);
+		configStartButtonHandler(R.id.button_start_kinder     , PutzAlter.KINDER     );
+		configStartButtonHandler(R.id.button_start_jugendliche, PutzAlter.JUGENDLICHE);
+	}
+
+	private void configStartButtonHandler(int rID, PutzAlter pa) {
+		Button             startButton = (Button) findViewById(rID);
+        StartClickListener scl         = new StartClickListener(pa);
         
-        startButton = (Button) findViewById(R.id.button_start_jugendliche);
-        scl = new StartClickListener(PutzAlter.JUGENDLICHE);
         scl.setActivity(this);
         startButton.setOnClickListener(scl);
 	}

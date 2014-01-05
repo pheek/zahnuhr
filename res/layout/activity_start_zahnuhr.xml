@@ -1,6 +1,11 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android" 
     android:layout_width ="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@color/app_background">
+    
+  <RelativeLayout 
+    android:layout_width ="fill_parent"
+    android:layout_height="wrap_content"
     android:background="@color/app_background" >
 
     <ImageView
@@ -28,29 +33,29 @@
 
     <Button
         android:id="@+id/button_start_kinder"
-        style="?android:attr/buttonStyleSmall"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/imageView1"
-        android:background="@color/start_button_background"
+       
         android:text="@string/start_button"
-        android:textColor="@color/start_button_foreground"
+
         android:textSize="@dimen/start_button_text_size" />
 
     <Button
         android:id="@+id/button_start_jugendliche"
-        style="?android:attr/buttonStyleSmall"
+    
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:layout_below="@+id/button_start_kinder"
-        android:background="@color/start_button_background"
+    
         android:padding="2dp"
         android:layout_marginTop="5dp"
         android:text="@string/start_button"
-        android:textColor="@color/start_button_foreground"
+   
         android:textSize="@dimen/start_button_text_size" />
 
     <TextView
@@ -65,4 +70,5 @@
         android:textColor="@color/genehmigungText"
         android:textSize="@dimen/erklaerungstexte" />
 
-</RelativeLayout>
+  </RelativeLayout>
+</ScrollView>

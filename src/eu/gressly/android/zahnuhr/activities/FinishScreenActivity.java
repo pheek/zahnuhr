@@ -10,10 +10,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import eu.gressly.android.zahnuhr.R;
-import eu.gressly.android.zahnuhr.StateCallback;
-import eu.gressly.android.zahnuhr.StateImplementation;
 import eu.gressly.android.zahnuhr.util.AllActivities;
-import eu.gressly.android.zahnuhr.util.StartClickListener;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
