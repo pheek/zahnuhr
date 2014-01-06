@@ -26,17 +26,16 @@ public class PauseResumeButtonListener implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		Log.i(TAG, "Pause/Weiter geklickt...");
-		Button pauseResumeButton = (Button) slideShowActivity
-				.findViewById(R.id.button_pause_resume);
-		CharSequence label;
-		if (slideShowActivity.isPaused()) {
-			label = slideShowActivity.getResources().getText(R.string.pause);
+		
+		if(slideShowActivity.isPaused()) {
 			slideShowActivity.resume();
 		} else {
-			label = slideShowActivity.getResources().getText(R.string.resume);
 			slideShowActivity.pause();
 		}
-		pauseResumeButton.setText(label);
+		
+		slideShowActivity.setPausedResumeText();
+	
+		
 	}
 
 } // end class PauseResumeButton

@@ -2,5 +2,5 @@
 <resources>
   <dimen name="genehmigung">22sp</dimen>
   <dimen name="start_button_text_size">36sp</dimen> 
-  <dimen name="erklaerungstexte">13sp</dimen>
+  <dimen name="erklaerungstexte">15sp</dimen>
 </resources>

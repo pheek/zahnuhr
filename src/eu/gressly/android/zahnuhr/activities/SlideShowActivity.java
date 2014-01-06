@@ -72,6 +72,7 @@ public class SlideShowActivity extends Activity implements Updater {
 	  setContentViewAndStartProgress();
 	  // sofort neu zeichnen, und nicht auf den Repaint-Thread warten:
 	  this.update();
+	  setPausedResumeText();
 	}
 	
 	private void registerPauseButtonListener() {
@@ -187,6 +188,18 @@ public class SlideShowActivity extends Activity implements Updater {
 				}
 			}
 		});
+	}
+
+	public void setPausedResumeText() {
+		Button pauseResumeButton = (Button) findViewById(R.id.button_pause_resume);
+		CharSequence label;
+		
+		if (isPaused()) {
+			label = getResources().getText(R.string.resume);
+		} else {
+			label = getResources().getText(R.string.pause);
+		}
+		pauseResumeButton.setText(label);
 	}
 
 } // end class: SlideShowActivity
