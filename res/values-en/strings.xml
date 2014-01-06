@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Teeth Timer</string>
+    <string name="kinder">Children up to 10 years</string>
+    <string name="jugendliche">Older than 10 years</string>
+    <string name="start_button">Start</string>
+    <string name="los_text">Go</string>
+    <string name="zielgruppe">(en: )Eine Zahnuhr für Kinder, welche in der Schule bereits ins richtige Zähneputzen eingeführt wurden.</string>
+    <string name="genehmigung">(en: )Bilder mit freundlicher Genehmigung:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
+    <string name="logo">Logo</string>
+    <string name="title_activity_slide_show">SlideShow</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="restart_button">Restart</string>
+    <string name="ok_button">OK</string>
+    <string name="stopp">Stop</string>
+    <string name="pause">Break</string>
+    <string name="resume">Resume</string>
+    <string name="title_activity_finished">Complete</string>
+    
+    <string name="kf_or">(en:)Kauflächen oben erste Seite</string>
+    <string name="kf_ol">(en:)Kauflächen oben zweite Seite</string>
+    <string name="kf_ur">(en:)Kauflächen unten erste Seite</string>
+    <string name="kf_ul">(en:)Kauflächen unten zweite Seite</string>
+    
+    <string name="sf_r">(en:)Seitenfläche erste Seite bis und mit Eckzahn</string>
+    <string name="sf_l">(en:)Seitenfläche zweite Seite bis und mit Eckzahn</string>
+    
+    <!-- ab der Mittelstufe (10jährige): -->
+    <string name="sf_ro">(en:)Seitenfläche erste Seite oben bis und mit Eckzahn</string>
+    <string name="sf_ru">(en:)Seitenfläche erste Seite unten bis und mit Eckzahn</string>
+    <string name="sf_lo">(en:)Seitenfläche zweite Seite oben bis und mit Eckzahn</string>
+    <string name="sf_lu">(en:)Seitenfläche zweite Seite unten bis und mit Eckzahn</string>
+
+    <string name="sf_vo">(en:)Außen vorne oben</string>
+    <string name="sf_vu">(en:)Außen vorne unten</string>
+
+    <string name="i_or">(en:)Innen oben erste Seite</string>
+    <string name="i_ov">(en:)Innen oben vorne</string>
+    <string name="i_ol">(en:)Innen oben zweite Seite</string>
+    <string name="i_ur">(en:)Innen unten erste Seite</string>
+    <string name="i_uv">(en:)Innen unten vorne</string>
+    <string name="i_ul">(en:)Innen unten zweite Seite</string>
+    
+    <string name="fertig">Finished, Bravo!</string>
+    <string name="beenden_button">Terminate</string>
+</resources>

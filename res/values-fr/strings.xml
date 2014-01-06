@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sablier des dents</string>
+    <string name="kinder">Enfants jusqu\'à 10 ans</string>
+    <string name="jugendliche">Adolescents</string>
+    <string name="start_button">Démarrer</string>
+    <string name="los_text">Partez</string>
+    <string name="zielgruppe">Un chronomètre dentaire pour enfants, qui ont déjà été introduits au brossage correct des dents à l\'école.</string>
+    <string name="genehmigung">Images avec l\'aimable autorisation:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
+    <string name="logo">Logo</string>
+    <string name="title_activity_slide_show">Animation</string>
+    <string name="dummy_button">dummy button</string>
+    <string name="restart_button">Redémarrer</string>
+    <string name="ok_button">Confirmer</string>
+    <string name="stopp">Arrêter</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Continuer</string>
+    <string name="title_activity_finished">Terminé</string>
+    
+    <string name="kf_or">Surface de mastication supérieure, premier côté</string>
+    <string name="kf_ol">Surface de mastication supérieure, deuxième côté</string>
+    <string name="kf_ur">Surface de mastication inférieure, premier côté</string>
+    <string name="kf_ul">Surface de mastication inférieure, deuxième côté</string>
+    
+    <string name="sf_r">Surface latérale des molaires y compris canine, premier côté</string>
+    <string name="sf_l">Surface latérale des molaires y compris canine, deuxième côté</string>
+    
+    <!-- ab der Mittelstufe (10jährige): -->
+    <string name="sf_ro">Surface latérale des molaires supérieures y compris canine, premier côté</string>
+    <string name="sf_ru">Surface latérale des molaires inférieures y compris canine, premier côté</string>
+    <string name="sf_lo">Surface latérale des molaires supérieures y compris canine, deuxième côté</string>
+    <string name="sf_lu">Surface latérale des molaires inférieures y compris canine, deuxième côté</string>
+
+    <string name="sf_vo">Extérieur avant en haut</string>
+    <string name="sf_vu">Extérieur avant en bas</string>
+
+    <string name="i_or">Intérieur en haut, premier côté</string>
+    <string name="i_ov">Intérieur avant en haut</string>
+    <string name="i_ol">Intérieur en haut, deuxième côté</string>
+    <string name="i_ur">Intérieur en bas, premier côté</string>
+    <string name="i_uv">Intérieur en bas, avant</string>
+    <string name="i_ul">Intérieur en bas, deuxième côté</string>
+    
+    <string name="fertig">Fini, bravo!</string>
+    <string name="beenden_button">Quitter</string>
+</resources>

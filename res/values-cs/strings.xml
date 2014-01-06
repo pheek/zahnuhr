@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Zubní hodinky</string>
+    <string name="kinder">Děti do 10 let</string>
+    <string name="jugendliche">Mladiství</string>
+    <string name="start_button">Začátek</string>
+    <string name="los_text">Start</string>
+    <string name="zielgruppe">Zubní hodinky pro děti, které se ve škole už naučili správně čistit svoje zubí.</string>
+    <string name="genehmigung">Obrazy s srdečním povolením:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
+    <string name="logo">Logo</string>
+    <string name="title_activity_slide_show">Animace</string>
+    <string name="dummy_button">dummy button</string>
+    <string name="restart_button">Restartovat</string>
+    <string name="ok_button">Potvrdit</string>
+    <string name="stopp">Zastavit</string>
+    <string name="pause">Pauza</string>
+    <string name="resume">Pokračovat</string>
+    <string name="title_activity_finished">Hotovo</string>
+    
+    <string name="kf_or">Horní zubní povrch, první strana</string>
+    <string name="kf_ol">Horní zubní povrch, druhá strana</string>
+    <string name="kf_ur">Dolní zubní povrch, první strana</string>
+    <string name="kf_ul">Dolní zubní povrch, druhá strana</string>
+    
+    <string name="sf_r">Postranní povrch, stoličky s špičákem, první strana</string>
+    <string name="sf_l">Postranní povrch, stoličky s špičákem, druhá strana</string>
+    
+    <!-- ab der Mittelstufe (10jährige): -->
+    <string name="sf_ro">Horní postranní povrch, stoličky s špičákem, první strana</string>
+    <string name="sf_ru">Dolní postranní povrch, stoličky s špičákem, první strana</string>
+    <string name="sf_lo">Horní postranní povrch, stoličky s špičákem, druhá strana</string>
+    <string name="sf_lu"></string>
+
+    <string name="sf_vo">Vnější přední horní</string>
+    <string name="sf_vu">Vnější přední dolní</string>
+
+    <string name="i_or">Vnitřní horní, první strana</string>
+    <string name="i_ov">Vnitřní horní, přední strana</string>
+    <string name="i_ol">Vnitřní horní, druhá strana</string>
+    <string name="i_ur">Vnitřní dolní, první strana</string>
+    <string name="i_uv">Vnitřní dolní, přední strana</string>
+    <string name="i_ul">Vnitřní dolní, druhá strana</string>
+    
+    <string name="fertig">Hotovo, bravo!</string>
+    <string name="beenden_button">Zavřít</string>
+</resources>
