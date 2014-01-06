@@ -36,6 +36,7 @@ import eu.gressly.util.callback.Updater;
 public class SlideShowActivity extends Activity implements Updater {
 	private static final String TAG = "SlideShowActivity";
    
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -54,6 +55,20 @@ public class SlideShowActivity extends Activity implements Updater {
 
 		setContentViewAndStartProgress();
 	}
+
+	
+	// to repaint after a screen turn (rotation)
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+		Log.i(TAG, "onConfigurationchanged()");
+		super.onConfigurationChanged(newConfig);	
+		
+		setContentViewAndStartProgress();
+		// sofort neu zeichnen, und nicht auf den Repaint-Thread warten:
+		this.update();
+		setPausedResumeText();
+	}
+	
 	
 	void setContentViewAndStartProgress() {
 		this.setContentView(R.layout.activity_slide_show);
@@ -63,17 +78,6 @@ public class SlideShowActivity extends Activity implements Updater {
 		sc.setUpdater(this);
 	}
 	
-	// to repaint after a screen turn (rotation)???
-	@Override
-	public void onConfigurationChanged(Configuration newConfig) {
-      Log.i(TAG, "onConfigurationchanged()");
-	  super.onConfigurationChanged(newConfig);	
-
-	  setContentViewAndStartProgress();
-	  // sofort neu zeichnen, und nicht auf den Repaint-Thread warten:
-	  this.update();
-	  setPausedResumeText();
-	}
 	
 	private void registerPauseButtonListener() {
 		Button pauseResumeButton = (Button) findViewById(R.id.button_pause_resume);
@@ -81,34 +85,39 @@ public class SlideShowActivity extends Activity implements Updater {
 		pauseResumeButton.setOnClickListener(prbl);
 	}
 
+	
 	private void setProgress(int bar_rid, float actualSeconds, float maxSeconds) {
-		ProgressBar pbOverAll = (ProgressBar) findViewById(bar_rid);
-		if(null == pbOverAll) {
+		ProgressBar actualProgressBar = (ProgressBar) findViewById(bar_rid);
+		if(null == actualProgressBar) {
 			Log.e(TAG, "set Progress has a NullPointer!!!!");
 			return;
 		}
-		pbOverAll.setProgress((int) (actualSeconds * 100.0 / maxSeconds));
+		actualProgressBar.setProgress((int) (actualSeconds * 100.0 / maxSeconds));
 	}
 
+	
 	public void pause() {
 		StateImplementation.getInstance().pause();
 	}
 
+	
 	public void resume() {
 		StateImplementation.getInstance().resume();
 	}
 
+	
 	public boolean isPaused() {
 		return StateImplementation.getInstance().isPaused();
 	}
 
+	
 	@Override
 	public void update() {
 		this.neuZeichnen();
 	}
 	
 	
-	boolean isGonging = false;
+	private boolean isGonging = false;
 	private synchronized void neuZeichnen() {
 		StateCallback state = StateImplementation.getInstance();
 		if (state.isGlobalTimeOver()) {
@@ -134,42 +143,44 @@ public class SlideShowActivity extends Activity implements Updater {
 		
 	}
 	
-	void blackScreen() {
-		SlideShowActivity.this.runOnUiThread(new Runnable() {
-			@Override
-			public void run() {
-				ImageView img = (ImageView) findViewById(R.id.startImage);
-				img.setImageResource(R.drawable.blackout);
-				
-				StateCallback state = StateImplementation.getInstance();
-			    TextView txt = (TextView) findViewById(R.id.textView_wo);
-			    txt.setText(getResources().getText(state.getActPutzSchritt().getStringID()));
-			}
-		});
-		
-	}
 	
+	/**
+	 * Mit Musik geht alles besser.
+	 */
 	void gongPlay() {
 		MediaPlayer mPlayer = MediaPlayer.create(SlideShowActivity.this, R.raw.gong);
 		mPlayer.start();
 	}
 	
+	
 	private void paintingProgressBars() {
 		StateCallback state = StateImplementation.getInstance();
-		setProgress(R.id.progressBar_teilSchritt, state.getActPutzSchritt().getSeconds()
-				- state.getRemainingSecondsActState(), state.getActPutzSchritt().getSeconds());
+		// Nur laufen, wenn nicht "gonging"
+		if(isGonging) {
+			// Solange der Gong läuft, ist der "Bar" auf null (0)
+			setProgress(R.id.progressBar_teilSchritt, 0, state.getActPutzSchritt().getSeconds());
+		} else {			
+		  // Zeit etwas manipulieren, denn der Gong benötigt ja auch seine Zeit.
+		  // Die Maximalzeit sollte dennoch nicht überschritten werden.
+		  // Ob am Anfang, oder am Ende des Gonges die Seite gewechselt wird, spielt somit
+	      // keine Rolle.
+		  setProgress(R.id.progressBar_teilSchritt, state.getActPutzSchritt().getSeconds() - StateImplementation.GONG_LEN
+				- state.getRemainingSecondsActState(), state.getActPutzSchritt().getSeconds() - StateImplementation.GONG_LEN);
+		}
 
 		// Nur pro bild wechseln
-				setProgress(R.id.progressBar_overallProcess, state.getTotalSecs()
+		setProgress(R.id.progressBar_overallProcess, state.getTotalSecs()
 				- state.getRemainingSecondsFromStartPositionActState(), state.getTotalSecs());
 	}
 
+	
 	private void gotoViewFinished() {
 		StateImplementation.getInstance().stop();
 		Intent finishedView = new Intent(getApplicationContext(), FinishScreenActivity.class);
 		startActivity(finishedView);
 	}
 
+	
 	private void drawAndText(final PutzSchritt paintedSchritt) {
 		// from stackoverflow:
 		if (null == paintedSchritt) {
@@ -183,13 +194,34 @@ public class SlideShowActivity extends Activity implements Updater {
 				if(!isGonging) {
 			    	ImageView img = (ImageView) findViewById(R.id.startImage);
 				    img.setImageResource(paintedSchritt.getDrawableID());
+				    
 				    TextView txt = (TextView) findViewById(R.id.textView_wo);
 				    txt.setText(getResources().getText(paintedSchritt.getStringID()));
 				}
 			}
 		});
 	}
-
+	
+	
+	/**
+	 * Hier wird ein anderes Bild eingefügt, damit der Wechsel zwischen den Bildern klar wird.
+	 * Dies geschieht zusätzlich zum "Gong".
+	 */
+	void blackScreen() {
+		SlideShowActivity.this.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				ImageView img = (ImageView) findViewById(R.id.startImage);
+				img.setImageResource(R.drawable.blackout);
+				
+				StateCallback state = StateImplementation.getInstance();
+			    TextView txt = (TextView) findViewById(R.id.textView_wo);
+			    txt.setText(getResources().getText(state.getActPutzSchritt().getStringID()));
+			}
+		});
+	}
+	
+	
 	public void setPausedResumeText() {
 		Button pauseResumeButton = (Button) findViewById(R.id.button_pause_resume);
 		CharSequence label;
@@ -202,4 +234,5 @@ public class SlideShowActivity extends Activity implements Updater {
 		pauseResumeButton.setText(label);
 	}
 
+	
 } // end class: SlideShowActivity
