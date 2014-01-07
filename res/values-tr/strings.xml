@@ -1,47 +1,39 @@
-<resources>
-
-    <string name="app_name">Dis saati</string>
-    <string name="kinder">Cocuklar 10 yasina kadar</string>
-    <string name="jugendliche">10 yasindan itibaren</string>
-    <string name="start_button">Basla</string>
-    <string name="los_text">(tr:) Los</string> 
-    <string name="zielgruppe">Okulda dis fircalamasini ögrenmis cocuklar icin dis saati uygulamasi</string>
-    <string name="genehmigung">Bilder mit freundlicher Genehmigung: \ nZentrum für Zahnmedizin der Universität Zürich \ nKlinik für Präventivzahnmedizin \ nParadontologie und Kariologie</string>
-    <string name="logo">Logo</string>
-    <string name="title_activity_slide_show">Slayt</string>
-    <string name="dummy_button">Kukla Düğme</string>
-    <string name="restart_button">Yeniden baslat</string>
-    <string name="ok_button">(tr:) OK</string>
-    <string name="stopp">Dur</string>
-    <string name="pause">Ara ver</string>
-    <string name="resume">Devam</string>
-    <string name="title_activity_finished">Bitti</string>
-    
-    <string name="kf_or">Üst taraf cigneme bölgeleri</string>
-    <string name="kf_ol">Ust taraf cigneme bögeleri ikinci kisim</string>
-    <string name="kf_ur">Alt taraf cigneme bölgeleri</string>
-    <string name="kf_ul">(tr:) Kauflächen unten zweite Seite</string>
-    
-    <string name="sf_r">(tr:) Seitenfläche Erste Seite bis und mit Eckzahn</string>
-    <string name="sf_l">(tr:) Seitenfläche zweite Seite bis und mit Eckzahn</string>
-    
-    <!-- ab der Mittelstufe (10jährige): -->
-    <string name="sf_ro">(tr:) Seitenfläche Erste Seite oben bis und mit Eckzahn</string>
-    <string name="sf_ru">(tr:) Seitenfläche Erste Seite unten bis und mit Eckzahn</string>
-    <string name="sf_lo">(tr:) Seitenfläche zweite Seite oben bis und mit Eckzahn</string>
-    <string name="sf_lu">(tr:) Seitenfläche zweite Seite unten bis und mit Eckzahn</string>
-
-    <string name="sf_vo">(tr:) Vorne oben</string>
-    <string name="sf_vu">(tr:) Vorne unten</string>
-
-    <string name="i_or">(tr:) Innen oben Erste Seite</string>
-    <string name="i_ov">(tr:) Innen oben vorne</string>
-    <string name="i_ol">(tr:) Innen oben zweite Seite</string>
-    <string name="i_ur">(tr:) Innen unten Erste Seite</string>
-    <string name="i_uv">(tr:) Innen unten vorne</string>
-    <string name="i_ul">(tr:) Unten zweite Seite innen</string>
-    
-    
-    <string name="fertig">(tr:) Fertig\'in, Bravo!</string>
-    <string name="beenden_button">(tr:) Beenden</string>
+<resources> 
+ <string name="app_name">Dis saati</string> 
+ <string name="kinder">Cocuklar 10 yasina kadar</string> 
+ <string name="jugendliche">10 yasindan büyükler</string> 
+ <string name="start_button">Basla</string> 
+ <string name="los_text">Basla</string> 
+ <string name="zielgruppe">Okulda dis fircalamasini ögrenmis cocuklar icin dis saati uygulamasi</string> 
+ <string name="genehmigung">Resim kaynaklari: \ nZentrum für Zahnmedizin der Universität Zürich \ nKlinik für Präventivzahnmedizin \ nParadontologie und Kariologie</string> 
+ <string name="logo">Logo</string> 
+ <string name="title_activity_slide_show">Slayt</string> 
+ <string name="dummy_button">dummy_button</string> 
+ <string name="restart_button">Yeniden baslat</string> 
+ <string name="ok_button">OK</string> 
+ <string name="stopp">Dur</string> 
+ <string name="pause">Ara ver</string> 
+ <string name="resume">Devam</string> 
+ <string name="title_activity_finished">Bitti</string> 
+ <string name="kf_or">Üst taraf cigneme bölgeleri</string> 
+ <string name="kf_ol">Ust taraf cigneme bögeleri ikinci kisim</string> 
+ <string name="kf_ur">Alt taraf cigneme bölgeleri</string> 
+ <string name="kf_ul">Alt taraf cigneme bölgeleri ikinci kisim</string> 
+ <string name="sf_r">Köpek disine kadar birinci kisim yan yüzeyler</string> 
+ <string name="sf_l">Köpek disine kadar ikinci kisim yan yüzeyler</string> 
+<!-- ab der Mittelstufe (10jährige): -->
+ <string name="sf_ro">Köpek disi dahil birinci kisim, üst yan yüzeyler</string> 
+ <string name="sf_ru">Köpek disi dahil birinci kisim, alt yan yüzeyler</string>
+ <string name="sf_lo">Köpek disi dahil ikinci kisim, üst yan yüzeyler</string> 
+ <string name="sf_lu">Köpek disi dahil ikinci kisim, alt yan yüzeyler</string> 
+ <string name="sf_vo">Ön üst</string> 
+ <string name="sf_vu">Ön alt</string> 
+ <string name="i_or">Üst ic taraf birinci yüzey</string> 
+ <string name="i_ov">Üst ic taraf ön</string> 
+ <string name="i_ol">Üst ic taraf ikinci yüzey</string> 
+ <string name="i_ur">Alt ic taraf birinci yüzey</string> 
+ <string name="i_uv">Alt ic ön</string> 
+ <string name="i_ul">Alt ic taraf ikinci yüzey</string> 
+ <string name="fertig">Bitti\'in, Bravo!</string> 
+ <string name="beenden_button">Kapat</string> 
 </resources>
