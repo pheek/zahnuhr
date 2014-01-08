@@ -45,7 +45,7 @@ public class StartMainActivity extends Activity {
     
     private void losText(int rButtonID, int rTextID) {
       Button startButton = (Button) findViewById(rButtonID);
-      String losText     = (String) getText(rTextID) + ": " + getText(R.string.los_text) + "!";
+      String losText     = (String) getText(rTextID) + ":\n" + getText(R.string.los_text) + "!";
       startButton.setText(losText);
     }
     

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
   <resources>
-    <string name="app_name">Tandenuur</string>
+    <string name="app_name">Tandenklok</string>
     <string name="kinder">Kinderen tot 10 jaar</string>
     <string name="jugendliche">Kinderen vanaf 10 jaar</string>
     <string name="start_button">Start</string> 
-    <string name="los_text">(nl:) Los</string>
-    <string name="zielgruppe">Transalte: Eine Zahnuhr für Kinder, welche in der Schule bereits ins richtige Zähneputzen eingeführt wurden.</string>
+    <string name="los_text">1, 2, 3, starten maar</string>
+    <string name="zielgruppe">Een poetsklok voor kinderen, die op school al in het goed tandenpoetsen voorgelicht zijn.</string>
     <string name="genehmigung">Foto’s met vriendelijke goedkeuring:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
     <string name="logo">Logo</string>
     <string name="title_activity_slide_show">Slideshow</string>
@@ -30,8 +30,8 @@
     <string name="sf_lo">Zijvlakken tweede zijde boven tot en met hoektand</string>
     <string name="sf_lu">Zijvlakken tweede zijde onder tot en met hoektand</string>
 
-    <string name="sf_vo">Voorzijde boven</string>
-    <string name="sf_vu">Voorzijde onder</string>
+    <string name="sf_vo">Buiten Voorzijde boven</string>
+    <string name="sf_vu">Buiten Voorzijde onder</string>
 
     <string name="i_or">Binnen boven eerste zijde</string>
     <string name="i_ov">Binnen boven voorzijde</string>
