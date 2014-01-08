@@ -1,0 +1,39 @@
+<resources> 
+ <string name="app_name">Zegar Mycia Zębów</string> 
+ <string name="kinder">Dzieci do lat 10</string> 
+ <string name="jugendliche">Nastolatki</string> 
+ <string name="start_button">Start</string> 
+ <string name="los_text">Start</string> 
+ <string name="zielgruppe">Zegar dla dzieci, które już zostały nauczone w szkole jak poprawnie myć zęby.</string> 
+ <string name="genehmigung">Udostępnione Zdjęcia:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string> 
+ <string name="logo">Logo</string> 
+ <string name="title_activity_slide_show">Animacja</string> 
+ <string name="dummy_button">dummy_button</string> 
+ <string name="restart_button">Restartować</string> 
+ <string name="ok_button">Zatwierdź</string> 
+ <string name="stopp">Stop</string> 
+ <string name="pause">Pauza</string> 
+ <string name="resume">Dalej</string> 
+ <string name="title_activity_finished">Zakończono</string> 
+ <string name="kf_or">Powierzchnia żucia u góry strona pierwsza</string> 
+ <string name="kf_ol">Powierzchnia żucia u góry strona druga</string> 
+ <string name="kf_ur">Powierzchnia żucia na dole strona pierwsza</string> 
+ <string name="kf_ul">Powierzchnia żucia na dole strona druga</string> 
+ <string name="sf_r">Ściana bocznawłącznie z kłem, pierwszej strona</string> 
+ <string name="sf_l">Ściana bocznawłącznie z kłem, druga strona</string> 
+<!-- ab der Mittelstufe (10jährige): -->
+ <string name="sf_ro">Ściana boczna u góry włącznie z kłem, pierwszej strona</string> 
+ <string name="sf_ru">Ściana boczna  na dole włącznie z kłem, pierwszej strona</string>
+ <string name="sf_lo">Ściana boczna u góry włącznie z kłem, druga strona</string> 
+ <string name="sf_lu">Ściana boczna na dole włącznie z kłem, druga strona</string> 
+ <string name="sf_vo">Zewnątrz przód góra</string> 
+ <string name="sf_vu">Zewnątrz przód dół</string> 
+ <string name="i_or">Wewnątz góra pierwsza strona</string> 
+ <string name="i_ov">Wewątrz góra przód</string> 
+ <string name="i_ol">Wewnątrz góra, druga strona</string> 
+ <string name="i_ur">Wewnątz dół, pierwsza strona</string> 
+ <string name="i_uv">Wewnątz dół przód</string> 
+ <string name="i_ul">Wewnątrz dół, druga strona</string> 
+ <string name="fertig">Gotowe, bravo!</string> 
+ <string name="beenden_button">Zakończyć</string> 
+</resources>
