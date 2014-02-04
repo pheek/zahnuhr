@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Χρονόμετρο στοματικής υγιεινής</string>
+    <string name="kinder">Παιδιά έως 10 ετών</string>
+    <string name="jugendliche">Ενήλικες</string>
+    <string name="start_button">Εκκίνησις</string>
+    <string name="los_text">Πάμε</string>
+    <string name="zielgruppe">Ένα χρονόμετρο στοματικής υγιεινης γιά παιδιά, τά οποία γνωρίζουν ήδη τήν τεχνική βουρτσίσματος τών δοντιών από τό σχολείο.</string>
+    <string name="genehmigung">Φωτογραφίες μέ ευγενική προσφορά:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
+    <string name="logo">Λογότυπον</string>
+    <string name="title_activity_slide_show">Παρουσίασις</string>
+    <string name="dummy_button">dummy</string>
+    <string name="restart_button">Επανεκκίνησις</string>
+    <string name="ok_button">Εντάξει</string>
+    <string name="stopp">Τέλος</string>
+    <string name="pause">Διάλειμμα</string>
+    <string name="resume">Συνέχεια</string>
+    <string name="title_activity_finished">Έτοιμο</string>
+    
+    <string name="kf_or">Επιφάνεια δοντιών 1. πλευρά επάνω</string>
+    <string name="kf_ol">Επιφάνεια δοντιών 2. πλευρά επάνω</string>
+    <string name="kf_ur">Επιφάνεια δοντιών 1. πλευρά κάτω</string>
+    <string name="kf_ul">Επιφάνεια δοντιών 2. πλευρά κάτω</string>
+    
+    <string name="sf_r">Πλευρική επιφάνεια 1. πλευρά μέχρι καί τόν κυνόδοντα</string>
+    <string name="sf_l">Πλευρική επιφάνεια 2. πλευρά μέχρι καί τόν κυνόδοντα</string>
+    
+    <!-- ab der Mittelstufe (10jährige): -->
+    <string name="sf_ro">Πλευρική επιφάνεια 1. πλευρά επάνω μέχρι καί τόν κυνόδοντα</string>
+    <string name="sf_ru">Πλευρική επιφάνεια 1. πλευρά κάτω μέχρι καί τόν κυνόδοντα</string>
+    <string name="sf_lo">Πλευρική επιφάνεια 2. πλευρά επάνω μέχρι καί τόν κυνόδοντα</string>
+    <string name="sf_lu">Πλευρική επιφάνεια 2. πλευρά κάτω μέχρι καί τόν κυνόδοντα</string>
+
+    <string name="sf_vo">Εξωτερικά εμπρός επάνω</string>
+    <string name="sf_vu">Εξωτερικά εμπρός κάτω</string>
+
+    <string name="i_or">Εσωτερικά επάνω 1. πλευρά</string>
+    <string name="i_ov">Εσωτερικά επάνω εμπρός</string>
+    <string name="i_ol">Εσωτερικά επάνω 2. πλευρά</string>
+    <string name="i_ur">Εσωτερικά κάτω 1. πλευρά</string>
+    <string name="i_uv">Εσωτερικά κάτω εμπρός</string>
+    <string name="i_ul">Εσωτερικά κάτω 2. πλευρά</string>
+    
+    <string name="fertig">Έτοιμα, μπράβο!</string>
+    <string name="beenden_button">Τερματισμός</string>
+</resources>
