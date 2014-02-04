@@ -50,7 +50,7 @@ public class SlideShowRunner implements Runnable {
 				// refresh rate of the sliders.
 				Thread.sleep(REDRAW_MILLISECS);
 				//System.out.println("SSR: running;");
-				callbackState.update();
+				if(running) {callbackState.update();}
 			} catch (InterruptedException ie) {
 				running = false;
 			}
@@ -66,7 +66,7 @@ public class SlideShowRunner implements Runnable {
 		}
 		thisThread = new Thread(this);
 		thisThread.start();
-		running = true;
+		//running = true;
 	}
 	
 	public boolean isRunning() {

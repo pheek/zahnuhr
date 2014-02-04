@@ -5,6 +5,7 @@ import java.util.List;
 
 import eu.gressly.android.zahnuhr.activities.FinishScreenActivity;
 import eu.gressly.android.zahnuhr.activities.SlideShowActivity;
+import eu.gressly.android.zahnuhr.activities.StartMainActivity;
 import eu.gressly.android.zahnuhr.stati.PutzAlter;
 
 import android.app.Activity;
@@ -33,12 +34,12 @@ public class AllActivities {
 			registeredActivities = new ArrayList<Activity>();
 		}
 		
-		removeSlideShowActivitiesAfterTerminating(a);
+		removeOtherActivitiesAfterTerminatingOrRelaunch(a);
 		
 		registeredActivities.add(a);
 	}
 
-	private static void removeSlideShowActivitiesAfterTerminating(Activity a) {
+	private static void removeOtherActivitiesAfterTerminatingOrRelaunch(Activity a) {
 		if(a instanceof FinishScreenActivity) {
 			// remove all SlideShowActivities
 			@SuppressWarnings("unchecked")
@@ -47,6 +48,16 @@ public class AllActivities {
 				if(ac instanceof SlideShowActivity) {
 				  registeredActivities.remove(ac);
 				  ac.finish();
+				}
+			}
+		}
+		if(a instanceof StartMainActivity) {
+			@SuppressWarnings("unchecked")
+			ArrayList<Activity> clone = (ArrayList<Activity>) registeredActivities.clone();
+			for(Activity ac: clone) {
+				if(ac != a) {
+					registeredActivities.remove(ac);
+					ac.finish();
 				}
 			}
 		}

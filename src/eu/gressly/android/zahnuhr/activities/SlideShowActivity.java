@@ -35,7 +35,6 @@ import eu.gressly.util.callback.Updater;
  */
 public class SlideShowActivity extends Activity implements Updater {
 	private static final String TAG = "SlideShowActivity";
-   
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +55,12 @@ public class SlideShowActivity extends Activity implements Updater {
 		setContentViewAndStartProgress();
 	}
 
+	@Override
+	public void onBackPressed() {
+    	StateCallback sc = StateImplementation.getInstance();
+    	sc.stop();  
+    	super.onBackPressed();
+	}
 	
 	// to repaint after a screen turn (rotation)
 	@Override
@@ -132,6 +137,7 @@ public class SlideShowActivity extends Activity implements Updater {
 		
 		drawAndText(state.getActPutzSchritt());
 		paintingProgressBars();
+
 		if(state.isGongTime() && !isGonging) {
 			isGonging = true;
 			blackScreen();
@@ -147,9 +153,9 @@ public class SlideShowActivity extends Activity implements Updater {
 	/**
 	 * Mit Musik geht alles besser.
 	 */
-	void gongPlay() {
+	synchronized void gongPlay() {
 		MediaPlayer mPlayer = MediaPlayer.create(SlideShowActivity.this, R.raw.gong);
-		mPlayer.start();
+		mPlayer.start();	
 	}
 	
 	

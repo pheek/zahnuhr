@@ -34,12 +34,12 @@ public class PutzSequenz {
 			new PutzSchritt(R.drawable.kf_ol, R.string.kf_ol, 12),
 			new PutzSchritt(R.drawable.kf_ur, R.string.kf_ur, 12),
 			new PutzSchritt(R.drawable.kf_ul, R.string.kf_ul, 12),
-
+  
 			// TODO: Bilder für oben und unten separieren
-			new PutzSchritt(R.drawable.sf_r, R.string.sf_ro, 10),
-			new PutzSchritt(R.drawable.sf_r, R.string.sf_ru, 10),
-			new PutzSchritt(R.drawable.sf_l, R.string.sf_lo, 10),
-			new PutzSchritt(R.drawable.sf_l, R.string.sf_lu, 10),
+			new PutzSchritt(R.drawable.sf_r, R.string.sf_ro, 8),
+			new PutzSchritt(R.drawable.sf_r, R.string.sf_ru, 8) ,
+			new PutzSchritt(R.drawable.sf_l, R.string.sf_lo, 8),
+			new PutzSchritt(R.drawable.sf_l, R.string.sf_lu, 8 ),
 
 			new PutzSchritt(R.drawable.sf_vo, R.string.sf_vo, 8),
 			new PutzSchritt(R.drawable.sf_vu, R.string.sf_vu, 8),
@@ -66,8 +66,8 @@ public class PutzSequenz {
 			new PutzSchritt(R.drawable.kf_ur, R.string.kf_ur, 12),
 			new PutzSchritt(R.drawable.kf_ul, R.string.kf_ul, 12),
 
-			new PutzSchritt(R.drawable.sf_r, R.string.sf_r, 10),
-			new PutzSchritt(R.drawable.sf_l, R.string.sf_l, 10),
+			new PutzSchritt(R.drawable.sf_r, R.string.sf_r, 12),
+			new PutzSchritt(R.drawable.sf_l, R.string.sf_l, 12),
 			new PutzSchritt(R.drawable.sf_vo, R.string.sf_vo, 8),
 			new PutzSchritt(R.drawable.sf_vu, R.string.sf_vu, 8),
 

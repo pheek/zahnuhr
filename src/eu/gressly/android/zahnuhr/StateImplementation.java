@@ -152,7 +152,11 @@ public class StateImplementation implements StateCallback {
 	// ACHTUNG: Dies entspricht genau der Länge des Tons!
 	@Override
 	public boolean isGongTime() {
-		return this.sequenz.getActPos().getSeconds() - this.getRemainingSecondsActState() < GONG_LEN;
+		if(! this.isRunning()) {return false;}
+		float  actPosSeconds            = this.sequenz.getActPos().getSeconds();
+		float  remainingSecondsActState = this.getRemainingSecondsActState(); 
+		float  diff = actPosSeconds - remainingSecondsActState;
+		return diff  < GONG_LEN;
 		// gong never palyed after last sequence
 //		if(this.sequenz.isLastPos()) {
 //			return false;

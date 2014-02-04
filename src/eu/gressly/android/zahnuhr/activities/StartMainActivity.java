@@ -51,12 +51,13 @@ public class StartMainActivity extends Activity {
     
     @Override
     protected void onPostResume() {
-    	super.onPostResume();
     	//TODO: Hier sollte irgendwie gestoppt werden können, wenn
     	//      mit "back" von der 2. Activity hier zurückgesprungen wird.
     	//      Wahrscheinlich in einem anderen on...-Handler.
     	StateCallback sc = StateImplementation.getInstance();
-    	sc.stop();  	
+    	sc.stop();  
+
+    	super.onPostResume();
     }
     
 	private void hideTitleAndNotificationbar() {
@@ -75,8 +76,8 @@ public class StartMainActivity extends Activity {
 	}
 
 	private void configStartButtonHandler(int rID, PutzAlter pa) {
-		Button             startButton = (Button) findViewById(rID);
-        StartClickListener scl         = new StartClickListener(pa);
+		Button             startButton =  (Button) findViewById(rID);
+        StartClickListener scl         =  new StartClickListener(pa);
         
         scl.setActivity(this);
         startButton.setOnClickListener(scl);
