@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">歯時計</string>
+    <string name="kinder">１０歳以下の子供</string>
+    <string name="jugendliche">１０歳以上の子供</string>
+    <string name="start_button">スタート</string>
+    <string name="los_text">始め</string>
+    <string name="zielgruppe">学校で正しい歯の磨き方を学んだ、子供向けの歯時計</string>
+    <string name="genehmigung">許可された画像:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
+    <string name="logo">ロゴ</string>
+    <string name="title_activity_slide_show">プレゼンテーション</string>
+    <string name="dummy_button">dummy</string>
+    <string name="restart_button">はじめから</string>
+    <string name="ok_button">OK</string>
+    <string name="stopp">ストップ</string>
+    <string name="pause">きゆうけい</string>
+    <string name="resume">つづく</string>
+    <string name="title_activity_finished">おわり</string>
+    
+    <string name="kf_or">右上の噛み合わせ面</string>
+    <string name="kf_ol">左上の噛み合わせ面</string>
+    <string name="kf_ur">右下の噛み合わせ面</string>
+    <string name="kf_ul">左下の噛み合わせ面</string>
+    
+    <string name="sf_r">右の糸切り歯までの側面</string>
+    <string name="sf_l">左の糸切り歯までの側面</string>
+    
+    <!-- ab der Mittelstufe (10jährige): -->
+    <string name="sf_ro">右上の糸切り歯までの側面</string>
+    <string name="sf_ru">右下の糸切り歯までの側面</string>
+    <string name="sf_lo">左上の糸切り歯までの側面</string>
+    <string name="sf_lu">左下の糸切り歯までの側面</string>
+
+    <string name="sf_vo">上,　前,　外</string>
+    <string name="sf_vu">下、前、 外</string>
+
+    <string name="i_or">右、上、裏側</string>
+    <string name="i_ov">上、前、裏側</string>
+    <string name="i_ol">左、上、内側</string>
+    <string name="i_ur">右、下、内側</string>
+    <string name="i_uv">下、前、裏側</string>
+    <string name="i_ul">左、下、内側</string>
+    
+    <string name="fertig">終った！おめでとうございます！</string>
+    <string name="beenden_button">終了</string>
+</resources>
