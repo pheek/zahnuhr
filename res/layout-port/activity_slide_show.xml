@@ -33,7 +33,7 @@
             android:id="@+id/textView_wo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-   
+            android:textColor="@color/generic_label_text"
             android:layout_centerHorizontal="true"
             android:text="@string/kf_or"
             android:layout_below="@+id/progressBar_overallProcess"
@@ -41,6 +41,8 @@
         
         <Button
             android:id="@+id/button_pause_resume"
+            android:background="@drawable/bordershape"
+            android:textColor="@color/generic_button_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView_wo"

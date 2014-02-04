@@ -35,6 +35,8 @@
 
         <Button
             android:id="@+id/button_pause_resume"
+            android:background="@drawable/bordershape"
+            android:textColor="@color/generic_button_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/progressBar_overallProcess"
@@ -49,6 +51,7 @@
             android:layout_alignParentRight="true"
             android:layout_below="@+id/startImage"
             android:text="@string/kf_or"
+            android:textColor="@color/generic_label_text"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

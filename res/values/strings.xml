@@ -7,7 +7,7 @@
     <string name="start_button">Start</string>
     <string name="los_text">Los</string>
     <string name="zielgruppe">Eine Zahnuhr für Kinder, welche in der Schule bereits ins richtige Zähneputzen eingeführt wurden.</string>
-    <string name="genehmigung">Bilder mit freundlicher Genehmigung:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
+    <string name="genehmigung">Bilder mit freundlicher Genehmigung:\n<a href="http://www.sbb.ch">Zentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</a></string>
     <string name="logo">Logo</string>
     <string name="title_activity_slide_show">SlideShow</string>
     <string name="dummy_button">Dummy Button</string>

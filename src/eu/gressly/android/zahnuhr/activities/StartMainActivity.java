@@ -14,12 +14,10 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import eu.gressly.android.zahnuhr.R;
-import eu.gressly.android.zahnuhr.StateCallback;
-import eu.gressly.android.zahnuhr.StateImplementation;
-import eu.gressly.android.zahnuhr.stati.PutzAlter;
-import eu.gressly.android.zahnuhr.util.AllActivities;
-import eu.gressly.android.zahnuhr.util.StartClickListener;
+
+import eu.gressly.android.zahnuhr.*;
+import eu.gressly.android.zahnuhr.stati.*;
+import eu.gressly.android.zahnuhr.util.*;
 
 
 public class StartMainActivity extends Activity {
@@ -31,7 +29,7 @@ public class StartMainActivity extends Activity {
         hideTitleAndNotificationbar();
 
         buttonTexteLos();
-        setStartButonHandler();    
+        setStartButonHandler();  
     }
    
     /**
@@ -51,9 +49,6 @@ public class StartMainActivity extends Activity {
     
     @Override
     protected void onPostResume() {
-    	//TODO: Hier sollte irgendwie gestoppt werden können, wenn
-    	//      mit "back" von der 2. Activity hier zurückgesprungen wird.
-    	//      Wahrscheinlich in einem anderen on...-Handler.
     	StateCallback sc = StateImplementation.getInstance();
     	sc.stop();  
 
