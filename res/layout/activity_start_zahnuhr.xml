@@ -32,7 +32,8 @@
         android:textSize="@dimen/erklaerungstexte" />
 
     <Button
-        android:id="@+id/button_start_kinder"
+        android:id="@+id/button_start_kinder" 
+        android:layout_margin="@dimen/button_margin"
         android:background="@drawable/bordershape"
         android:textColor="@color/generic_button_text"
         android:layout_width="match_parent"
@@ -44,6 +45,7 @@
         />
 
     <Button
+        android:layout_margin="@dimen/button_margin"
         android:id="@+id/button_start_jugendliche" 
         android:background="@drawable/bordershape"
         android:textColor="@color/generic_button_text"
@@ -59,13 +61,18 @@
    
         android:textSize="@dimen/start_button_text_size" />
 
-    <TextView
+    <TextView    
+        android:layout_margin="@dimen/button_margin"
         android:id="@+id/textView_genehmigung"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/button_start_jugendliche"
-        android:padding="15dp"
+        android:padding="15dp"   
+        android:layout_marginTop="5dp"
+        android:onClick="onUniClick"
+        android:clickable="true"  
+        android:background="@drawable/bordershape"
         android:text="@string/genehmigung"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/genehmigungText"

@@ -39,7 +39,8 @@
             android:layout_below="@+id/progressBar_overallProcess"
             android:textAppearance="?android:attr/textAppearanceLarge" />
         
-        <Button
+        <Button  
+            android:layout_margin="@dimen/button_margin"
             android:id="@+id/button_pause_resume"
             android:background="@drawable/bordershape"
             android:textColor="@color/generic_button_text"

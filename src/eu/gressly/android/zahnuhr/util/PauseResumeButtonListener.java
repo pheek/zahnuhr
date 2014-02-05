@@ -6,12 +6,11 @@ package eu.gressly.android.zahnuhr.util;
  * 
  * @purpose if "paused()", resume the timer, otherwise: pause the timer.
  */
-import eu.gressly.android.zahnuhr.R;
+
 import eu.gressly.android.zahnuhr.activities.SlideShowActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 
 public class PauseResumeButtonListener implements OnClickListener {
 	private static final String TAG = "PauseResumeButtonListener";

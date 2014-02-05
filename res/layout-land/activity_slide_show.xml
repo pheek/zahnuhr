@@ -33,7 +33,8 @@
             android:layout_toRightOf="@+id/startImage"
             android:layout_below="@+id/progressBar_teilSchritt" />
 
-        <Button
+        <Button   
+            android:layout_margin="@dimen/button_margin"
             android:id="@+id/button_pause_resume"
             android:background="@drawable/bordershape"
             android:textColor="@color/generic_button_text"
