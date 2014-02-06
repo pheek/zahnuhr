@@ -19,6 +19,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;	
 
+// project specific
 import eu.gressly.android.zahnuhr.*;
 import eu.gressly.android.zahnuhr.stati.*;
 import eu.gressly.android.zahnuhr.util.*;
@@ -37,6 +38,7 @@ public class StartMainActivity extends Activity {
         setStartButonHandler();  
     }
    
+    // switch to the browser.
     public void onUniClick(View v) {
       Log.i(logTag, "onUniClick");
       Intent zahnInstitutImBrowser = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.zzm.uzh.ch/patienten/downloads/mb-kinder.html"));
