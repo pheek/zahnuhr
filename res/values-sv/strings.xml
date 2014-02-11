@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tandborstar timer</string>
+    <string name="kinder">barn (&lt;10år)</string>
+    <string name="jugendliche">barn (&gt;10år)</string>
+    <string name="start_button">startknapp</string>
+    <string name="los_text">start</string>
+    <string name="zielgruppe">Ett tidtagarur för barn som vill lära sig borsta tänderna på bästa</string>
+    <string name="genehmigung">godkänd:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
+    <string name="logo">loggo</string>
+    <string name="title_activity_slide_show">aktivitet-bildvisning</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="restart_button">Återställningsknapp</string>
+    <string name="ok_button">ok knapp</string>
+    <string name="stopp">stopp</string>
+    <string name="pause">paus</string>
+    <string name="resume">sammanfattning</string>
+    <string name="title_activity_finished">titel aktivitet avslutad</string>
+    
+    <string name="kf_or">Tuggytan övre käken – första sidan</string>
+    <string name="kf_ol">Tuggytan övre käken – andra sidan</string>
+    <string name="kf_ur">Tuggytan nedre käken – första sidan</string>
+    <string name="kf_ul">Tuggytan nedre käken – andra sidan</string>
+    
+    <string name="sf_r">Övre kindtänderna första sidan inkluderat hörntänderna</string>
+    <string name="sf_l">Övre kindtänderna andra sidan inkluderat hörntänderna</string>
+    
+    <!-- ab der Mittelstufe (10jährige): -->
+    <string name="sf_ro">Nedre kindtänderna första sidan inkluderat hörntänderna</string>
+    <string name="sf_ru">Nedre kindtänderna andra sidan inkluderat hörntänderna</string>
+    <string name="sf_lo">Övre kindtänderna inklusive hörntänderna</string>
+    <string name="sf_lu">Övre kindtänderna, andra sidan, inklusive hörntänderna</string>
+
+    <string name="sf_vo">Utsidan på framtänderna i ovankäken</string>
+    <string name="sf_vu">Utsidan påframtänderna i nedankäken</string>
+
+    <string name="i_or">Insidan på framtäderna ovankäken på förstasidan</string>
+    <string name="i_ov">Insidan på framtäderna i ovankäken</string>
+    <string name="i_ol">Insidan på ovankäken – andra sidan</string>
+    <string name="i_ur">Insidan på underkäken – andra sidan</string>
+    <string name="i_uv">Insidan på nederkäkens insida</string>
+    <string name="i_ul">Insidan på nederkäken – andra sidan</string>
+    
+    <string name="fertig">Färdig – klart!</string>
+    <string name="beenden_button">Stäng av / off</string>
+</resources>
