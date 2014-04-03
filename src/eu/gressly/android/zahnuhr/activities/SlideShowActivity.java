@@ -157,6 +157,7 @@ public class SlideShowActivity extends Activity implements Updater {
 		MediaPlayer mPlayer = MediaPlayer.create(SlideShowActivity.this, R.raw.gong);
 		mPlayer.start();	
 	}
+
 	
 	
 	private void paintingProgressBars() {
@@ -183,7 +184,17 @@ public class SlideShowActivity extends Activity implements Updater {
 	private void gotoViewFinished() {
 		StateImplementation.getInstance().stop();
 		Intent finishedView = new Intent(getApplicationContext(), FinishScreenActivity.class);
+    gongPlayFinished();
 		startActivity(finishedView);
+	}
+
+	/**
+	 * Ende Gong 
+   * @see gongPlay
+	 */
+	synchronized void gongPlayFinished() {
+		MediaPlayer mPlayer = MediaPlayer.create(SlideShowActivity.this, R.raw.gongEnde);
+		mPlayer.start();	
 	}
 
 	
