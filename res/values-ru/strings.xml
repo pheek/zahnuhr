@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Зубные часы</string>
+    <string name="kinder">Дети до 10 лет</string>
+    <string name="jugendliche">Дети от 10 лет</string>
+    <string name="start_button">Старт</string>
+    <string name="los_text">Старт</string>
+    <string name="zielgruppe">Зубные часы для детей, которых в школе  уже научили правильно чистить зубы.</string>
+    <string name="genehmigung"> Изображения с любезного разрешения:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
+    <string name="logo">Лого</string>
+    <string name="title_activity_slide_show">Слайд-шоу</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="restart_button">Перезапуск</string>
+    <string name="ok_button">Подтвердить</string>
+    <string name="stopp">Стоп</string>
+    <string name="pause">Пауза</string>
+    <string name="resume">Дальше</string>
+    <string name="title_activity_finished">Gotovo</string>
+    
+    <string name="kf_or">Жевательные поверхности верхней первой стороны</string>
+    <string name="kf_ol">Жевательные поверхности верхней второй стороны</string>
+    <string name="kf_ur">Жевательные поверхности нижней первой стороны</string>
+    <string name="kf_ul">Жевательные поверхности нижней второй стороны</string>
+    
+    <string name="sf_r">Боковая поверхность коренных зубов, включая клык, первой стороны</string>
+    <string name="sf_l">Боковая поверхность коренных зубов, включая клык, второй стороны</string>
+    
+    <!-- ab der Mittelstufe (10jährige): -->
+    <string name="sf_ro">Боковая поверхность верхних коренных зубов, включая клык, первой стороны</string>
+    <string name="sf_ru">Боковая поверхность нижних коренных зубов, включая клык, первой стороны</string>
+    <string name="sf_lo">Боковая поверхность верхних передних зубов включая клык, второй стороны</string>
+    <string name="sf_lu">Боковая поверхность нижних передних зубов включая клык, второй стороны</string>
+
+    <string name="sf_vo">внешняя верхняя передняя</string>
+    <string name="sf_vu">внешняя нижняя передняя</string>
+
+    <string name="i_or">внутренняя верхняя первая сторона</string>
+    <string name="i_ov">внутренняя верхняя передняя</string>
+    <string name="i_ol">внутренняя верхняя вторая сторона</string>
+    <string name="i_ur">внутренняя нижняя первая сторона</string>
+    <string name="i_uv">внутренняя нижняя передняя</string>
+    <string name="i_ul">внутренняя нижняя вторая сторона</string>
+    
+    <string name="fertig">Готово, Браво!</string>
+    <string name="beenden_button">Выход</string>
+</resources>
