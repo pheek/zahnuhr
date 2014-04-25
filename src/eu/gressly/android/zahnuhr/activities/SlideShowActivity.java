@@ -252,7 +252,7 @@ public class SlideShowActivity extends Activity implements Updater {
 		
 		if (isPaused()) {
 			label = getResources().getText(R.string.resume);
-		    pauseResumeButton.setBackgroundColor(Color.GREEN);
+			pauseResumeButton.setBackground(getResources().getDrawable(R.drawable.bordershape2));
 		} else {
 			label = getResources().getText(R.string.pause);
 			pauseResumeButton.setBackground(getResources().getDrawable(R.drawable.bordershape));
