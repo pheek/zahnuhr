@@ -10,6 +10,7 @@ package eu.gressly.android.zahnuhr.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
@@ -193,8 +194,14 @@ public class SlideShowActivity extends Activity implements Updater {
    * @see gongPlay
 	 */
 	synchronized void gongPlayFinished() {
-		MediaPlayer mPlayer = MediaPlayer.create(SlideShowActivity.this, R.raw.gongEnde);
-		mPlayer.start();	
+		try {
+			MediaPlayer mPlayer = MediaPlayer.create(SlideShowActivity.this, R.raw.gongende);
+			mPlayer.start();
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	
@@ -245,8 +252,10 @@ public class SlideShowActivity extends Activity implements Updater {
 		
 		if (isPaused()) {
 			label = getResources().getText(R.string.resume);
+		    pauseResumeButton.setBackgroundColor(Color.GREEN);
 		} else {
 			label = getResources().getText(R.string.pause);
+			pauseResumeButton.setBackground(getResources().getDrawable(R.drawable.bordershape));
 		}
 		pauseResumeButton.setText(label);
 	}

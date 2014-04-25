@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name"></string>
+    <string name="kinder"></string>
+    <string name="jugendliche"></string>
+    <string name="start_button"></string>
+    <string name="los_text"></string>
+    <string name="zielgruppe"></string>
+    <string name="genehmigung">:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
+    <string name="logo"></string>
+    <string name="title_activity_slide_show"></string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="restart_button"></string>
+    <string name="ok_button"></string>
+    <string name="stopp"></string>
+    <string name="pause"></string>
+    <string name="resume"></string>
+    <string name="title_activity_finished"></string>
+    
+    <string name="kf_or"></string>
+    <string name="kf_ol"></string>
+    <string name="kf_ur"></string>
+    <string name="kf_ul"></string>
+    
+    <string name="sf_r"></string>
+    <string name="sf_l"></string>
+    
+    <!-- ab der Mittelstufe (10jährige): -->
+    <string name="sf_ro"></string>
+    <string name="sf_ru"></string>
+    <string name="sf_lo"></string>
+    <string name="sf_lu"></string>
+
+    <string name="sf_vo"></string>
+    <string name="sf_vu"></string>
+
+    <string name="i_or"></string>
+    <string name="i_ov"></string>
+    <string name="i_ol"></string>
+    <string name="i_ur"></string>
+    <string name="i_uv"></string>
+    <string name="i_ul"></string>
+    
+    <string name="fertig"></string>
+    <string name="beenden_button"></string>
+</resources>
