@@ -24,7 +24,6 @@ import eu.gressly.android.zahnuhr.*;
 import eu.gressly.android.zahnuhr.stati.*;
 import eu.gressly.android.zahnuhr.util.*;
 
-
 public class StartMainActivity extends Activity {
     private final static String logTag = "eu.gressly.android.zahnuhr.activities.StartMainActivity";
     
@@ -33,7 +32,6 @@ public class StartMainActivity extends Activity {
         super.onCreate(savedInstanceState);
         AllActivities.registerActivity(this);
         hideTitleAndNotificationbar();
-
         buttonTexteLos();
         setStartButonHandler();  
     }

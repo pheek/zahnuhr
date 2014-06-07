@@ -7,10 +7,10 @@ package eu.gressly.android.zahnuhr.activities;
  * @purpose Contains the images (slide show) of teeth.
  *          is updated (repainted) when the Callback calls "update()".
  */
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
@@ -53,9 +53,14 @@ public class SlideShowActivity extends Activity implements Updater {
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-		setContentViewAndStartProgress();
 	}
 
+	@Override
+	protected void onResume(){
+		super.onResume();
+		setContentViewAndStartProgress();		
+	}
+	
 	@Override
 	public void onBackPressed() {
     	StateCallback sc = StateImplementation.getInstance();
@@ -95,7 +100,7 @@ public class SlideShowActivity extends Activity implements Updater {
 	private void setProgress(int bar_rid, float actualSeconds, float maxSeconds) {
 		ProgressBar actualProgressBar = (ProgressBar) findViewById(bar_rid);
 		if(null == actualProgressBar) {
-			Log.e(TAG, "set Progress has a NullPointer!!!!");
+			Log.e(TAG, "Debug SlideShowActivity.setProgress(): set Progress has a NullPointer!!!!");
 			return;
 		}
 		actualProgressBar.setProgress((int) (actualSeconds * 100.0 / maxSeconds));
@@ -123,7 +128,6 @@ public class SlideShowActivity extends Activity implements Updater {
 	}
 	
 	
-	private boolean isGonging = false;
 	private synchronized void neuZeichnen() {
 		StateCallback state = StateImplementation.getInstance();
 		if (state.isGlobalTimeOver()) {
@@ -139,32 +143,35 @@ public class SlideShowActivity extends Activity implements Updater {
 		drawAndText(state.getActPutzSchritt());
 		paintingProgressBars();
 
-		if(state.isGongTime() && !isGonging) {
-			isGonging = true;
-			blackScreen();
-			gongPlay();
-		} 
-		if(!state.isGongTime()) {
-			isGonging = false;
-		}
-		
+		gongPlay();
 	}
-	
-	
+		
 	/**
 	 * Mit Musik geht alles besser.
 	 */
+	//private static boolean isGonging = false;
+	MediaPlayer mPlayer = null;
 	synchronized void gongPlay() {
-		MediaPlayer mPlayer = MediaPlayer.create(SlideShowActivity.this, R.raw.gong);
-		mPlayer.start();	
-	}
+		if(null == mPlayer) { // lazy instantiation
+			mPlayer = MediaPlayer.create(SlideShowActivity.this, R.raw.gong);			
+		}
+		StateCallback state = StateImplementation.getInstance();
+		Log.i(TAG, "Gong time " + state.isGongTime());
 
-	
+		if(state.isGongTime()) {
+			if(!mPlayer.isPlaying()) {
+				blackScreen();
+				if(! isPaused()) {
+					mPlayer.start();
+				}
+			}
+		}
+	}
 	
 	private void paintingProgressBars() {
 		StateCallback state = StateImplementation.getInstance();
 		// Nur laufen, wenn nicht "gonging"
-		if(isGonging) {
+		if(null != mPlayer && mPlayer.isPlaying()) {
 			// Solange der Gong läuft, ist der "Bar" auf null (0)
 			setProgress(R.id.progressBar_teilSchritt, 0, state.getActPutzSchritt().getSeconds());
 		} else {			
@@ -185,25 +192,9 @@ public class SlideShowActivity extends Activity implements Updater {
 	private void gotoViewFinished() {
 		StateImplementation.getInstance().stop();
 		Intent finishedView = new Intent(getApplicationContext(), FinishScreenActivity.class);
-    gongPlayFinished();
+  
 		startActivity(finishedView);
 	}
-
-	/**
-	 * Ende Gong 
-   * @see gongPlay
-	 */
-	synchronized void gongPlayFinished() {
-		try {
-			MediaPlayer mPlayer = MediaPlayer.create(SlideShowActivity.this, R.raw.gongende);
-			mPlayer.start();
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
 	
 	private void drawAndText(final PutzSchritt paintedSchritt) {
 		// from stackoverflow:
@@ -215,10 +206,11 @@ public class SlideShowActivity extends Activity implements Updater {
 		SlideShowActivity.this.runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
-				if(!isGonging) {
+				if(null != mPlayer && !mPlayer.isPlaying()) {
 			    	ImageView img = (ImageView) findViewById(R.id.startImage);
-				    img.setImageResource(paintedSchritt.getDrawableID());
-				    
+			    	if(! isPaused()) {
+				      img.setImageResource(paintedSchritt.getDrawableID());
+			    	}
 				    TextView txt = (TextView) findViewById(R.id.textView_wo);
 				    txt.setText(getResources().getText(paintedSchritt.getStringID()));
 				}
@@ -247,18 +239,22 @@ public class SlideShowActivity extends Activity implements Updater {
 	
 	
 	public void setPausedResumeText() {
-		Button pauseResumeButton = (Button) findViewById(R.id.button_pause_resume);
-		CharSequence label;
-		
 		if (isPaused()) {
-			label = getResources().getText(R.string.resume);
-			pauseResumeButton.setBackground(getResources().getDrawable(R.drawable.bordershape2));
+			relabel(R.string.resume, R.drawable.bordershape2);
 		} else {
-			label = getResources().getText(R.string.pause);
-			pauseResumeButton.setBackground(getResources().getDrawable(R.drawable.bordershape));
+			relabel(R.string.pause,  R.drawable.bordershape);
 		}
-		pauseResumeButton.setText(label);
 	}
 
-	
+	@SuppressLint("NewApi") // setBackground erst ab API Version 11 
+	private void relabel(int stringResource, int drawableResource) {
+		Button pauseResumeButton = (Button) findViewById(R.id.button_pause_resume);
+		CharSequence label = getResources().getText(stringResource);
+		try{
+		 pauseResumeButton.setBackground(getResources().getDrawable(drawableResource));
+		} catch (Exception e) {
+	     System.out.println("Debug SlideShowActivity.relabel(): API Version Problem: Unsupported API (must be greater than 10).");
+		}
+	    pauseResumeButton.setText(label);
+	}
 } // end class: SlideShowActivity

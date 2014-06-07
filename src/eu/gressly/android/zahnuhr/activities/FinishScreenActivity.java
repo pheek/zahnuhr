@@ -2,6 +2,7 @@ package eu.gressly.android.zahnuhr.activities;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -37,10 +38,22 @@ public class FinishScreenActivity extends Activity {
 		setContentView(R.layout.activity_fertig);
 		
 		registerOKButton();
-
 	}
-
 	
+	@Override
+	protected void onResume() { 
+		super.onResume();
+		gongPlayFinished();
+	}
+	
+	/**
+	 * Ende Gong 
+   * @see gongPlay
+	 */
+	synchronized void gongPlayFinished() {
+      MediaPlayer mPlayer = MediaPlayer.create(FinishScreenActivity.this, R.raw.gongende);
+	  mPlayer.start();
+	}
 	
 	private void registerOKButton() {
 		Button restartButton = (Button) findViewById(R.id.button_ok);

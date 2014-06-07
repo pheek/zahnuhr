@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Zahnuhr</string>
-    <string name="kinder">Kinder bis 10 Jahre</string>
-    <string name="jugendliche">Ab 10 Jahren</string>
+    <string name="app_name">Teeth Timer</string>
+    <string name="kinder">Kids up to 10 years</string>
+    <string name="jugendliche">Kids over 10 years of age</string>
     <string name="start_button">Start</string>
-    <string name="los_text">Los</string>
-    <string name="zielgruppe">Eine Zahnuhr für Kinder, welche in der Schule bereits ins richtige Zähneputzen eingeführt wurden.</string>
-    <string name="genehmigung">Bilder mit freundlicher Genehmigung:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
+    <string name="los_text">Go</string>
+    <string name="zielgruppe">A Teeth Cleaning Timer for Kids who have already been introduced to the tooth brushing technique at school.</string>
+    <string name="genehmigung">Images courtesy of:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie»</string>
     <string name="logo">Logo</string>
-    <string name="title_activity_slide_show">SlideShow</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="restart_button">Neu starten</string>
+    <string name="title_activity_slide_show">Slideshow</string>
+    <string name="dummy_button">dummy button</string>
+    <string name="restart_button">Restart</string>
     <string name="ok_button">OK</string>
-    <string name="stopp">Stopp</string>
+    <string name="stopp">Stop</string>
     <string name="pause">Pause</string>
-    <string name="resume">Weiter</string>
-    <string name="title_activity_finished">Fertig</string>
+    <string name="resume">Continue</string>
+    <string name="title_activity_finished">Finished!</string>
     
-    <string name="kf_or">Kauflächen oben erste Seite</string>
-    <string name="kf_ol">Kauflächen oben zweite Seite</string>
-    <string name="kf_ur">Kauflächen unten erste Seite</string>
-    <string name="kf_ul">Kauflächen unten zweite Seite</string>
+    <string name="kf_or">Upper chewing surfaces first side</string>
+    <string name="kf_ol">Upper chewing surfaces second side</string>
+    <string name="kf_ur">Lower chewing surfaces first side</string>
+    <string name="kf_ul">Lower chewing surfaces second side</string>
     
-    <string name="sf_r">Seitenfläche erste Seite bis und mit Eckzahn</string>
-    <string name="sf_l">Seitenfläche zweite Seite bis und mit Eckzahn</string>
+    <string name="sf_r">Side surfaces first side up to and including eyetooth</string>
+    <string name="sf_l">Side surfaces second side up to and including eyetooth</string>
     
     <!-- ab der Mittelstufe (10jährige): -->
-    <string name="sf_ro">Seitenfläche erste Seite oben bis und mit Eckzahn</string>
-    <string name="sf_ru">Seitenfläche erste Seite unten bis und mit Eckzahn</string>
-    <string name="sf_lo">Seitenfläche zweite Seite oben bis und mit Eckzahn</string>
-    <string name="sf_lu">Seitenfläche zweite Seite unten bis und mit Eckzahn</string>
+    <string name="sf_ro">Upper side surfaces first side up to and including eyetooth</string>
+    <string name="sf_ru">Lower side surfaces first side up to and including eyetooth</string>
+    <string name="sf_lo">Upper side surfaces second side up to and including eyetooth</string>
+    <string name="sf_lu">Lower side surfaces second side up to and including eyetooth</string>
 
-    <string name="sf_vo">Außen vorne oben</string>
-    <string name="sf_vu">Außen vorne unten</string>
+    <string name="sf_vo">Upper outer front surfaces</string>
+    <string name="sf_vu">Lower outer front surfaces</string>
 
-    <string name="i_or">Innen oben erste Seite</string>
-    <string name="i_ov">Innen oben vorne</string>
-    <string name="i_ol">Innen oben zweite Seite</string>
-    <string name="i_ur">Innen unten erste Seite</string>
-    <string name="i_uv">Innen unten vorne</string>
-    <string name="i_ul">Innen unten zweite Seite</string>
+    <string name="i_or">Upper inside surfaces first side</string>
+    <string name="i_ov">Upper inside surfaces front side</string>
+    <string name="i_ol">Upper inside surfaces second side</string>
+    <string name="i_ur">Lower inside surfaces first side</string>
+    <string name="i_uv">Lower inside surfaces front side</string>
+    <string name="i_ul">Lower inside surfaces second side</string>
     
-    <string name="fertig">Fertig, Bravo!</string>
-    <string name="beenden_button">Beenden</string>
+    <string name="fertig">Finished! Well done!</string>
+    <string name="beenden_button">Exit</string>
 </resources>

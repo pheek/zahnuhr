@@ -25,9 +25,9 @@ public class PutzSequenz {
 	private PutzSchritt[] statiJugendliche = {
 
 			// debug data:
-			// new PutzSchritt(R.drawable.kf_or, R.string.kf_or, 3),
-			// new PutzSchritt(R.drawable.i_uv, R.string.i_uv, 5),
-			// new PutzSchritt(R.drawable.sf_r, R.string.sf_r, 5)
+//			 new PutzSchritt(R.drawable.kf_or, R.string.kf_or,6),
+//			 new PutzSchritt(R.drawable.i_uv, R.string.i_uv, 6),
+//			 new PutzSchritt(R.drawable.sf_r, R.string.sf_r, 6)
 
 			// hot data:
 			new PutzSchritt(R.drawable.kf_or, R.string.kf_or, 12),
@@ -56,9 +56,9 @@ public class PutzSequenz {
 	private PutzSchritt[] statiKinder = {
 
 			// debug data:
-			// new PutzSchritt(R.drawable.kf_or, R.string.kf_or, 5),
-			// new PutzSchritt(R.drawable.kf_ol, R.string.kf_ol, 4),
-			// new PutzSchritt(R.drawable.kf_ur, R.string.kf_ur, 4)
+//			 new PutzSchritt(R.drawable.kf_or, R.string.kf_or, 6),
+//			 new PutzSchritt(R.drawable.kf_ol, R.string.kf_ol, 6),
+//			 new PutzSchritt(R.drawable.kf_ur, R.string.kf_ur, 6)
 
 			// hot data:
 			new PutzSchritt(R.drawable.kf_or, R.string.kf_or, 12),

@@ -6,8 +6,8 @@
     <string name="jugendliche">barn (&gt;10år)</string>
     <string name="start_button">start</string>
     <string name="los_text">start</string>
-    <string name="zielgruppe">Ett tidtagarur för barn som vill lära sig borsta tänderna på bästa</string>
-    <string name="genehmigung">godkänd:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
+    <string name="zielgruppe">Ett tidtagarur för barn som vill lära sig borsta tänderna på bästa sätt.</string>
+    <string name="genehmigung">Illustrationer med tillstånd:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
     <string name="logo">loggo</string>
     <string name="title_activity_slide_show">bildvisning</string>
     <string name="dummy_button">Dummy Button</string>
@@ -15,7 +15,7 @@
     <string name="ok_button">ok</string>
     <string name="stopp">stopp</string>
     <string name="pause">paus</string>
-    <string name="resume">sammanfattning</string>
+    <string name="resume">fortsätt</string>
     <string name="title_activity_finished">avslutad</string>
     
     <string name="kf_or">Tuggytan övre käken – första sidan</string>

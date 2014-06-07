@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Teeth Cleaning Timer</string>
+    <string name="app_name">Teeth Timer</string>
     <string name="kinder">Kids up to 10 years</string>
     <string name="jugendliche">Kids over 10 years of age</string>
     <string name="start_button">Start</string>
@@ -24,7 +24,7 @@
     <string name="kf_ul">Lower chewing surfaces second side</string>
     
     <string name="sf_r">Side surfaces first side up to and including eyetooth</string>
-    <string name="sf_l">Lower side surfaces second side up to and including eyetooth</string>
+    <string name="sf_l">Side surfaces second side up to and including eyetooth</string>
     
     <!-- ab der Mittelstufe (10jährige): -->
     <string name="sf_ro">Upper side surfaces first side up to and including eyetooth</string>
