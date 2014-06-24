@@ -206,7 +206,7 @@ public class SlideShowActivity extends Activity implements Updater {
 			@Override
 			public void run() {
 				if(null != mPlayer && !mPlayer.isPlaying()) {
-			    	ImageView img = (ImageView) findViewById(R.id.startImage);
+					ImageView img = (ImageView) findViewById(R.id.startImage);
 			    	if(! isPaused()) {
 				      img.setImageResource(paintedSchritt.getDrawableID());
 			    	}
