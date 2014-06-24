@@ -85,8 +85,9 @@ public class SlideShowActivity extends Activity implements Updater {
 		this.setContentView(R.layout.activity_slide_show);
 		registerPauseButtonListener();
 		// register this for callback
-		StateCallback sc = StateImplementation.getInstance();
-		sc.setUpdater(this);
+		gongPlay();
+		StateCallback stateCallback = StateImplementation.getInstance();
+		stateCallback.setUpdater(this);
 	}
 	
 	
@@ -106,7 +107,6 @@ public class SlideShowActivity extends Activity implements Updater {
 		actualProgressBar.setProgress((int) (actualSeconds * 100.0 / maxSeconds));
 	}
 
-	
 	public void pause() {
 		StateImplementation.getInstance().pause();
 	}
@@ -116,12 +116,10 @@ public class SlideShowActivity extends Activity implements Updater {
 		StateImplementation.getInstance().resume();
 	}
 
-	
 	public boolean isPaused() {
 		return StateImplementation.getInstance().isPaused();
 	}
 
-	
 	@Override
 	public void update() {
 		this.neuZeichnen();
@@ -138,12 +136,12 @@ public class SlideShowActivity extends Activity implements Updater {
 
 		if (state.getRemainingSecondsActState() <= 0) {
 			state.nextInSequence();
+			gongPlay();
 		}
 		
 		drawAndText(state.getActPutzSchritt());
 		paintingProgressBars();
 
-		gongPlay();
 	}
 		
 	/**
