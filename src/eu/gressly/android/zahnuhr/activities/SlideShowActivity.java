@@ -157,7 +157,7 @@ public class SlideShowActivity extends Activity implements Updater {
 		}
 		StateCallback state = StateImplementation.getInstance();
 		Log.i(TAG, "Gong time " + state.isGongTime());
-
+        mPlayer.stop();
 		if(state.isGongTime()) {
 			if(!mPlayer.isPlaying()) {
 				blackScreen();
@@ -191,8 +191,8 @@ public class SlideShowActivity extends Activity implements Updater {
 	
 	private void gotoViewFinished() {
 		StateImplementation.getInstance().stop();
+		FinishScreenActivity.allowEndeGong();
 		Intent finishedView = new Intent(getApplicationContext(), FinishScreenActivity.class);
-  
 		startActivity(finishedView);
 	}
 	
@@ -246,15 +246,23 @@ public class SlideShowActivity extends Activity implements Updater {
 		}
 	}
 
-	@SuppressLint("NewApi") // setBackground erst ab API Version 11 
 	private void relabel(int stringResource, int drawableResource) {
 		Button pauseResumeButton = (Button) findViewById(R.id.button_pause_resume);
 		CharSequence label = getResources().getText(stringResource);
-		try{
-		 pauseResumeButton.setBackground(getResources().getDrawable(drawableResource));
-		} catch (Exception e) {
-	     System.out.println("Debug SlideShowActivity.relabel(): API Version Problem: Unsupported API (must be greater than 10).");
-		}
+		setBackgroundVersionIndependant(drawableResource, pauseResumeButton);
 	    pauseResumeButton.setText(label);
+	}
+
+	@SuppressWarnings("deprecation")
+	@SuppressLint("NewApi")
+	private void setBackgroundVersionIndependant(int drawableResource,
+			Button pauseResumeButton) {
+		
+		int sdk = android.os.Build.VERSION.SDK_INT;
+		if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+			pauseResumeButton.setBackgroundDrawable(getResources().getDrawable(drawableResource));
+		} else {
+			pauseResumeButton.setBackground(getResources().getDrawable(drawableResource));
+		}
 	}
 } // end class: SlideShowActivity

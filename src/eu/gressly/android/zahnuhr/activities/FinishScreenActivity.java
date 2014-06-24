@@ -21,6 +21,8 @@ import eu.gressly.android.zahnuhr.util.AllActivities;
  */
 public class FinishScreenActivity extends Activity {
 	private static final String TAG = "FinishScreenActivity";
+	
+	static boolean gongedForCurrentShow = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -51,8 +53,15 @@ public class FinishScreenActivity extends Activity {
    * @see gongPlay
 	 */
 	synchronized void gongPlayFinished() {
-      MediaPlayer mPlayer = MediaPlayer.create(FinishScreenActivity.this, R.raw.gongende);
-	  mPlayer.start();
+	  if(! gongedForCurrentShow) {
+        MediaPlayer mPlayer = MediaPlayer.create(FinishScreenActivity.this, R.raw.gongende);
+        FinishScreenActivity.gongedForCurrentShow = true;
+	    mPlayer.start();
+	  }
+	}
+	
+	public static void allowEndeGong() {
+		FinishScreenActivity.gongedForCurrentShow = false;
 	}
 	
 	private void registerOKButton() {
