@@ -157,7 +157,6 @@ public class SlideShowActivity extends Activity implements Updater {
 		}
 		StateCallback state = StateImplementation.getInstance();
 		Log.i(TAG, "Gong time " + state.isGongTime());
-        mPlayer.stop();
 		if(state.isGongTime()) {
 			if(!mPlayer.isPlaying()) {
 				blackScreen();
