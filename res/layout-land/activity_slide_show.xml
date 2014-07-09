@@ -9,9 +9,6 @@
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:src="@drawable/kf_or" />
-            <!-- 
-              android:scaleType="centerCrop" 
-              -->
 
         <ProgressBar
             android:id="@+id/progressBar_teilSchritt"

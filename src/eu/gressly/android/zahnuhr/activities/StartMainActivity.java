@@ -18,7 +18,6 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;	
-
 // project specific
 import eu.gressly.android.zahnuhr.*;
 import eu.gressly.android.zahnuhr.stati.*;
@@ -26,14 +25,16 @@ import eu.gressly.android.zahnuhr.util.*;
 
 public class StartMainActivity extends Activity {
     private final static String logTag = "eu.gressly.android.zahnuhr.activities.StartMainActivity";
+
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AllActivities.registerActivity(this);
         hideTitleAndNotificationbar();
+        setContentView(R.layout.activity_start_zahnuhr);
         buttonTexteLos();
-        setStartButonHandler();  
+        setStartButonHandler();         
     }
    
     // switch to the browser.
@@ -59,7 +60,9 @@ public class StartMainActivity extends Activity {
     private void losText(int rButtonID, int rTextID) {
       Button startButton = (Button) findViewById(rButtonID);
       String losText     = (String) getText(rTextID) + ":\n" + getText(R.string.los_text) + "!";
-      startButton.setText(losText);
+      if(null != startButton && null != losText) {
+    	  startButton.setText(losText);
+      }
     }
     
     @Override
@@ -76,8 +79,7 @@ public class StartMainActivity extends Activity {
         //Hide notification-bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
         		WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        setContentView(R.layout.activity_start_zahnuhr);
+        
 	}
 
 	private void setStartButonHandler() {

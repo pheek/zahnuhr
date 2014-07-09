@@ -52,13 +52,13 @@ public class SlideShowActivity extends Activity implements Updater {
 		// Hide notification-bar
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
 	}
 
 	@Override
 	protected void onResume(){
 		super.onResume();
-		setContentViewAndStartProgress();		
+		setContentViewAndStartProgress();
+		
 	}
 	
 	@Override
@@ -79,7 +79,6 @@ public class SlideShowActivity extends Activity implements Updater {
 		this.update();
 		setPausedResumeText();
 	}
-	
 	
 	void setContentViewAndStartProgress() {
 		this.setContentView(R.layout.activity_slide_show);

@@ -30,13 +30,18 @@ public class StartClickListener implements OnClickListener {
     public void setActivity(Activity a) {
     	this.myActivity = a;
     }
+
 	@Override
 	public void onClick(View v) {
 		StateCallback sc = StateImplementation.getInstance();
 		sc.setAlter(this.alter);
-		sc.restart();
+		//sc.restart();
 		Intent slideShowView = new Intent(myActivity.getApplicationContext(), SlideShowActivity.class);
-        myActivity.startActivity(slideShowView);	
+        myActivity.startActivity(slideShowView);
+        //TODO: Dies sollte erst im SlideShowActivity.setContentViewAnd StartProgress() 
+        //      geschehen, doch dort habe ich das "Alter" nicht mehr zur Verfügung...
+        
+        sc.restart();
 	}
 
 } // end class StartClickListener

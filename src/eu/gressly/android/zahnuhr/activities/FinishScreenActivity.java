@@ -23,7 +23,7 @@ public class FinishScreenActivity extends Activity {
 	private static final String TAG = "FinishScreenActivity";
 	
 	static boolean gongedForCurrentShow = false;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		System.out.println("DEBUG: Creating FinishScreenActivity");

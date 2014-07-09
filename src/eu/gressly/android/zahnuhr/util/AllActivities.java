@@ -1,11 +1,8 @@
 package eu.gressly.android.zahnuhr.util;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import eu.gressly.android.zahnuhr.activities.FinishScreenActivity;
 import eu.gressly.android.zahnuhr.activities.SlideShowActivity;
-import eu.gressly.android.zahnuhr.activities.StartMainActivity;
 import eu.gressly.android.zahnuhr.stati.PutzAlter;
 
 import android.app.Activity;
@@ -23,8 +20,9 @@ import android.app.Activity;
  * 
  */
 public class AllActivities {
+	public final static String TAG="AllActivities";
 	
-   public static PutzAlter SEQUENZ;
+    public static PutzAlter SEQUENZ;
 
 	private static ArrayList<Activity> registeredActivities;
 
@@ -40,33 +38,42 @@ public class AllActivities {
 	}
 
 	private static void removeOtherActivitiesAfterTerminatingOrRelaunch(Activity a) {
-		if(a instanceof FinishScreenActivity) {
-			// remove all SlideShowActivities
-			@SuppressWarnings("unchecked")
-			ArrayList<Activity> clone = (ArrayList<Activity>) registeredActivities.clone();
-			for(Activity ac : clone) {
-				if(ac instanceof SlideShowActivity) {
-				  registeredActivities.remove(ac);
-				  ac.finish();
-				}
+		@SuppressWarnings("unchecked")
+		ArrayList<Activity> clone = (ArrayList<Activity>) registeredActivities.clone();
+		for(Activity ac : clone) {
+			if(a != ac) {
+				registeredActivities.remove(ac);
+		    	ac.finish();
 			}
 		}
-		if(a instanceof StartMainActivity) {
-			@SuppressWarnings("unchecked")
-			ArrayList<Activity> clone = (ArrayList<Activity>) registeredActivities.clone();
-			for(Activity ac: clone) {
-				if(ac != a) {
-					registeredActivities.remove(ac);
-					ac.finish();
-				}
-			}
-		}
+	
+//		if(a instanceof FinishScreenActivity) {
+//			// remove all SlideShowActivities
+//			@SuppressWarnings("unchecked")
+//			ArrayList<Activity> clone = (ArrayList<Activity>) registeredActivities.clone();
+//			for(Activity ac : clone) {
+//				if(ac instanceof SlideShowActivity) {
+//				  registeredActivities.remove(ac);
+//				  ac.finish();
+//				}
+//			}
+//		}
+//		if(a instanceof StartMainActivity) {
+//			@SuppressWarnings("unchecked")
+//			ArrayList<Activity> clone = (ArrayList<Activity>) registeredActivities.clone();
+//			for(Activity ac: clone) {
+//				if(ac != a) {
+//					registeredActivities.remove(ac);
+//					ac.finish();
+//				}
+//			}
+//		}
 	}
 
-	public static List<Activity> getAllRegisteredActivities() {
-		return registeredActivities;
-	}
-
+//	public static List<Activity> getAllRegisteredActivities() {
+//		return registeredActivities;
+//	}
+//
 	public static SlideShowActivity getNewestSlideActivity() {
 		if(null == registeredActivities) {
 			return null;
@@ -80,6 +87,7 @@ public class AllActivities {
 		}
 		return newest;
 	}
+	
 
 //	public static void unregister(SlideShowActivity toRemove) {
 //		if(null == AllActivities.registeredActivities) {

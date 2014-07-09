@@ -107,7 +107,13 @@ public class StateImplementation implements StateCallback {
 	public synchronized void update() {
 		// delegate
 		if(null == updater) {
-			Log.e(TAG, "Fehlerin StateImplementation.update(): updater ist null!");
+			Log.e(TAG, "Fehler in StateImplementation.update(): updater ist null!");
+			try {
+				throw new Exception("Fehler in StateImplementation.update(): updater ist null!");
+			} catch (Exception log) {
+				Log.e(TAG, "StateImpl: " + log);
+				log.printStackTrace();
+			}
 			return;
 		}
 		this.updater.update();

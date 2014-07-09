@@ -16,8 +16,14 @@ import android.widget.ImageView;
 public class DynamicImageView extends ImageView {
     public static final float HEIGHT_PERCENTAGE_IN_LANDSCAPE_LAYOUT = 0.75f;
     
+    private static DynamicImageView oldView = null;
+    
 	public DynamicImageView(final Context context, final AttributeSet attrs) {
 		super(context, attrs);
+		if(null != oldView) {
+			oldView.setImageResource(0);
+		}
+		oldView = this;
 		System.out.println("DEBUG Dynamic Image View Constructor");
 	}
 
