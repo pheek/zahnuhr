@@ -19,8 +19,8 @@ import eu.gressly.android.zahnuhr.stati.PutzSequenz;
 import eu.gressly.util.callback.Updater;
 
 public class StateImplementation implements StateCallback {
-    private static final String TAG = "StateImplementation";
-    
+	private static final String TAG = "StateImplementation";
+
 	private Updater         updater        ;
 	private SlideShowRunner slideShowRunner;
 	private BackwardsTimer  timerOverall   ;
@@ -44,7 +44,7 @@ public class StateImplementation implements StateCallback {
 	
 	@Override
 	public synchronized void setUpdater(Updater u) {
-      this.updater = u;
+		this.updater = u;
 	}
 
 	@Override

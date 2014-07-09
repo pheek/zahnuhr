@@ -14,10 +14,10 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 
 public class DynamicImageView extends ImageView {
-    public static final float HEIGHT_PERCENTAGE_IN_LANDSCAPE_LAYOUT = 0.75f;
-    
-    private static DynamicImageView oldView = null;
-    
+	public static final float HEIGHT_PERCENTAGE_IN_LANDSCAPE_LAYOUT = 0.75f;
+
+	private static DynamicImageView oldView = null;
+
 	public DynamicImageView(final Context context, final AttributeSet attrs) {
 		super(context, attrs);
 		if(null != oldView) {
@@ -57,8 +57,8 @@ public class DynamicImageView extends ImageView {
 			return false;
 		}
 		boolean bb =  Configuration.ORIENTATION_LANDSCAPE ==
-			  AllActivities.getNewestSlideActivity().getResources().getConfiguration().orientation;
-        return bb;
+				AllActivities.getNewestSlideActivity().getResources().getConfiguration().orientation;
+		return bb;
 		//return MeasureSpec.getSize(widthMeasureSpec) > MeasureSpec.getSize(heightMeasureSpec);
 	}
 	

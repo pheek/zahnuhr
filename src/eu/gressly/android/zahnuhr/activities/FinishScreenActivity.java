@@ -30,18 +30,18 @@ public class FinishScreenActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		
 		AllActivities.registerActivity(this);
-		
+
 		//Hide title
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        //Hide notification-bar
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-        		WindowManager.LayoutParams.FLAG_FULLSCREEN);
-             
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		//Hide notification-bar
+		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+				WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 		setContentView(R.layout.activity_fertig);
-		
+
 		registerOKButton();
 	}
-	
+
 	@Override
 	protected void onResume() { 
 		super.onResume();
@@ -50,33 +50,33 @@ public class FinishScreenActivity extends Activity {
 	
 	/**
 	 * Ende Gong 
-   * @see gongPlay
+	 * @see gongPlay
 	 */
 	synchronized void gongPlayFinished() {
-	  if(! gongedForCurrentShow) {
-        MediaPlayer mPlayer = MediaPlayer.create(FinishScreenActivity.this, R.raw.gongende);
-        FinishScreenActivity.gongedForCurrentShow = true;
-	    mPlayer.start();
-	  }
+		if(! gongedForCurrentShow) {
+			MediaPlayer mPlayer = MediaPlayer.create(FinishScreenActivity.this, R.raw.gongende);
+			FinishScreenActivity.gongedForCurrentShow = true;
+			mPlayer.start();
+		}
 	}
-	
+
 	public static void allowEndeGong() {
 		FinishScreenActivity.gongedForCurrentShow = false;
 	}
 	
 	private void registerOKButton() {
 		Button restartButton = (Button) findViewById(R.id.button_ok);
-		 if(null == restartButton) {
-			 Log.w(TAG, "FEHLER: Resource button_ok nicht gefunden!!!");
-		 } else {
+		if(null == restartButton) {
+			Log.w(TAG, "FEHLER: Resource button_ok nicht gefunden!!!");
+		} else {
 			restartButton.setOnClickListener(new OnClickListener() {
-			    @Override
-			    public void onClick(View arg0) {
-				  Intent startActivity = new Intent(FinishScreenActivity.this, StartMainActivity.class);
-				  startActivity(startActivity);
-			    }
+				@Override
+				public void onClick(View arg0) {
+					Intent startActivity = new Intent(FinishScreenActivity.this, StartMainActivity.class);
+					startActivity(startActivity);
+				}
 			});
-		 }
+		}
 	}
 
 } //end class FinishScreenActivity

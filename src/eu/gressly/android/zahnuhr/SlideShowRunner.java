@@ -18,14 +18,14 @@ import eu.gressly.util.callback.Updater;
  * calls back the view to refresh its content about every 1/4 second
  */
 public class SlideShowRunner implements Runnable {
-    private static final String TAG = "SlideShowRunner";
-    
-    private static final int REDRAW_MILLISECS = 100;
-    
+	private static final String TAG = "SlideShowRunner";
+
+	private static final int REDRAW_MILLISECS = 100;
+
 	private boolean running          ;
 	private Thread  thisThread = null;
 	private Updater callbackState    ;
-    
+
 	// Singleton Design Pattern
 	private static  SlideShowRunner singleton;
 	
@@ -36,7 +36,7 @@ public class SlideShowRunner implements Runnable {
 	
 	public static SlideShowRunner getInstance(Updater up) {
 		if(null == singleton) {
-		   SlideShowRunner.singleton = new SlideShowRunner(up);
+			SlideShowRunner.singleton = new SlideShowRunner(up);
 		}
 		return singleton;
 	}

@@ -16,23 +16,23 @@ import eu.gressly.util.callback.Callback;
 
 public interface StateCallback extends Callback
 {
-	 boolean isRunning()  ;
-	 void    restart()    ;
-	 void    stop()       ;
-	 void    pause()      ;
-	 boolean isPaused()   ;
-	 void    resume()     ;
-	  
-	 void    setRemainingSecondsOverAll(float secs);
-	 boolean isGlobalTimeOver();
-	 float   getRemainingSecondsFromStartPositionActState();
-	 
-	 float   getRemainingSecondsActState();
-	  
-	 PutzSchritt getActPutzSchritt();
-	 void setAlter(PutzAlter alter);
-     PutzAlter getAlter();
-	 float getTotalSecs();
-     void nextInSequence();
-     boolean isGongTime();
-}
+	boolean isRunning()  ;
+	void    restart()    ;
+	void    stop()       ;
+	void    pause()      ;
+	boolean isPaused()   ;
+	void    resume()     ;
+
+	void    setRemainingSecondsOverAll(float secs);
+	boolean isGlobalTimeOver();
+	float   getRemainingSecondsFromStartPositionActState();
+
+	float   getRemainingSecondsActState();
+
+	PutzSchritt getActPutzSchritt();
+	void setAlter(PutzAlter alter);
+	PutzAlter getAlter();
+	float getTotalSecs();
+	void nextInSequence();
+	boolean isGongTime();
+} // end interfaces StateCallback

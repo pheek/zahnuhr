@@ -171,11 +171,11 @@ public class SlideShowActivity extends Activity implements Updater {
 			// Solange der Gong läuft, ist der "Bar" auf null (0)
 			setProgress(R.id.progressBar_teilSchritt, 0, state.getActPutzSchritt().getSeconds());
 		} else {			
-		  // Zeit etwas manipulieren, denn der Gong benötigt ja auch seine Zeit.
-		  // Die Maximalzeit sollte dennoch nicht überschritten werden.
-		  // Ob am Anfang, oder am Ende des Gonges die Seite gewechselt wird, spielt somit
-	      // keine Rolle.
-		  setProgress(R.id.progressBar_teilSchritt, state.getActPutzSchritt().getSeconds() - StateImplementation.GONG_LEN
+			// Zeit etwas manipulieren, denn der Gong benötigt ja auch seine Zeit.
+			// Die Maximalzeit sollte dennoch nicht überschritten werden.
+			// Ob am Anfang, oder am Ende des Gonges die Seite gewechselt wird, spielt somit
+			// keine Rolle.
+			setProgress(R.id.progressBar_teilSchritt, state.getActPutzSchritt().getSeconds() - StateImplementation.GONG_LEN
 				- state.getRemainingSecondsActState(), state.getActPutzSchritt().getSeconds() - StateImplementation.GONG_LEN);
 		}
 
@@ -204,17 +204,17 @@ public class SlideShowActivity extends Activity implements Updater {
 			public void run() {
 				if(null != mPlayer && !mPlayer.isPlaying()) {
 					ImageView img = (ImageView) findViewById(R.id.startImage);
-			    	if(! isPaused()) {
-				      img.setImageResource(paintedSchritt.getDrawableID());
-			    	}
-				    TextView txt = (TextView) findViewById(R.id.textView_wo);
-				    txt.setText(getResources().getText(paintedSchritt.getStringID()));
+					if(! isPaused()) {
+						img.setImageResource(paintedSchritt.getDrawableID());
+					}
+					TextView txt = (TextView) findViewById(R.id.textView_wo);
+					txt.setText(getResources().getText(paintedSchritt.getStringID()));
 				}
 			}
 		});
 	}
-	
-	
+
+
 	/**
 	 * Hier wird ein anderes Bild eingefügt, damit der Wechsel zwischen den Bildern klar wird.
 	 * Dies geschieht zusätzlich zum "Gong".
@@ -227,8 +227,8 @@ public class SlideShowActivity extends Activity implements Updater {
 				img.setImageResource(R.drawable.blackout);
 				
 				StateCallback state = StateImplementation.getInstance();
-			    TextView txt = (TextView) findViewById(R.id.textView_wo);
-			    txt.setText(getResources().getText(state.getActPutzSchritt().getStringID()));
+				TextView txt = (TextView) findViewById(R.id.textView_wo);
+				txt.setText(getResources().getText(state.getActPutzSchritt().getStringID()));
 			}
 		});
 	}
@@ -246,14 +246,14 @@ public class SlideShowActivity extends Activity implements Updater {
 		Button pauseResumeButton = (Button) findViewById(R.id.button_pause_resume);
 		CharSequence label = getResources().getText(stringResource);
 		setBackgroundVersionIndependant(drawableResource, pauseResumeButton);
-	    pauseResumeButton.setText(label);
+		pauseResumeButton.setText(label);
 	}
 
 	@SuppressWarnings("deprecation")
 	@SuppressLint("NewApi")
 	private void setBackgroundVersionIndependant(int drawableResource,
 			Button pauseResumeButton) {
-		
+
 		int sdk = android.os.Build.VERSION.SDK_INT;
 		if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
 			pauseResumeButton.setBackgroundDrawable(getResources().getDrawable(drawableResource));

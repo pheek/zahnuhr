@@ -20,16 +20,16 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 public class StartClickListener implements OnClickListener {
-    Activity myActivity;
-    PutzAlter alter;
-    
-    public StartClickListener(PutzAlter alter) {
-    	this.alter = alter;
-    }
-    
-    public void setActivity(Activity a) {
-    	this.myActivity = a;
-    }
+	Activity myActivity;
+	PutzAlter alter;
+
+	public StartClickListener(PutzAlter alter) {
+		this.alter = alter;
+	}
+
+	public void setActivity(Activity a) {
+		this.myActivity = a;
+	}
 
 	@Override
 	public void onClick(View v) {
@@ -37,11 +37,11 @@ public class StartClickListener implements OnClickListener {
 		sc.setAlter(this.alter);
 		//sc.restart();
 		Intent slideShowView = new Intent(myActivity.getApplicationContext(), SlideShowActivity.class);
-        myActivity.startActivity(slideShowView);
-        //TODO: Dies sollte erst im SlideShowActivity.setContentViewAnd StartProgress() 
-        //      geschehen, doch dort habe ich das "Alter" nicht mehr zur Verfügung...
-        
-        sc.restart();
+		myActivity.startActivity(slideShowView);
+		//TODO: Dies sollte erst im SlideShowActivity.setContentViewAnd StartProgress() 
+		//      geschehen, doch dort habe ich das "Alter" nicht mehr zur Verfügung...
+
+		sc.restart();
 	}
 
 } // end class StartClickListener

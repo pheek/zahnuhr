@@ -9,5 +9,5 @@ package eu.gressly.android.zahnuhr.stati;
  *          b) Teens, which brush outside first the upper part, then the lower part.
  */
 public enum PutzAlter {
-  KINDER, JUGENDLICHE;
+	KINDER, JUGENDLICHE;
 }

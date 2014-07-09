@@ -22,7 +22,7 @@ import android.app.Activity;
 public class AllActivities {
 	public final static String TAG="AllActivities";
 	
-    public static PutzAlter SEQUENZ;
+	public static PutzAlter SEQUENZ;
 
 	private static ArrayList<Activity> registeredActivities;
 
@@ -31,7 +31,7 @@ public class AllActivities {
 		if (null == registeredActivities) {
 			registeredActivities = new ArrayList<Activity>();
 		}
-		
+
 		removeOtherActivitiesAfterTerminatingOrRelaunch(a);
 		
 		registeredActivities.add(a);
@@ -43,7 +43,7 @@ public class AllActivities {
 		for(Activity ac : clone) {
 			if(a != ac) {
 				registeredActivities.remove(ac);
-		    	ac.finish();
+				ac.finish();
 			}
 		}
 	
