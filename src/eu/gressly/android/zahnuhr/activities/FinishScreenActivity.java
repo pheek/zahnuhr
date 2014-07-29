@@ -21,9 +21,10 @@ import eu.gressly.android.zahnuhr.util.AllActivities;
  */
 public class FinishScreenActivity extends Activity {
 	private static final String TAG = "FinishScreenActivity";
-	
+
 	static boolean gongedForCurrentShow = false;
-	
+
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		System.out.println("DEBUG: Creating FinishScreenActivity");
@@ -42,12 +43,14 @@ public class FinishScreenActivity extends Activity {
 		registerOKButton();
 	}
 
+
 	@Override
 	protected void onResume() { 
 		super.onResume();
 		gongPlayFinished();
 	}
-	
+
+
 	/**
 	 * Ende Gong 
 	 * @see gongPlay
@@ -60,10 +63,12 @@ public class FinishScreenActivity extends Activity {
 		}
 	}
 
+
 	public static void allowEndeGong() {
 		FinishScreenActivity.gongedForCurrentShow = false;
 	}
-	
+
+
 	private void registerOKButton() {
 		Button restartButton = (Button) findViewById(R.id.button_ok);
 		if(null == restartButton) {

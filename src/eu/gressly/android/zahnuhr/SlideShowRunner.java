@@ -1,5 +1,7 @@
 package eu.gressly.android.zahnuhr;
+
 import android.util.Log;
+
 /**
  * @author  phi (phi@gressly.eu)
  * @version alpha
@@ -8,6 +10,7 @@ import android.util.Log;
  * @purpose A runner who calls every 200ms an "update()" Method, so a
  *          Progressbar can be repainted.
  */
+
 import eu.gressly.util.callback.Updater;
 
 /**
@@ -18,6 +21,7 @@ import eu.gressly.util.callback.Updater;
  * calls back the view to refresh its content about every 1/4 second
  */
 public class SlideShowRunner implements Runnable {
+
 	private static final String TAG = "SlideShowRunner";
 
 	private static final int REDRAW_MILLISECS = 100;
@@ -28,18 +32,21 @@ public class SlideShowRunner implements Runnable {
 
 	// Singleton Design Pattern
 	private static  SlideShowRunner singleton;
-	
+
+
 	private SlideShowRunner(Updater up) {
 		this.callbackState = up;
 		Log.i(TAG, "Starting GUI-Thread in SlideShowRunner");
 	}
-	
+
+
 	public static SlideShowRunner getInstance(Updater up) {
 		if(null == singleton) {
 			SlideShowRunner.singleton = new SlideShowRunner(up);
 		}
 		return singleton;
 	}
+
 
 	@Override
 	public void run() {
@@ -57,6 +64,7 @@ public class SlideShowRunner implements Runnable {
 		}
 	}
 
+
 	void start() {
 		stop();
 		Log.i(TAG, "SlideShowRunner.start()");
@@ -68,13 +76,15 @@ public class SlideShowRunner implements Runnable {
 		thisThread.start();
 		//running = true;
 	}
-	
+
+
 	public boolean isRunning() {
 		return running;
 	}
 
+
 	public void stop() {
 		running = false;
 	}
-	
+
 } // end class SlideShowRunner

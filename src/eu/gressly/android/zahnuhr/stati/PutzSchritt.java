@@ -9,9 +9,10 @@ package eu.gressly.android.zahnuhr.stati;
  */
 
 public class PutzSchritt {
-	private int    drawableID;
-	private int    stringID  ;
-	private float  seconds   ;
+	private int    drawableID; // which image to paint
+	private int    stringID  ; // which string to write
+	private float  seconds   ; // seconds of this step
+
 
 	public PutzSchritt(int drawableID, int stringID, int seconds) {
 		this.drawableID = drawableID;
@@ -19,13 +20,17 @@ public class PutzSchritt {
 		this.seconds    = seconds   ; 
 	}
 
+
 	public int getDrawableID() {
 		return this.drawableID;
 	}
 
+
 	public int getStringID() {
 		return this.stringID;
 	}
+
+
 
 	public float getSeconds() {
 		return this.seconds;

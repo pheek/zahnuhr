@@ -12,11 +12,13 @@ package eu.gressly.android.zahnuhr;
  *          Without a singleton "implementation" like this, the runnable
  *          would restart every turn.
  */
+
 import android.util.Log;
 import eu.gressly.android.zahnuhr.stati.PutzAlter;
 import eu.gressly.android.zahnuhr.stati.PutzSchritt;
 import eu.gressly.android.zahnuhr.stati.PutzSequenz;
 import eu.gressly.util.callback.Updater;
+
 
 public class StateImplementation implements StateCallback {
 	private static final String TAG = "StateImplementation";
@@ -25,32 +27,37 @@ public class StateImplementation implements StateCallback {
 	private SlideShowRunner slideShowRunner;
 	private BackwardsTimer  timerOverall   ;
 	private PutzSequenz     sequenz = null ; // must be set before switching to slideShwo
-	
+
 	private static StateImplementation singleton;
-	
+
+
 	private StateImplementation() {
 		this.slideShowRunner = SlideShowRunner.getInstance(this);
 		this.timerOverall    = new BackwardsTimer();
 		this.sequenz         = new PutzSequenz();
 		this.sequenz.reset();
 	}
-	
+
+
 	public static StateImplementation getInstance() {
 		if(null == singleton) {
 			StateImplementation.singleton = new StateImplementation();
 		}
 		return singleton;
 	}
-	
+
+
 	@Override
 	public synchronized void setUpdater(Updater u) {
 		this.updater = u;
 	}
 
+
 	@Override
 	public boolean isRunning() {
 		return slideShowRunner.isRunning();
 	}
+
 
 	@Override
 	public void restart() {
@@ -60,7 +67,8 @@ public class StateImplementation implements StateCallback {
 		resetTimer();
 		slideShowRunner.start();
 	}
-	
+
+
 	private void resetTimer() {
 		this.setRemainingSecondsOverAll(sequenz.getTotalSecs());
 	}
@@ -72,25 +80,30 @@ public class StateImplementation implements StateCallback {
 		sequenz.reset();
 	}
 
+
 	@Override
 	public void pause() {
 		timerOverall.pause();
 	}
+
 
 	@Override
 	public boolean isPaused() {
 		return timerOverall.isPaused();
 	}
 
+
 	@Override
 	public void resume() {
 		timerOverall.resume();
 	}
 
+
 	@Override
 	public void setRemainingSecondsOverAll(float secs) {
 		timerOverall.setRemainingSeconds(secs);
 	}
+
 
 	@Override
 	public float getRemainingSecondsActState() {
@@ -98,10 +111,12 @@ public class StateImplementation implements StateCallback {
 		return timerOverall.getRemainingSeconds() - afterSecs;
 	}
 
+
 	@Override
 	public PutzSchritt getActPutzSchritt() {
 		return sequenz.getActPos();
 	}
+
 
 	@Override
 	public synchronized void update() {
@@ -119,24 +134,29 @@ public class StateImplementation implements StateCallback {
 		this.updater.update();
 	}
 
+
 	public void start(Updater up) {
 		this.setUpdater(up);
 	}
+
 
 	@Override
 	public void setAlter(PutzAlter alter) {
 		this.sequenz.setAlter(alter);
 	}
 
+
 	@Override
 	public PutzAlter getAlter() {
 		return this.sequenz.getAlter();
 	}
 
+
 	@Override
 	public float getTotalSecs() {
 		return this.sequenz.getTotalSecs();
 	}
+
 
 	@Override
 	public void nextInSequence() {
@@ -144,15 +164,18 @@ public class StateImplementation implements StateCallback {
 		//setRemainingSecondsActState(this.sequenz.getActPos().getSeconds());
 	}
 
+
 	@Override
 	public boolean isGlobalTimeOver() {
 		return this.timerOverall.getRemainingSeconds() <= 0.0f;
 	}
 
+
 	@Override
 	public float getRemainingSecondsFromStartPositionActState() {
 		return this.sequenz.getTotalSecsAfterActState() + this.sequenz.getActPos().getSeconds();
 	}
+
 
 	public static final float GONG_LEN = 2.5f;
 	// ACHTUNG: Dies entspricht genau der Länge des Tons!

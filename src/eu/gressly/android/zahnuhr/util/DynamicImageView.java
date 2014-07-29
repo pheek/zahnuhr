@@ -27,6 +27,7 @@ public class DynamicImageView extends ImageView {
 		System.out.println("DEBUG Dynamic Image View Constructor");
 	}
 
+
 	@Override
 	protected void onMeasure(final int widthMeasureSpec,
 			final int heightMeasureSpec) {
@@ -52,6 +53,7 @@ public class DynamicImageView extends ImageView {
 		}
 	}
 
+
 	private boolean breitbild(int widthMeasureSpec, int heightMeasureSpec) {
 		if(null == AllActivities.getNewestSlideActivity()) {
 			return false;
@@ -61,5 +63,5 @@ public class DynamicImageView extends ImageView {
 		return bb;
 		//return MeasureSpec.getSize(widthMeasureSpec) > MeasureSpec.getSize(heightMeasureSpec);
 	}
-	
+
 } // end class DynamicImageView

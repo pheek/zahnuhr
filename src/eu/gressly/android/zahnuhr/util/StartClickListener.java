@@ -27,9 +27,11 @@ public class StartClickListener implements OnClickListener {
 		this.alter = alter;
 	}
 
+
 	public void setActivity(Activity a) {
 		this.myActivity = a;
 	}
+
 
 	@Override
 	public void onClick(View v) {

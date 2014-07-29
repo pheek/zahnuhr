@@ -1,4 +1,5 @@
 package eu.gressly.android.zahnuhr;
+
 /**
  * @author  phi (phi@gressly.eu)
  * @version alpha
@@ -23,8 +24,8 @@ public interface StateCallback extends Callback
 	boolean isPaused()   ;
 	void    resume()     ;
 
-	void    setRemainingSecondsOverAll(float secs);
-	boolean isGlobalTimeOver();
+	void    setRemainingSecondsOverAll(float secs)        ;
+	boolean isGlobalTimeOver()                            ;
 	float   getRemainingSecondsFromStartPositionActState();
 
 	float   getRemainingSecondsActState();
@@ -35,4 +36,5 @@ public interface StateCallback extends Callback
 	float getTotalSecs();
 	void nextInSequence();
 	boolean isGongTime();
+
 } // end interfaces StateCallback

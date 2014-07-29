@@ -1,7 +1,7 @@
 package eu.gressly.android.zahnuhr.activities;
 /**
  * @author  phi (phi@gressly.eu)
- * @version alpha
+ * @version 1
  * @date    16. 12. 2013
  * 
  * @purpose Start main Activity.
@@ -35,7 +35,8 @@ public class StartMainActivity extends Activity {
 		setStartButonHandler();
 	}
 
-	// switch to the browser.
+
+	// switch to the browser. "Uni" = Link to university of Zurich
 	public void onUniClick(View v) {
 		Log.i(logTag, "onUniClick");
 		Intent zahnInstitutImBrowser = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.zzm.uzh.ch/patienten/downloads/mb-kinder.html"));
@@ -52,6 +53,7 @@ public class StartMainActivity extends Activity {
 		losText(R.id.button_start_jugendliche, R.string.jugendliche);
 	}
 
+
 	/**
 	 * Zusammensetzen von "Kinder bis 10 Jahre" + ": " + "Los"
 	 */
@@ -62,7 +64,8 @@ public class StartMainActivity extends Activity {
 			startButton.setText(losText);
 		}
 	}
-	
+
+
 	@Override
 	protected void onPostResume() {
 		StateCallback sc = StateImplementation.getInstance();
@@ -70,6 +73,7 @@ public class StartMainActivity extends Activity {
 
 		super.onPostResume();
 	}
+
 
 	private void hideTitleAndNotificationbar() {
 		//Hide title
@@ -79,10 +83,12 @@ public class StartMainActivity extends Activity {
 			WindowManager.LayoutParams.FLAG_FULLSCREEN);
 	}
 
+
 	private void setStartButonHandler() {
 		configStartButtonHandler(R.id.button_start_kinder     , PutzAlter.KINDER     );
 		configStartButtonHandler(R.id.button_start_jugendliche, PutzAlter.JUGENDLICHE);
 	}
+
 
 	private void configStartButtonHandler(int rID, PutzAlter pa) {
 		Button             startButton =  (Button) findViewById(rID);

@@ -21,10 +21,11 @@ import android.app.Activity;
  */
 public class AllActivities {
 	public final static String TAG="AllActivities";
-	
+
 	public static PutzAlter SEQUENZ;
 
 	private static ArrayList<Activity> registeredActivities;
+
 
 	public static void registerActivity(Activity a) {
 		// lazy instantiation
@@ -36,6 +37,7 @@ public class AllActivities {
 		
 		registeredActivities.add(a);
 	}
+
 
 	private static void removeOtherActivitiesAfterTerminatingOrRelaunch(Activity a) {
 		@SuppressWarnings("unchecked")
@@ -74,11 +76,13 @@ public class AllActivities {
 //		return registeredActivities;
 //	}
 //
+
+
 	public static SlideShowActivity getNewestSlideActivity() {
 		if(null == registeredActivities) {
 			return null;
 		}
-		
+
 		SlideShowActivity newest = null;		
 		for (Activity a : registeredActivities) {
 			if (a instanceof SlideShowActivity) {
@@ -87,7 +91,7 @@ public class AllActivities {
 		}
 		return newest;
 	}
-	
+
 
 //	public static void unregister(SlideShowActivity toRemove) {
 //		if(null == AllActivities.registeredActivities) {
