@@ -35,7 +35,7 @@ public class PutzSequenz {
 			new PutzSchritt(R.drawable.kf_ur, R.string.kf_ur, 11),
 			new PutzSchritt(R.drawable.kf_ul, R.string.kf_ul, 11),
 
-			// TODO: Bilder für oben und unten separieren
+			// TODO: Bilder für oben und unten separieren. Will heißen: Neue zeichnen.
 			new PutzSchritt(R.drawable.sf_r,  R.string.sf_ro,  9),
 			new PutzSchritt(R.drawable.sf_r,  R.string.sf_ru,  9) ,
 			new PutzSchritt(R.drawable.sf_l,  R.string.sf_lo,  9),

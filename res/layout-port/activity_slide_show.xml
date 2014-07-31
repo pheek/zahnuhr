@@ -1,71 +1,75 @@
+<!-- @author  phi@gressly.eu
+     @webpage http://igeeks.gressly.eu
+     @version since 1.0
+     @date    since 2014
+  -->
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent" 
-        android:background   ="@color/app_background"
-        android:layout_height="match_parent" >
-        
-            <!-- android:layout_centerHorizontal="true" -->
-        <ProgressBar
-            android:id="@+id/progressBar_teilSchritt"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"  
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            
-            android:layout_below="@+id/image_layout_container"
-            android:minHeight="20dp"
-            android:maxHeight="20dp"
-            android:scrollbarSize="20dp"
-            android:background="#00f"
-            />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width  = "match_parent" 
+	android:background    = "@color/app_background"
+	android:layout_height = "match_parent" >
 
-        <ProgressBar
-            android:id="@+id/progressBar_overallProcess"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_alignParentLeft="true"    
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/progressBar_teilSchritt" />
+	<!-- android:layout_centerHorizontal="true" -->
+	<ProgressBar
+		android:id                      = "@+id/progressBar_teilSchritt"
+		style                           = "?android:attr/progressBarStyleHorizontal"
+		android:layout_width            = "match_parent"
+		android:layout_height           = "20dp"  
+		android:layout_alignParentLeft  = "true"
+		android:layout_alignParentRight = "true"
 
-        <TextView
-            android:id="@+id/textView_wo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/generic_label_text"
-            android:layout_centerHorizontal="true"
-            android:text="@string/kf_or"
-            android:layout_below="@+id/progressBar_overallProcess"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-        
-        <Button  
-            android:layout_margin="@dimen/button_margin"
-            android:id="@+id/button_pause_resume"
-            android:background="@drawable/bordershape"
-            android:textColor="@color/generic_button_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView_wo"
-            android:layout_centerHorizontal="true"
-            android:text="@string/pause" />
+		android:layout_below            = "@+id/image_layout_container"
+		android:minHeight               = "20dp"
+		android:maxHeight               = "20dp"
+		android:scrollbarSize           = "20dp"
+		android:background              = "#00f" />
 
-<LinearLayout 
-      android:id="@+id/image_layout_container"
-      android:layout_gravity="center"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content">
-    
-<eu.gressly.android.zahnuhr.util.DynamicImageView
-    android:id="@+id/startImage"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    
-    android:scaleType="centerCrop"
-    android:layout_gravity="center"
-    android:gravity = "center"
-    android:src="@drawable/kf_or" />
+	<ProgressBar
+		android:id                      = "@+id/progressBar_overallProcess"
+		style                           = "?android:attr/progressBarStyleHorizontal"
+		android:layout_width            = "match_parent"
+		android:layout_height           = "20dp"
+		android:layout_alignParentLeft  = "true"    
+		android:layout_alignParentRight = "true"
+		android:layout_below            = "@+id/progressBar_teilSchritt" />
 
-</LinearLayout>
-    </RelativeLayout>
+	<TextView
+		android:id                      = "@+id/textView_wo"
+		android:layout_width            = "wrap_content"
+		android:layout_height           = "wrap_content"
+		android:textColor               = "@color/generic_label_text"
+		android:layout_centerHorizontal = "true"
+		android:text                    = "@string/kf_or"
+		android:layout_below            = "@+id/progressBar_overallProcess"
+		android:textAppearance          = "?android:attr/textAppearanceLarge" />
+
+	<Button  
+		android:layout_margin           = "@dimen/button_margin"
+		android:id                      = "@+id/button_pause_resume"
+		android:background              = "@drawable/bordershape"
+		android:textColor               = "@color/generic_button_text"
+		android:layout_width            = "match_parent"
+		android:layout_height           = "wrap_content"
+		android:layout_below            = "@+id/textView_wo"
+		android:layout_centerHorizontal = "true"
+		android:text                    = "@string/pause" />
+
+	<LinearLayout 
+		android:id             = "@+id/image_layout_container"
+		android:layout_gravity = "center"
+		android:layout_width   = "match_parent"
+		android:layout_height  = "wrap_content">
+
+		<eu.gressly.android.zahnuhr.util.DynamicImageView
+			android:id            = "@+id/startImage"
+			android:layout_width  = "fill_parent"
+			android:layout_height = "wrap_content"
+
+			android:scaleType      = "centerCrop"
+			android:layout_gravity = "center"
+			android:gravity        = "center"
+			android:src            = "@drawable/kf_or" />
+
+	</LinearLayout>
+</RelativeLayout>
 

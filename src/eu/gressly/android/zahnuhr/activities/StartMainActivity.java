@@ -12,18 +12,19 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;	
+import android.widget.Button;
+import eu.gressly.android.zahnuhr.R;
+import eu.gressly.android.zahnuhr.StateCallback;
+import eu.gressly.android.zahnuhr.StateImplementation;
+import eu.gressly.android.zahnuhr.stati.PutzAlter;
+import eu.gressly.android.zahnuhr.util.AllActivities;
+import eu.gressly.android.zahnuhr.util.StartClickListener;
 // project specific
-import eu.gressly.android.zahnuhr.*;
-import eu.gressly.android.zahnuhr.stati.*;
-import eu.gressly.android.zahnuhr.util.*;
 
 public class StartMainActivity extends Activity {
-	private final static String logTag = "eu.gressly.android.zahnuhr.activities.StartMainActivity";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,6 @@ public class StartMainActivity extends Activity {
 
 	// switch to the browser. "Uni" = Link to university of Zurich
 	public void onUniClick(View v) {
-		Log.i(logTag, "onUniClick");
 		Intent zahnInstitutImBrowser = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.zzm.uzh.ch/patienten/downloads/mb-kinder.html"));
 		startActivity(zahnInstitutImBrowser);	
 	}

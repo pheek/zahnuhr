@@ -1,7 +1,7 @@
 package eu.gressly.android.zahnuhr;
 /**
  * @author  phi (phi@gressly.eu)
- * @version alpha
+ * @version 1.0
  * @date    16. 12. 2013
  * 
  * @purpose Implements the actual state (in sequence).
@@ -26,7 +26,7 @@ public class StateImplementation implements StateCallback {
 	private Updater         updater        ;
 	private SlideShowRunner slideShowRunner;
 	private BackwardsTimer  timerOverall   ;
-	private PutzSequenz     sequenz = null ; // must be set before switching to slideShwo
+	private PutzSequenz     sequenz = null ; // must be set before switching to slideShow
 
 	private static StateImplementation singleton;
 

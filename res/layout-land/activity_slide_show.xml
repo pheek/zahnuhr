@@ -1,55 +1,61 @@
+<!-- @author  phi@gressly.eu
+     @webpage http://igeeks.gressly.eu
+     @version since 1.0
+     @date    since 2014
+  -->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/app_background" >
-        
-        <eu.gressly.android.zahnuhr.util.DynamicImageView
-            android:id="@+id/startImage"
-            android:layout_gravity="top|left"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:src="@drawable/kf_or" />
+	android:layout_width  = "match_parent"
+	android:layout_height = "match_parent"
+	android:background    = "@color/app_background" >
 
-        <ProgressBar
-            android:id="@+id/progressBar_teilSchritt"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_alignParentTop="true"
-            android:background="#00f"
-            android:maxHeight="20dp"
-            android:minHeight="20dp"  
-            android:layout_toRightOf="@+id/startImage"
-            android:scrollbarSize="20dp" />
+	<eu.gressly.android.zahnuhr.util.DynamicImageView
+		android:id             = "@+id/startImage"
+		android:layout_gravity = "top|left"
+		android:layout_height  = "match_parent"
+		android:layout_width   = "match_parent"
+		android:src            = "@drawable/kf_or" />
 
-        <ProgressBar
-            android:id="@+id/progressBar_overallProcess"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_toRightOf="@+id/startImage"
-            android:layout_below="@+id/progressBar_teilSchritt" />
+	<ProgressBar
+		android:id                    = "@+id/progressBar_teilSchritt"
+		style                         = "?android:attr/progressBarStyleHorizontal"
+		android:layout_width          = "match_parent"
+		android:layout_height         = "20dp"
+		android:layout_alignParentTop = "true"
+		android:background            = "#00f"
+		android:maxHeight             = "20dp"
+		android:minHeight             = "20dp"  
+		android:layout_toRightOf      = "@+id/startImage"
+		android:scrollbarSize         = "20dp" />
 
-        <Button   
-            android:layout_margin="@dimen/button_margin"
-            android:id="@+id/button_pause_resume"
-            android:background="@drawable/bordershape"
-            android:textColor="@color/generic_button_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/progressBar_overallProcess"
-            android:layout_toRightOf="@+id/startImage"
-            android:text="@string/pause" />
+	<ProgressBar
+		android:id               = "@+id/progressBar_overallProcess"
+		style                    = "?android:attr/progressBarStyleHorizontal"
+		android:layout_width     = "match_parent"
+		android:layout_height    = "20dp"
+		android:layout_toRightOf = "@+id/startImage"
+		android:layout_below     = "@+id/progressBar_teilSchritt" />
 
-        <TextView
-            android:id="@+id/textView_wo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/startImage"
-            android:text="@string/kf_or"
-            android:textColor="@color/generic_label_text"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+	<Button   
+		android:id               = "@+id/button_pause_resume"
+		android:layout_margin    = "@dimen/button_margin"
+		android:background       = "@drawable/bordershape"
+		android:textColor        = "@color/generic_button_text"
+		android:layout_width     = "match_parent"
+		android:layout_height    = "wrap_content"
+		android:layout_below     = "@+id/progressBar_overallProcess"
+		android:layout_toRightOf = "@+id/startImage"
+		android:text             = "@string/pause" />
+
+	<TextView
+		android:id                      = "@+id/textView_wo"
+		android:layout_width            = "wrap_content"
+		android:layout_height           = "wrap_content"
+		android:layout_alignParentLeft  = "true"
+		android:layout_alignParentRight = "true"
+		android:layout_below            = "@+id/startImage"
+		android:text                    = "@string/kf_or"
+		android:textColor               = "@color/generic_label_text"
+		android:textAppearance          = "?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

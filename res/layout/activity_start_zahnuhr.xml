@@ -1,82 +1,86 @@
+<!-- @author  phi@gressly.eu
+     @webpage http://igeeks.gressly.eu
+     @version since 1.0
+     @date    since 2014
+  -->
+
 <ScrollView  xmlns:android="http://schemas.android.com/apk/res/android" 
-    android:layout_width ="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@color/app_background">
-    
-  <RelativeLayout 
-    android:layout_width ="fill_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/app_background" >
+	android:layout_width  = "fill_parent"
+	android:layout_height = "fill_parent"
+	android:background    = "@color/app_background">
 
-    <ImageView
-        android:id="@+id/logoImage"
-        android:layout_width ="150dp"
-        android:layout_height="150dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:contentDescription="@string/logo"
-        android:padding="7dp"
-        android:src="@drawable/ic_launcher" />
+	<RelativeLayout 
+		android:layout_width  = "fill_parent"
+		android:layout_height = "wrap_content"
+		android:background    = "@color/app_background" >
 
-    <TextView
-        android:id="@+id/textView_zielgruppe"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/logoImage"
-        android:padding="15dp"
-        android:text="@string/zielgruppe"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/generic_label_text"
-        android:textSize="@dimen/erklaerungstexte" />
+		<ImageView
+			android:id                     = "@+id/logoImage"
+			android:layout_width           = "150dp"
+			android:layout_height          = "150dp"
+			android:layout_alignParentLeft = "true"
+			android:layout_alignParentTop  = "true"
+			android:contentDescription     = "@string/logo"
+			android:padding                = "7dp"
+			android:src                    = "@drawable/ic_launcher" />
 
-    <Button
-        android:id="@+id/button_start_kinder" 
-        android:layout_margin="@dimen/button_margin"
-        android:background="@drawable/bordershape"
-        android:textColor="@color/generic_button_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/logoImage"   
-        android:text="@string/start_button"
-        android:textSize="@dimen/start_button_text_size" 
-        />
+		<TextView
+			android:id                      = "@+id/textView_zielgruppe"
+			android:layout_width            = "fill_parent"
+			android:layout_height           = "wrap_content"
+			android:layout_alignParentRight = "true"
+			android:layout_alignParentTop   = "true"
+			android:layout_toRightOf        = "@+id/logoImage"
+			android:padding                 = "15dp"
+			android:text                    = "@string/zielgruppe"
+			android:textAppearance          = "?android:attr/textAppearanceMedium"
+			android:textColor               = "@color/generic_label_text"
+			android:textSize                = "@dimen/erklaerungstexte" />
 
-    <Button
-        android:layout_margin="@dimen/button_margin"
-        android:id="@+id/button_start_jugendliche" 
-        android:background="@drawable/bordershape"
-        android:textColor="@color/generic_button_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:layout_below="@+id/button_start_kinder"
-    
-        android:padding="2dp"
-        android:layout_marginTop="5dp"
-        android:text="@string/start_button"
-   
-        android:textSize="@dimen/start_button_text_size" />
+		<Button
+			android:id                     = "@+id/button_start_kinder" 
+			android:layout_margin          = "@dimen/button_margin"
+			android:background             = "@drawable/bordershape"
+			android:textColor              = "@color/generic_button_text"
+			android:layout_width           = "match_parent"
+			android:layout_height          = "wrap_content"
+			android:layout_alignParentLeft = "true"
+			android:layout_below           = "@+id/logoImage"   
+			android:text                   = "@string/start_button"
+			android:textSize               = "@dimen/start_button_text_size" />
 
-    <TextView    
-        android:layout_margin="@dimen/button_margin"
-        android:id="@+id/textView_genehmigung"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/button_start_jugendliche"
-        android:padding="15dp"   
-        android:layout_marginTop="5dp"
-        android:onClick="onUniClick"
-        android:clickable="true"  
-        android:background="@drawable/bordershape"
-        android:text="@string/genehmigung"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/genehmigungText"
-        android:textSize="@dimen/erklaerungstexte" />
+		<Button
+			android:layout_margin          = "@dimen/button_margin"
+			android:id                     = "@+id/button_start_jugendliche" 
+			android:background             = "@drawable/bordershape"
+			android:textColor              = "@color/generic_button_text"
+			android:layout_width           = "match_parent"
+			android:layout_height          = "wrap_content"
+			android:layout_alignParentLeft = "true"
+			android:layout_centerVertical  = "true"
+			android:layout_below           = "@+id/button_start_kinder"
+			android:padding                = "2dp"
+			android:layout_marginTop       = "5dp"
+			android:text                   = "@string/start_button"
+			android:textSize               = "@dimen/start_button_text_size" />
 
-  </RelativeLayout>
+		<TextView    
+			android:id                     = "@+id/textView_genehmigung"
+			android:layout_margin          = "@dimen/button_margin"
+			android:layout_width           = "fill_parent"
+			android:layout_height          = "wrap_content"
+			android:layout_alignParentLeft = "true"
+			android:layout_below           = "@+id/button_start_jugendliche"
+			android:padding                = "15dp"   
+			android:layout_marginTop       =  "5dp"
+			android:onClick                = "onUniClick"
+			android:clickable              = "true"  
+			android:background             = "@drawable/bordershape"
+			android:text                   = "@string/genehmigung"
+			android:textAppearance         = "?android:attr/textAppearanceMedium"
+			android:textColor              = "@color/genehmigungText"
+			android:textSize               = "@dimen/erklaerungstexte" />
+
+	</RelativeLayout>
+
 </ScrollView>

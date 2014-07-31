@@ -1,7 +1,5 @@
 package eu.gressly.android.zahnuhr;
 
-import android.util.Log;
-
 /**
  * @author  phi (phi@gressly.eu)
  * @version alpha
@@ -22,8 +20,6 @@ import eu.gressly.util.callback.Updater;
  */
 public class SlideShowRunner implements Runnable {
 
-	private static final String TAG = "SlideShowRunner";
-
 	private static final int REDRAW_MILLISECS = 100;
 
 	private boolean running          ;
@@ -36,7 +32,6 @@ public class SlideShowRunner implements Runnable {
 
 	private SlideShowRunner(Updater up) {
 		this.callbackState = up;
-		Log.i(TAG, "Starting GUI-Thread in SlideShowRunner");
 	}
 
 
@@ -51,12 +46,10 @@ public class SlideShowRunner implements Runnable {
 	@Override
 	public void run() {
 		running = true;
-		Log.i(TAG, "Starting runnable.");
 		while (running) {
 			try {
 				// refresh rate of the sliders.
 				Thread.sleep(REDRAW_MILLISECS);
-				//System.out.println("SSR: running;");
 				if(running) {callbackState.update();}
 			} catch (InterruptedException ie) {
 				running = false;
@@ -67,7 +60,6 @@ public class SlideShowRunner implements Runnable {
 
 	void start() {
 		stop();
-		Log.i(TAG, "SlideShowRunner.start()");
 		if (null != thisThread) {
 			thisThread.interrupt();
 			thisThread = null;

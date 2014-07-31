@@ -20,16 +20,16 @@ public class BackwardsTimer {
 
 	public float getRemainingSeconds() {
 		if(isPaused()) {
-			return secondsFromLong(endTimePoint - pauseSince);
+			return millisecondsToSeconds(endTimePoint - pauseSince);
 		}
 		long now      = System.currentTimeMillis();
 		long diff     = this.endTimePoint - now;
-		float  diffSecs = secondsFromLong(diff);
+		float  diffSecs = millisecondsToSeconds(diff);
 		return diffSecs;
 	}
 
 
-	private float secondsFromLong(long millis) {
+	private float millisecondsToSeconds(long millis) {
 		long  abs  = Math.abs(millis);
 		float secs = (float) (((float)abs / 1000.0)); 
 		return secs * ((int) Math.signum(millis));

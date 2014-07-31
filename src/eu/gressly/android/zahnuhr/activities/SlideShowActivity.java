@@ -52,7 +52,7 @@ public class SlideShowActivity extends Activity implements Updater {
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		// Hide notification-bar
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-				WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		                          WindowManager.LayoutParams.FLAG_FULLSCREEN);
 	}
 
 
@@ -60,8 +60,8 @@ public class SlideShowActivity extends Activity implements Updater {
 	protected void onResume(){
 		super.onResume();
 		setContentViewAndStartProgress();
-		
 	}
+
 
 	@Override
 	public void onBackPressed() {
@@ -82,6 +82,7 @@ public class SlideShowActivity extends Activity implements Updater {
 		this.update();
 		setPausedResumeText();
 	}
+
 
 	void setContentViewAndStartProgress() {
 		this.setContentView(R.layout.activity_slide_show);
@@ -118,6 +119,7 @@ public class SlideShowActivity extends Activity implements Updater {
 	public void resume() {
 		StateImplementation.getInstance().resume();
 	}
+
 
 	public boolean isPaused() {
 		return StateImplementation.getInstance().isPaused();
@@ -202,7 +204,7 @@ public class SlideShowActivity extends Activity implements Updater {
 	private void drawAndText(final PutzSchritt paintedSchritt) {
 		// from stackoverflow:
 		if (null == paintedSchritt) {
-			Log.i(TAG, "DEBUG SlideShowActivity drawAndText(): paintenSchritt == NULL !");
+			Log.i(TAG, "DEBUG SlideShowActivity drawAndText(): paintedSchritt == NULL !");
 			return;
 		}
 

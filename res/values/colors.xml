@@ -1,14 +1,20 @@
+<!-- @author  phi@gressly.eu
+     @webpage http://igeeks.gressly.eu
+     @version since 1.0
+     @date    since 2014
+  -->
+
 <resources>
 
-    <color name="black_overlay">#66000000</color>
-    <color name="genehmigungText">#008</color>
-    <color name="start_button_foreground">#fff</color>
-    <color name="start_button_background">#0088ff</color>
-    <color name="zielgruppeText">#008</color>
-    <color name="app_background">#6df</color>
-    <color name="generic_button_text">#007</color>
-    <color name="generic_button_background">#aef</color>
-    <color name="generic_label_text">#008</color>
-    <color name="fertig_bravo_text">#066</color>
+	<color name="black_overlay">            #66000000</color>
+	<color name="genehmigungText">          #008     </color>
+	<color name="start_button_foreground">  #fff     </color>
+	<color name="start_button_background">  #0088ff  </color>
+	<color name="zielgruppeText">           #008     </color>
+	<color name="app_background">           #6df     </color>
+	<color name="generic_button_text">      #007     </color>
+	<color name="generic_button_background">#aef     </color>
+	<color name="generic_label_text">       #008     </color>
+	<color name="fertig_bravo_text">        #066     </color>
 
 </resources>

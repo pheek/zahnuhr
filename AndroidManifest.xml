@@ -1,52 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- @author  phi@gressly.eu
+	   @webpage http://igeeks.gressly.eu
+	   @version since 1.0
+	   @date    since 2014
+	-->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="eu.gressly.android.zahnuhr"
 	android:versionCode="6"
 	android:versionName="1.5" >
 
 	<uses-sdk
-		android:minSdkVersion="8"
-		android:targetSdkVersion="19" />
+		android:minSdkVersion    = "8"
+		android:targetSdkVersion ="24" />
 
-    <!-- 
- <application
-        android:allowBackup="true"
-        android:debuggable="true" !!!!!!!!!!!!! Dies wieder einschalten!
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" -->
-
-
+	<!-- 
 	<application
 		android:allowBackup="true"
+		android:debuggable="true" !!!!!!!!!!!!! Dies wieder einschalten!
 		android:icon="@drawable/ic_launcher"
-		android:label="@string/app_name"
-		android:theme="@style/AppTheme"
-		android:logo="@drawable/ic_launcher">
+		android:label="@string/app_name" -->
+
+	<application
+		android:allowBackup = "true"
+		android:icon        = "@drawable/ic_launcher"
+		android:label       = "@string/app_name"
+		android:theme       = "@style/AppTheme"
+		android:logo        = "@drawable/ic_launcher">
 
 		<activity
-			android:name="eu.gressly.android.zahnuhr.activities.StartMainActivity"
-			android:configChanges="orientation|keyboardHidden|screenSize"
-			android:label="@string/app_name"
-			android:theme="@style/FullscreenTheme" >
+			android:name          = "eu.gressly.android.zahnuhr.activities.StartMainActivity"
+			android:configChanges = "orientation|keyboardHidden|screenSize"
+			android:label         = "@string/app_name"
+			android:theme         = "@style/FullscreenTheme" >
 
 			<intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-				<category android:name="android.intent.category.LAUNCHER" />
+				<action   android:name = "android.intent.action.MAIN"       />
+				<category android:name = "android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
 
 		<activity
-			android:name="eu.gressly.android.zahnuhr.activities.SlideShowActivity"
-			android:configChanges="keyboardHidden|orientation|screenSize"
-			android:label="@string/title_activity_slide_show"
-			android:theme="@style/FullscreenTheme" >
+			android:name          = "eu.gressly.android.zahnuhr.activities.SlideShowActivity"
+			android:configChanges = "keyboardHidden|orientation|screenSize"
+			android:label         = "@string/title_activity_slide_show"
+			android:theme         = "@style/FullscreenTheme" >
 		</activity>
 
 		<activity
-			android:name="eu.gressly.android.zahnuhr.activities.FinishScreenActivity"
-			android:configChanges="orientation|keyboardHidden|screenSize"
-			android:label="@string/title_activity_finished"
-			android:theme="@style/FullscreenTheme" >
+			android:name          = "eu.gressly.android.zahnuhr.activities.FinishScreenActivity"
+			android:configChanges = "orientation|keyboardHidden|screenSize"
+			android:label         = "@string/title_activity_finished"
+			android:theme         = "@style/FullscreenTheme" >
 		</activity>
 	</application>
 

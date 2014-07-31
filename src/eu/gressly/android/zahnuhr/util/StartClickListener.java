@@ -20,8 +20,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 public class StartClickListener implements OnClickListener {
-	Activity myActivity;
-	PutzAlter alter;
+	Activity  myActivity;
+	PutzAlter alter     ;
+
 
 	public StartClickListener(PutzAlter alter) {
 		this.alter = alter;

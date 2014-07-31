@@ -13,6 +13,12 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
+/**
+ * Draws an image in landscape layout 75% of the screen width.
+ * @version 0.1 (Jul 31, 2014)
+ * @author Philipp Gressly Freimann 
+ *         (philipp.gressly@santis.ch)
+ */
 public class DynamicImageView extends ImageView {
 	public static final float HEIGHT_PERCENTAGE_IN_LANDSCAPE_LAYOUT = 0.75f;
 
@@ -58,9 +64,9 @@ public class DynamicImageView extends ImageView {
 		if(null == AllActivities.getNewestSlideActivity()) {
 			return false;
 		}
-		boolean bb =  Configuration.ORIENTATION_LANDSCAPE ==
-				AllActivities.getNewestSlideActivity().getResources().getConfiguration().orientation;
-		return bb;
+		return Configuration.ORIENTATION_LANDSCAPE ==
+		       AllActivities.getNewestSlideActivity().getResources().getConfiguration().orientation;
+		// other possibility? :
 		//return MeasureSpec.getSize(widthMeasureSpec) > MeasureSpec.getSize(heightMeasureSpec);
 	}
 

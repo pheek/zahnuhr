@@ -48,34 +48,7 @@ public class AllActivities {
 				ac.finish();
 			}
 		}
-	
-//		if(a instanceof FinishScreenActivity) {
-//			// remove all SlideShowActivities
-//			@SuppressWarnings("unchecked")
-//			ArrayList<Activity> clone = (ArrayList<Activity>) registeredActivities.clone();
-//			for(Activity ac : clone) {
-//				if(ac instanceof SlideShowActivity) {
-//				  registeredActivities.remove(ac);
-//				  ac.finish();
-//				}
-//			}
-//		}
-//		if(a instanceof StartMainActivity) {
-//			@SuppressWarnings("unchecked")
-//			ArrayList<Activity> clone = (ArrayList<Activity>) registeredActivities.clone();
-//			for(Activity ac: clone) {
-//				if(ac != a) {
-//					registeredActivities.remove(ac);
-//					ac.finish();
-//				}
-//			}
-//		}
 	}
-
-//	public static List<Activity> getAllRegisteredActivities() {
-//		return registeredActivities;
-//	}
-//
 
 
 	public static SlideShowActivity getNewestSlideActivity() {
@@ -91,13 +64,5 @@ public class AllActivities {
 		}
 		return newest;
 	}
-
-
-//	public static void unregister(SlideShowActivity toRemove) {
-//		if(null == AllActivities.registeredActivities) {
-//		   return;
-//		}
-//		AllActivities.registeredActivities.remove(toRemove);
-//	}
 
 } // end class AllActivities
