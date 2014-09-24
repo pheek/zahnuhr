@@ -22,7 +22,7 @@
 			android:layout_alignParentTop  = "true"
 			android:contentDescription     = "@string/logo"
 			android:padding                = "7dp"
-			android:src                    = "@drawable/ic_launcher" />
+			android:src                    = "@drawable/ic_launcher_big" />
 
 		<TextView
 			android:id                      = "@+id/textView_zielgruppe"
