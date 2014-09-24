@@ -41,8 +41,8 @@ public class PutzSequenz {
 			new PutzSchritt(R.drawable.sf_l,  R.string.sf_lo,  9),
 			new PutzSchritt(R.drawable.sf_l,  R.string.sf_lu,  9),
 
-			new PutzSchritt(R.drawable.sf_vo, R.string.sf_vo,  9),
-			new PutzSchritt(R.drawable.sf_vu, R.string.sf_vu,  9),
+			new PutzSchritt(R.drawable.sf_vo, R.string.sf_vo, 10),
+			new PutzSchritt(R.drawable.sf_vu, R.string.sf_vu, 10),
 
 			new PutzSchritt(R.drawable.i_or,  R.string.i_or,  10),
 			new PutzSchritt(R.drawable.i_ov,  R.string.i_ov,  10),
@@ -68,8 +68,8 @@ public class PutzSequenz {
 
 			new PutzSchritt(R.drawable.sf_r,  R.string.sf_r,  13),
 			new PutzSchritt(R.drawable.sf_l,  R.string.sf_l,  13),
-			new PutzSchritt(R.drawable.sf_vo, R.string.sf_vo,  9),
-			new PutzSchritt(R.drawable.sf_vu, R.string.sf_vu,  9),
+			new PutzSchritt(R.drawable.sf_vo, R.string.sf_vo, 10),
+			new PutzSchritt(R.drawable.sf_vu, R.string.sf_vu, 10),
 
 			new PutzSchritt(R.drawable.i_or,  R.string.i_or,  10),
 			new PutzSchritt(R.drawable.i_ov,  R.string.i_ov,  10),
