@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Relógio dental</string>
+    <string name="kinder">Crianças até 10 anos</string>
+    <string name="jugendliche">A partir de 10 anos</string>
+    <string name="start_button">Começar</string>
+    <string name="los_text">fugida</string>
+    <string name="zielgruppe">Um relógio dental para crianças, a quais ja foi introduzida a maneira correta da limpeza dental pela escola.</string>
+    <string name="genehmigung">Utilização de imagens gentilmente autorizada por:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
+    <string name="logo">logótipo</string>
+    <string name="title_activity_slide_show">Apresentação</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="restart_button">Recomeçar</string>
+    <string name="ok_button">Confirmar</string>
+    <string name="stopp">Parar</string>
+    <string name="pause">Pausa</string>
+    <string name="resume">Continuar</string>
+    <string name="title_activity_finished">Terminar</string>
+    
+    <string name="kf_or">Superfície de mastigação superior, primeiro lado</string>
+    <string name="kf_ol">Superfície de mastigação superior, segundo lado</string>
+    <string name="kf_ur">Superfície de mastigação inferior, primeiro lado</string>
+    <string name="kf_ul">Superfície de mastigação inferior, segundo lado</string>
+    
+    <string name="sf_r">Superfície lateral, primeiro lado, até ao dente canino</string>
+    <string name="sf_l">Superfície lateral, segundo lado, até ao dente canino</string>
+    
+    <!-- ab der Mittelstufe (10jährige): -->
+    <string name="sf_ro">Superfície lateral superiror, primeiro lado, até ao dente canino</string>
+    <string name="sf_ru">Superfície lateral inferior, primeiro lado, até ao dente canino</string>
+    <string name="sf_lo">Superfície lateral superior, segundo lado, até ao dente canino</string>
+    <string name="sf_lu">Superfície lateral inferior, segundo lado, até ao dente canino</string>
+
+    <string name="sf_vo">Do lado de fora, à frente, em cima</string>
+    <string name="sf_vu">Do lado de fora, à frente, em baixo</string>
+
+    <string name="i_or">Por dentro, em cima, primeiro lado</string>
+    <string name="i_ov">Por dentro, em cima, à frente</string>
+    <string name="i_ol">Por dentro, em cima, segundo lado</string>
+    <string name="i_ur">Por dentro, em baixo, primeiro lado</string>
+    <string name="i_uv">Por dentro, em baixo, à frente</string>
+    <string name="i_ul">Por dentro, em baixo, segundo lado</string>
+    
+    <string name="fertig">Feito, bravo!</string>
+    <string name="beenden_button">Sair</string>
+</resources>

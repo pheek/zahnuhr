@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- @author  phi@gressly.eu
+	   @webpage http://igeeks.gressly.eu
+	   @version since 1.0
+	   @date	  since 2014
+	-->
 <resources>
 
     <string name="app_name">Teeth Timer</string>

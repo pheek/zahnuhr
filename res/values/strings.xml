@@ -6,47 +6,47 @@
 	-->
 <resources>
 
-	<string name="app_name">Teeth Timer</string>
-	<string name="kinder">Kids up to 10 years</string>
-	<string name="jugendliche">Kids over 10 years of age</string>
-	<string name="start_button">Start</string>
-	<string name="los_text">Go</string>
-	<string name="zielgruppe">A Teeth Cleaning Timer for Kids who have already been introduced to the tooth brushing technique at school.</string>
-	<string name="genehmigung">Images courtesy of:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie»</string>
-	<string name="logo">Logo</string>
-	<string name="title_activity_slide_show">Slideshow</string>
-	<string name="dummy_button">dummy button</string>
-	<string name="restart_button">Restart</string>
-	<string name="ok_button">OK</string>
-	<string name="stopp">Stop</string>
-	<string name="pause">Pause</string>
-	<string name="resume">Continue</string>
-	<string name="title_activity_finished">Finished!</string>
-	
-	<string name="kf_or">Upper chewing surfaces first side</string>
-	<string name="kf_ol">Upper chewing surfaces second side</string>
-	<string name="kf_ur">Lower chewing surfaces first side</string>
-	<string name="kf_ul">Lower chewing surfaces second side</string>
-	
-	<string name="sf_r">Side surfaces first side up to and including eyetooth</string>
-	<string name="sf_l">Side surfaces second side up to and including eyetooth</string>
-	
-	<!-- ab der Mittelstufe (10jährige): -->
-	<string name="sf_ro">Upper side surfaces first side up to and including eyetooth</string>
-	<string name="sf_ru">Lower side surfaces first side up to and including eyetooth</string>
-	<string name="sf_lo">Upper side surfaces second side up to and including eyetooth</string>
-	<string name="sf_lu">Lower side surfaces second side up to and including eyetooth</string>
+    <string name="app_name">Teeth Timer</string>
+    <string name="kinder">Kids up to 10 years</string>
+    <string name="jugendliche">Kids over 10 years of age</string>
+    <string name="start_button">Start</string>
+    <string name="los_text">Go</string>
+    <string name="zielgruppe">A Teeth Cleaning Timer for Kids who have already been introduced to the tooth brushing technique at school.</string>
+    <string name="genehmigung">Images courtesy of:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie»</string>
+    <string name="logo">Logo</string>
+    <string name="title_activity_slide_show">Slideshow</string>
+    <string name="dummy_button">dummy button</string>
+    <string name="restart_button">Restart</string>
+    <string name="ok_button">OK</string>
+    <string name="stopp">Stop</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Continue</string>
+    <string name="title_activity_finished">Finished!</string>
+    
+    <string name="kf_or">Upper chewing surfaces first side</string>
+    <string name="kf_ol">Upper chewing surfaces second side</string>
+    <string name="kf_ur">Lower chewing surfaces first side</string>
+    <string name="kf_ul">Lower chewing surfaces second side</string>
+    
+    <string name="sf_r">Side surfaces first side up to and including eyetooth</string>
+    <string name="sf_l">Side surfaces second side up to and including eyetooth</string>
+    
+    <!-- ab der Mittelstufe (10jährige): -->
+    <string name="sf_ro">Upper side surfaces first side up to and including eyetooth</string>
+    <string name="sf_ru">Lower side surfaces first side up to and including eyetooth</string>
+    <string name="sf_lo">Upper side surfaces second side up to and including eyetooth</string>
+    <string name="sf_lu">Lower side surfaces second side up to and including eyetooth</string>
 
-	<string name="sf_vo">Upper outer front surfaces</string>
-	<string name="sf_vu">Lower outer front surfaces</string>
+    <string name="sf_vo">Upper outer front surfaces</string>
+    <string name="sf_vu">Lower outer front surfaces</string>
 
-	<string name="i_or">Upper inside surfaces first side</string>
-	<string name="i_ov">Upper inside surfaces front side</string>
-	<string name="i_ol">Upper inside surfaces second side</string>
-	<string name="i_ur">Lower inside surfaces first side</string>
-	<string name="i_uv">Lower inside surfaces front side</string>
-	<string name="i_ul">Lower inside surfaces second side</string>
-	
-	<string name="fertig">Finished! Well done!</string>
-	<string name="beenden_button">Exit</string>
+    <string name="i_or">Upper inside surfaces first side</string>
+    <string name="i_ov">Upper inside surfaces front side</string>
+    <string name="i_ol">Upper inside surfaces second side</string>
+    <string name="i_ur">Lower inside surfaces first side</string>
+    <string name="i_uv">Lower inside surfaces front side</string>
+    <string name="i_ul">Lower inside surfaces second side</string>
+    
+    <string name="fertig">Finished! Well done!</string>
+    <string name="beenden_button">Exit</string>
 </resources>

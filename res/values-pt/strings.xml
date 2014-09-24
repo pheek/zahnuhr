@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Cronometro dei denti</string>
+    <string name="kinder">Bambini fino a 10 anni</string>
+    <string name="jugendliche">Bambini oltre i 10 anni</string>
+    <string name="start_button">Inizia</string>
+    <string name="los_text">Vai</string>
+    <string name="zielgruppe">Un cronometro dentale per bambini che hanno già avuto un’introduzione a scuola ad un corretto uso dello spazzolino.</string>
+    <string name="genehmigung">Immagini per gentile concessione di:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
+    <string name="logo">logo</string>
+    <string name="title_activity_slide_show">Animazione</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="restart_button">Riparti</string>
+    <string name="ok_button">Conferma</string>
+    <string name="stopp">Ferma</string>
+    <string name="pause">Pausa</string>
+    <string name="resume">Continua</string>
+    <string name="title_activity_finished">Finito</string>
+    
+    <string name="kf_or">Superficie masticatoria superiore, prima parte</string>
+    <string name="kf_ol">Superficie masticatoria superiore, sencoda parte</string>
+    <string name="kf_ur">Superficie masticatoria inferiore, prima parte</string>
+    <string name="kf_ul">Superficie masticatoria inferiore, secondo parte</string>
+    
+    <string name="sf_r">Superficie laterale canini compresi, prima parte</string>
+    <string name="sf_l">Superficie laterale canini compresi, seconda parte</string>
+    
+    <!-- ab der Mittelstufe (10jährige): -->
+    <string name="sf_ro">Superficie laterale superiore canini compresi, prima parte</string>
+    <string name="sf_ru">Superficie laterale inferiore canini compresi, prima parte</string>
+    <string name="sf_lo">Superficie laterale superiore canini compresi, seconda parte</string>
+    <string name="sf_lu">Superficie laterale inferiore canini compresi, seconda parte</string>
+
+    <string name="sf_vo">Esterno davanti in alto (incisivi superiori)</string>
+    <string name="sf_vu">Esterno davanti sotto (inicisivi inferiori)</string>
+
+    <string name="i_or">Interno in alto, prima parte</string>
+    <string name="i_ov">Interno in alto davanti</string>
+    <string name="i_ol">Interno in alto, seconda parte</string>
+    <string name="i_ur">Interno in basso, prima parte</string>
+    <string name="i_uv">Interno in basso davanti</string>
+    <string name="i_ul">Interno in basso, seconda parte</string>
+    
+    <string name="fertig">Terminato, bravo!</string>
+    <string name="beenden_button">Esci</string>
+</resources>
