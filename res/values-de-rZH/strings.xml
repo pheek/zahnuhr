@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Zaauur</string>
+    <string name="app_name">Zaa-n-uur</string>
     <string name="kinder">Kinde bis 10 Jaar</string>
     <string name="jugendliche">Ab 10 Jaar</string>
     <string name="start_button">Start</string>  
     <string name="los_text">Los</string>
-    <string name="zielgruppe">Ä Zaauur fü Chinde, wo-n-i de Schuel scho g\'léért händ richtig Zää z\'butze.</string>
+    <string name="zielgruppe">Ä Zaa-n-uur fü Chinde, wo-n-i de Schuel scho g\'léért händ richtig Zää z\'butze.</string>
     <string name="genehmigung">Mit fründliche G\'néémigung:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
     <string name="logo">Logo</string>
     <string name="title_activity_slide_show">SlideShow</string>
@@ -23,14 +23,14 @@
     <string name="kf_ur">Bödeli une, éérschti Siite</string>
     <string name="kf_ul">Bödeli une, zwäiti Siite</string>
     
-    <string name="sf_r">Usse-n-éérschti Siite mit äm Eggzaa</string>
-    <string name="sf_l">Usse zwäiti Siite mit äm Eggzaa</string>
+    <string name="sf_r">Usse-n-éérschti Siite mit em Eggzaa</string>
+    <string name="sf_l">Usse zwäiti Siite mit em Eggzaa</string>
     
     <!-- ab der Mittelstufe (10jährige): -->
-    <string name="sf_ro">Usse-n-éérschti Siite-n-obe mit äm Eggzaa</string>
-    <string name="sf_ru">Usse-n-éérschti Siite-n-une mit äm Eggzaa</string>
-    <string name="sf_lo">Usse zwäiti Siite-n-obe mit äm Eggzaa</string>
-    <string name="sf_lu">Usse zwäiti Siite-n-obe mit äm Eggzaa</string>
+    <string name="sf_ro">Usse-n-éérschti Siite-n-obe mit em Eggzaa</string>
+    <string name="sf_ru">Usse-n-éérschti Siite-n-une mit em Eggzaa</string>
+    <string name="sf_lo">Usse zwäiti Siite-n-obe mit em Eggzaa</string>
+    <string name="sf_lu">Usse zwäiti Siite-n-obe mit em Eggzaa</string>
 
     <string name="sf_vo">Usse vorne-n-obe</string>
     <string name="sf_vu">Usse vorne-n-une</string>

@@ -11,9 +11,13 @@ package eu.gressly.util.callback;
  * @see     Updater
  */
  
+/*TODO: Let this class be the implementation and the StateImplementation (eu.gressly.android.zahnuhr) 
+ *      should only delegate to this class and not implement this interface.
+ */
 public interface Callback extends Updater {	
 	void setUpdater(Updater u);
 
 	@Override
-	void update();
+	public void update();
+	
 } // end interface Callback
