@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ceas pentru igiena dentara</string>
+    <string name="kinder">Copii pana la 10 ani</string>
+    <string name="jugendliche">Peste 10 ani</string>
+    <string name="start_button">Start</string>
+    <string name="los_text">Porneste</string>
+    <string name="zielgruppe">Un ceas pentru igiena dentara a copiilor care se foloseste deja la scoala.</string>
+    <string name="genehmigung">Imagini cu permis prietenos:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
+    <string name="logo">Logo</string>
+    <string name="title_activity_slide_show">Prezentare</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="restart_button">Start nou</string>
+    <string name="ok_button">Confirma</string>
+    <string name="stopp">Stopp</string>
+    <string name="pause">Pausa</string>
+    <string name="resume">Continuare</string>
+    <string name="title_activity_finished">Gata</string>
+    
+    <string name="kf_or">Suprafata de mestecare de sus prima parte</string>
+    <string name="kf_ol">Suprafata de mestecare  de sus a doua parte</string>
+    <string name="kf_ur">Suprafata de mestecare jos prima parte</string>
+    <string name="kf_ul">Suprafata de mestecare jos a doua parte</string>
+    
+    <string name="sf_r">Partea de sus laterala cu dintele canin</string>
+    <string name="sf_l">Suprafata laterala partea a doua cu dintele canin</string>
+    
+    <!-- ab der Mittelstufe (10jährige): -->
+    <string name="sf_ro">Partea de sus laterala cu dintele canin</string>
+    <string name="sf_ru">Suprafata laterala de jos cu dintele canin</string>
+    <string name="sf_lo">Suprafata a doua de sus cu dintele canin</string>
+    <string name="sf_lu">Suprafata laterala a doua de jos cu dintele canin</string>
+
+    <string name="sf_vo">Partea exterioara de sus in mijloc</string>
+    <string name="sf_vu">Partea exterioara de jos in mijloc</string>
+
+    <string name="i_or">Innen oben erste Seite</string>
+    <string name="i_ov">Partea interioara de sus in mijloc</string>
+    <string name="i_ol">Partea a doua interioara de sus</string>
+    <string name="i_ur">Prima parte interioara de jos</string>
+    <string name="i_uv">Partea interioara de jos in mijloc</string>
+    <string name="i_ul">Partea a doua interioara de jos</string>
+    
+    <string name="fertig">Gata, bravo!</string>
+    <string name="beenden_button">Sfarsit</string>
+</resources>
