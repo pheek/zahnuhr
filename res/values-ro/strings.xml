@@ -12,7 +12,7 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="restart_button">Start nou</string>
     <string name="ok_button">Confirma</string>
-    <string name="stopp">Stopp</string>
+    <string name="stopp">Stop</string>
     <string name="pause">Pauză</string>
     <string name="resume">Continuare</string>
     <string name="title_activity_finished">Gata</string>
