@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zubni sat</string>
+    <string name="kinder">Djeca do 10 godina</string>
+    <string name="jugendliche">Od 10 godina</string>
+    <string name="start_button">Start</string>  
+    <string name="los_text">Start</string>
+    <string name="zielgruppe">Zubni sat za djecu koja su u školi već uvedena u pravilno pranje zubi.</string>
+    <string name="genehmigung">Slike sa plemenitom dozvolom:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
+    <string name="logo">Logo</string>
+    <string name="title_activity_slide_show">Slideshow</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="restart_button">Dummy Button</string> 
+    <string name="ok_button">OK</string>
+    <string name="stopp">Stop</string>
+    <string name="pause">Pauza</string>
+    <string name="resume">Nastavi</string>
+    <string name="title_activity_finished">Gotovo</string>
+    
+    <string name="kf_or">Grizne površine gore, prva strana</string>
+    <string name="kf_ol">Grizne površine gore, druga strana</string>
+    <string name="kf_ur">Grizne površine dolje, prva strana</string>
+    <string name="kf_ul">Grizne površine dolje, druga strana</string>
+    
+    <string name="sf_r">Bočna površina, prva strana do i uključujući očnjaka</string>
+    <string name="sf_l">Bočna površina, druga strana do i uključujući očnjaka</string>
+    
+    <!-- ab der Mittelstufe (10jährige): -->
+    <string name="sf_ro">Bočna površina, prva strana gore do i uključujući očnjaka</string>
+    <string name="sf_ru">Bočna površina, prva strana dolje do i uključujući očnjaka</string>
+    <string name="sf_lo">Bočna površina, druga strana gore do i uključujući očnjaka</string>
+    <string name="sf_lu">Bočna površina, druga strana dolje do i uključujući očnjaka</string>
+
+    <string name="sf_vo">Izvana ispred gore</string>
+    <string name="sf_vu">Izvana ispred dolje</string>
+
+    <string name="i_or">Unutra gore prva strana</string>
+    <string name="i_ov">Unutra gore ispred</string>
+    <string name="i_ol">Unutra gore druga strana</string>
+    <string name="i_ur">Unutra dolje prva strana</string>
+    <string name="i_uv">Unutra dolje ispred</string>
+    <string name="i_ul">Unutra dolje druga strana</string>
+    
+    <string name="fertig">Gotovo, bravo!</string>
+    <string name="beenden_button">Završi</string>
+
+</resources>
