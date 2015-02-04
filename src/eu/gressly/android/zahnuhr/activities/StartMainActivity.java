@@ -39,6 +39,7 @@ public class StartMainActivity extends Activity {
 
 	// switch to the browser. "Uni" = Link to university of Zurich
 	public void onUniClick(View v) {
+		//TODO: URL auslagern
 		Intent zahnInstitutImBrowser = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.zzm.uzh.ch/patienten/downloads/mb-kinder.html"));
 		startActivity(zahnInstitutImBrowser);	
 	}

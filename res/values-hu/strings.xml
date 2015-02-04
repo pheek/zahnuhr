@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Fog-óra</string>
+    <string name="kinder">Gyermekek 10 éves korig</string>
+    <string name="jugendliche">10 éves kortól</string>
+    <string name="start_button">indulás</string>
+    <string name="los_text">indulás</string>
+    <string name="zielgruppe">Fog-óra gyerekek részére, akik már az iskolában a helyes fogtisztitás módszerébe be lettek vezetve.</string>
+    <string name="genehmigung">Megengedett barátságos képek:\nZentrum für Zahnmedizin der Universität Zürich\nKlinik für Präventivzahnmedizin\nParadontologie und Kariologie</string>
+    <string name="logo">Logo</string>
+    <string name="title_activity_slide_show">Prezentáció</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="restart_button">Ujrainditás</string>
+    <string name="ok_button">OK</string>
+    <string name="stopp">Stopp</string>
+    <string name="pause">Szünet</string>
+    <string name="resume">Tovább</string>
+    <string name="title_activity_finished">Kész</string>
+    
+    <string name="kf_or">Rágófelület fönt egyik oldalt</string>
+    <string name="kf_ol">Rágófelület fönt másik oldalt</string>
+    <string name="kf_ur">Rágófelület lent egyik oldalt</string>
+    <string name="kf_ul">Rágófelület lent másik oldalt</string>
+    
+    <string name="sf_r">Egyik oldalfelület, beleértve a szemfogat is</string>
+    <string name="sf_l">Másik oldalfelület fönt, beleértve a szemfogat is</string>
+    
+    <!-- ab der Mittelstufe (10jährige): -->
+    <string name="sf_ro">Egyik oldalfelület fönt, beleértve a szemfogat is</string>
+    <string name="sf_ru">Egyik oldalfelület lent, beleértve a szemfogat is</string>
+    <string name="sf_lo">Másik oldalfelület fönt, beleértve a szemfogat is</string>
+    <string name="sf_lu">Másik oldalfelület lent, beleértve a szemfogat is</string>
+
+    <string name="sf_vo">Kivülröl, elöl, fönt</string>
+    <string name="sf_vu">Kivülröl, elöl, lent</string>
+
+    <string name="i_or">Belülröl, fönt, egyik oldalt</string>
+    <string name="i_ov">Belülröl, fönt, elöl</string>
+    <string name="i_ol">Belülröl, fönt, másik oldalt</string>
+    <string name="i_ur">Belülröl, lent, egyik oldalt</string>
+    <string name="i_uv">Belülröl, lent, elöl</string>
+    <string name="i_ul">Belülröl, lent, másik oldalt</string>
+    
+    <string name="fertig">Készen van, bravo!</string>
+    <string name="beenden_button">Befejezni</string>
+</resources>
