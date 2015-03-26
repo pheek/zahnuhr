@@ -9,6 +9,6 @@ package eu.gressly.util.callback;
  * @see     Callback
  */
 
-public interface Updater {
+public interface Updateable {
 	void update();
 } //end interface Uptater

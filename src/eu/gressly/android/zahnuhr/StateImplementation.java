@@ -11,19 +11,22 @@ package eu.gressly.android.zahnuhr;
  *          the method "onCreate()" is called again. 
  *          Without a singleton "implementation" like this, the runnable
  *          would restart every turn.
+ *          
+ *          Notice that this class is Updateable (and gets notifide by the SlideShowRunner)
+ *          On the other hand, this Class updates the SlideShowActivity, when ever it gets updated by the SlideShowRunner.
+ *          
  */
 
 import android.util.Log;
 import eu.gressly.android.zahnuhr.stati.PutzAlter;
 import eu.gressly.android.zahnuhr.stati.PutzSchritt;
 import eu.gressly.android.zahnuhr.stati.PutzSequenz;
-import eu.gressly.util.callback.Updater;
+import eu.gressly.util.callback.Updateable;
 
 
-public class StateImplementation implements StateCallback {
+public class StateImplementation extends AbstractStateCallback implements Updateable {
 	private static final String TAG = "StateImplementation";
 
-	private Updater         updater        ;
 	private SlideShowRunner slideShowRunner;
 	private BackwardsTimer  timerOverall   ;
 	private PutzSequenz     sequenz = null ; // must be set before switching to slideShow
@@ -44,12 +47,6 @@ public class StateImplementation implements StateCallback {
 			StateImplementation.singleton = new StateImplementation();
 		}
 		return singleton;
-	}
-
-
-	@Override
-	public synchronized void setUpdater(Updater u) {
-		this.updater = u;
 	}
 
 
@@ -118,25 +115,16 @@ public class StateImplementation implements StateCallback {
 	}
 
 
-	@Override
-	public synchronized void update() {
-		// delegate
-		if(null == updater) {
-			Log.e(TAG, "Fehler in StateImplementation.update(): updater ist null!");
-			try {
-				throw new Exception("Fehler in StateImplementation.update(): updater ist null!");
-			} catch (Exception log) {
-				Log.e(TAG, "StateImpl: " + log);
-				log.printStackTrace();
-			}
-			return;
-		}
-		this.updater.update();
+	public void start(Updateable up) {
+		slideShowRunner.start();
+		Log.d(TAG, "Call start() in StateImplementation");
+		this.addUpdateable(up);
 	}
+	
 
-
-	public void start(Updater up) {
-		this.setUpdater(up);
+	@Override
+	public void update() {
+		updateAll();
 	}
 
 
@@ -186,11 +174,6 @@ public class StateImplementation implements StateCallback {
 		float  remainingSecondsActState = this.getRemainingSecondsActState(); 
 		float  diff = actPosSeconds - remainingSecondsActState;
 		return diff  < GONG_LEN;
-		// gong never palyed after last sequence
-//		if(this.sequenz.isLastPos()) {
-//			return false;
-//		}
-//		return this.getRemainingSecondsActState() < GONG_LEN;
 	}
 
 } // end class StateImplementation

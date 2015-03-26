@@ -9,7 +9,9 @@ package eu.gressly.android.zahnuhr;
  *          Progressbar can be repainted.
  */
 
-import eu.gressly.util.callback.Updater;
+import android.util.Log;
+import eu.gressly.util.callback.AbstractCallback;
+import eu.gressly.util.callback.Updateable;
 
 /**
  * 
@@ -18,24 +20,24 @@ import eu.gressly.util.callback.Updater;
  * 
  * calls back the view to refresh its content about every 1/4 second
  */
-public class SlideShowRunner implements Runnable {
+public class SlideShowRunner extends AbstractCallback implements Runnable {
 
 	private static final int REDRAW_MILLISECS = 100;
 
+	private static final String TAG = "SlideShowRunner-Class";
+
 	private boolean running          ;
 	private Thread  thisThread = null;
-	private Updater callbackState    ;
 
 	// Singleton Design Pattern
 	private static  SlideShowRunner singleton;
 
-
-	private SlideShowRunner(Updater up) {
-		this.callbackState = up;
+	private SlideShowRunner(Updateable up) {
+		this.addUpdateable(up);
 	}
 
 
-	public static SlideShowRunner getInstance(Updater up) {
+	public static SlideShowRunner getInstance(Updateable up) {
 		if(null == singleton) {
 			SlideShowRunner.singleton = new SlideShowRunner(up);
 		}
@@ -50,7 +52,10 @@ public class SlideShowRunner implements Runnable {
 			try {
 				// refresh rate of the sliders.
 				Thread.sleep(REDRAW_MILLISECS);
-				if(running) {callbackState.update();}
+				if(running) {
+					Log.d(TAG, "updateAll from SlideShowRunner!");
+					this.updateAll();
+				}
 			} catch (InterruptedException ie) {
 				running = false;
 			}

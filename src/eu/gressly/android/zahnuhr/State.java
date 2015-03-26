@@ -13,26 +13,25 @@ package eu.gressly.android.zahnuhr;
  
 import eu.gressly.android.zahnuhr.stati.PutzAlter;
 import eu.gressly.android.zahnuhr.stati.PutzSchritt;
-import eu.gressly.util.callback.Callback;
 
-public interface StateCallback extends Callback {
+public interface State {
 	/*
 	 * General Timer functions.
 	 */
-	boolean     isRunning()  ;
-	void        restart()    ;
-	void        stop()       ;
-	void        pause()      ;
-	boolean     isPaused()   ;
-	void        resume()     ;
+	boolean     isRunning() ;
+	void        restart()   ;
+	void        stop()      ;
+	void        pause()     ;
+	boolean     isPaused()  ;
+	void        resume()    ;
 
 	/*
 	 * State handling functions.
 	 */
-	void        setRemainingSecondsOverAll(float secs)        ;
-	boolean     isGlobalTimeOver()                            ;
-	float       getRemainingSecondsFromStartPositionActState();
-	float       getRemainingSecondsActState()                 ;
+	void        setRemainingSecondsOverAll(float secs)         ;
+	boolean     isGlobalTimeOver()                             ;
+	float       getRemainingSecondsFromStartPositionActState() ;
+	float       getRemainingSecondsActState()                  ;
 
 	/*
 	 * Teeth timer functions.

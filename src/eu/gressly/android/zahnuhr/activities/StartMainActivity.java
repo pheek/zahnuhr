@@ -17,7 +17,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import eu.gressly.android.zahnuhr.R;
-import eu.gressly.android.zahnuhr.StateCallback;
+import eu.gressly.android.zahnuhr.State;
 import eu.gressly.android.zahnuhr.StateImplementation;
 import eu.gressly.android.zahnuhr.stati.PutzAlter;
 import eu.gressly.android.zahnuhr.util.AllActivities;
@@ -69,7 +69,7 @@ public class StartMainActivity extends Activity {
 
 	@Override
 	protected void onPostResume() {
-		StateCallback sc = StateImplementation.getInstance();
+		State sc = StateImplementation.getInstance();
 		sc.stop();  
 
 		super.onPostResume();

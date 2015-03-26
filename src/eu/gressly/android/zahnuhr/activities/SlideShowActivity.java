@@ -20,13 +20,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import eu.gressly.android.zahnuhr.AbstractStateCallback;
 import eu.gressly.android.zahnuhr.R;
-import eu.gressly.android.zahnuhr.StateCallback;
+import eu.gressly.android.zahnuhr.State;
 import eu.gressly.android.zahnuhr.StateImplementation;
 import eu.gressly.android.zahnuhr.stati.PutzSchritt;
 import eu.gressly.android.zahnuhr.util.AllActivities;
 import eu.gressly.android.zahnuhr.util.PauseResumeButtonListener;
-import eu.gressly.util.callback.Updater;
+import eu.gressly.util.callback.Updateable;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -34,7 +36,7 @@ import eu.gressly.util.callback.Updater;
  * 
  * @see SystemUiHider
  */
-public class SlideShowActivity extends Activity implements Updater {
+public class SlideShowActivity extends Activity implements Updateable {
 	private static final String TAG = "SlideShowActivity";
 
 
@@ -53,6 +55,10 @@ public class SlideShowActivity extends Activity implements Updater {
 		// Hide notification-bar
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 		                          WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		
+		// register this for callback
+		AbstractStateCallback stateCallback = StateImplementation.getInstance();
+		stateCallback.addUpdateable(this);
 	}
 
 
@@ -65,7 +71,7 @@ public class SlideShowActivity extends Activity implements Updater {
 
 	@Override
 	public void onBackPressed() {
-		StateCallback sc = StateImplementation.getInstance();
+		State sc = StateImplementation.getInstance();
 		sc.stop();  
 		super.onBackPressed();
 	}
@@ -87,10 +93,7 @@ public class SlideShowActivity extends Activity implements Updater {
 	void setContentViewAndStartProgress() {
 		this.setContentView(R.layout.activity_slide_show);
 		registerPauseButtonListener();
-		// register this for callback
 		gongPlay();
-		StateCallback stateCallback = StateImplementation.getInstance();
-		stateCallback.setUpdater(this);
 	}
 
 
@@ -133,7 +136,7 @@ public class SlideShowActivity extends Activity implements Updater {
 
 
 	private synchronized void neuZeichnen() {
-		StateCallback state = StateImplementation.getInstance();
+		State state = StateImplementation.getInstance();
 		if (state.isGlobalTimeOver()) {
 			state.stop();
 			gotoViewFinished();
@@ -159,7 +162,7 @@ public class SlideShowActivity extends Activity implements Updater {
 		if(null == mPlayer) { // lazy instantiation
 			mPlayer = MediaPlayer.create(SlideShowActivity.this, R.raw.gong);			
 		}
-		StateCallback state = StateImplementation.getInstance();
+		State state = StateImplementation.getInstance();
 		Log.i(TAG, "Gong time " + state.isGongTime());
 		if(state.isGongTime()) {
 			if(!mPlayer.isPlaying()) {
@@ -173,7 +176,7 @@ public class SlideShowActivity extends Activity implements Updater {
 
 
 	private void paintingProgressBars() {
-		StateCallback state = StateImplementation.getInstance();
+		State state = StateImplementation.getInstance();
 		// Nur laufen, wenn nicht "gonging"
 		if(null != mPlayer && mPlayer.isPlaying()) {
 			// Solange der Gong läuft, ist der "Bar" auf null (0)
@@ -235,7 +238,7 @@ public class SlideShowActivity extends Activity implements Updater {
 				ImageView img = (ImageView) findViewById(R.id.startImage);
 				img.setImageResource(R.drawable.blackout);
 				
-				StateCallback state = StateImplementation.getInstance();
+				State state = StateImplementation.getInstance();
 				TextView txt = (TextView) findViewById(R.id.textView_wo);
 				txt.setText(getResources().getText(state.getActPutzSchritt().getStringID()));
 			}

@@ -10,7 +10,7 @@ package eu.gressly.android.zahnuhr.util;
  *          Restarting in "onCreate()" of the "SlideShowActivity" will
  *          restart the timer on all turns of the phone.
  */
-import eu.gressly.android.zahnuhr.StateCallback;
+import eu.gressly.android.zahnuhr.State;
 import eu.gressly.android.zahnuhr.StateImplementation;
 import eu.gressly.android.zahnuhr.activities.SlideShowActivity;
 import eu.gressly.android.zahnuhr.stati.PutzAlter;
@@ -36,7 +36,7 @@ public class StartClickListener implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		StateCallback sc = StateImplementation.getInstance();
+		State sc = StateImplementation.getInstance();
 		sc.setAlter(this.alter);
 		//sc.restart();
 		Intent slideShowView = new Intent(myActivity.getApplicationContext(), SlideShowActivity.class);
